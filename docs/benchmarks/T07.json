@@ -1,0 +1,12 @@
+{
+  "task": "T07",
+  "stock_symbols": 50,
+  "context_instruments": 3,
+  "simulated_hours": 6,
+  "ticks": 1144800,
+  "output_rows": 19461600,
+  "elapsed_seconds": 1160.988385546938,
+  "ticks_per_second": 986.0563759737255,
+  "simulator_decode_seconds": 40.67396451006425,
+  "mode": "streaming depth features; simulation/decode/cache read excluded"
+}
