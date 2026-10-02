@@ -125,7 +125,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T03 | T01 | ingest/recorder.py | 15 recorder cases; staged suite green; six-hour lossless benchmark | 73,537 tick-equivalents/s; 50 stocks+3 indices, 21,600 raw frames, zero drops | DONE |
 | T04 | T01 | trades/core.py, bars/core.py, schema mid_price | 22 T04 cases + 3 session guards; full suite 217 passing + 92 subtests | 14,231 ticks/s; 50 stocks+3 indices, 6h; classification+1m bars | DONE |
 | T05 | T01 | ingest/history.py | 6 new tests; full suite 58 passing | N/A: daily REST/import I/O; no per-tick metric | DONE |
-| T06 | T04 | layers/orderflow/footprint.py | 6 known-answer/truncation cases; full staged task suite green | 19,132 ticks/s; 50 stocks+3 indices, six-hour cached simulation | DONE |
+| T06 | T04 | layers/orderflow/footprint.py | 6 known-answer/truncation cases; full staged task suite green | 17,491 ticks/s; cached six-hour simulation; footprint only | DONE |
 | T07 | T04 | layers/orderflow/depth.py | 15 known-answer/availability/truncation cases; staged suite green | 986 ticks/s; 50 stocks+3 indices, 6h; 19.46m feature rows | DONE |
 | T08 | T06 | layers/orderflow/flow.py | 21 known-answer/availability/truncation cases; staged suite green | 5,347 ticks/s; cached six-hour day, includes T06 footprint | DONE |
 | T09 | T04 | layers/profile/core.py | 6 known-answer/truncation cases; staged suite green | 35,134 ticks/s; 50 stocks+3 indices, six-hour cached profile | DONE |
