@@ -1,0 +1,61 @@
+variant,family,timeframe,parameters,status,valid_oos_folds
+F1_m63_top10,1,daily,"{'lookback': 63, 'skip': 21, 'top': 10}",EVALUATED,22
+F1_m63_top20,1,daily,"{'lookback': 63, 'skip': 21, 'top': 20}",EVALUATED,22
+F1_m126_top10,1,daily,"{'lookback': 126, 'skip': 21, 'top': 10}",EVALUATED,24
+F1_m126_top20,1,daily,"{'lookback': 126, 'skip': 21, 'top': 20}",EVALUATED,22
+F1_m252_top10,1,daily,"{'lookback': 252, 'skip': 21, 'top': 10}",EVALUATED,22
+F1_m252_top20,1,daily,"{'lookback': 252, 'skip': 21, 'top': 20}",EVALUATED,22
+F2_vol125_ma100_hold5,2,daily,"{'lookback': 252, 'volume_window': 20, 'volume_multiple': 1.25, 'trend': 100, 'hold': 5}",EVALUATED,24
+F2_vol125_ma100_hold10,2,daily,"{'lookback': 252, 'volume_window': 20, 'volume_multiple': 1.25, 'trend': 100, 'hold': 10}",EVALUATED,24
+F2_vol125_ma200_hold5,2,daily,"{'lookback': 252, 'volume_window': 20, 'volume_multiple': 1.25, 'trend': 200, 'hold': 5}",EVALUATED,24
+F2_vol125_ma200_hold10,2,daily,"{'lookback': 252, 'volume_window': 20, 'volume_multiple': 1.25, 'trend': 200, 'hold': 10}",EVALUATED,24
+F2_vol150_ma100_hold5,2,daily,"{'lookback': 252, 'volume_window': 20, 'volume_multiple': 1.5, 'trend': 100, 'hold': 5}",EVALUATED,24
+F2_vol150_ma100_hold10,2,daily,"{'lookback': 252, 'volume_window': 20, 'volume_multiple': 1.5, 'trend': 100, 'hold': 10}",EVALUATED,24
+F2_vol150_ma200_hold5,2,daily,"{'lookback': 252, 'volume_window': 20, 'volume_multiple': 1.5, 'trend': 200, 'hold': 5}",EVALUATED,24
+F2_vol150_ma200_hold10,2,daily,"{'lookback': 252, 'volume_window': 20, 'volume_multiple': 1.5, 'trend': 200, 'hold': 10}",EVALUATED,24
+F3_rsi5_ma100_hold2,3,daily,"{'rsi_period': 2, 'threshold': 5, 'trend': 100, 'hold': 2}",EVALUATED,24
+F3_rsi5_ma100_hold5,3,daily,"{'rsi_period': 2, 'threshold': 5, 'trend': 100, 'hold': 5}",EVALUATED,24
+F3_rsi5_ma200_hold2,3,daily,"{'rsi_period': 2, 'threshold': 5, 'trend': 200, 'hold': 2}",EVALUATED,24
+F3_rsi5_ma200_hold5,3,daily,"{'rsi_period': 2, 'threshold': 5, 'trend': 200, 'hold': 5}",EVALUATED,24
+F3_rsi10_ma100_hold2,3,daily,"{'rsi_period': 2, 'threshold': 10, 'trend': 100, 'hold': 2}",EVALUATED,24
+F3_rsi10_ma100_hold5,3,daily,"{'rsi_period': 2, 'threshold': 10, 'trend': 100, 'hold': 5}",EVALUATED,24
+F3_rsi10_ma200_hold2,3,daily,"{'rsi_period': 2, 'threshold': 10, 'trend': 200, 'hold': 2}",EVALUATED,24
+F3_rsi10_ma200_hold5,3,daily,"{'rsi_period': 2, 'threshold': 10, 'trend': 200, 'hold': 5}",EVALUATED,24
+F4_daily_swing2_hold5,4,daily,"{'swing': 2, 'hold_days': 5, 'break_exit': True}",EVALUATED,24
+F4_daily_swing2_hold10,4,daily,"{'swing': 2, 'hold_days': 10, 'break_exit': True}",EVALUATED,22
+F4_daily_swing3_hold5,4,daily,"{'swing': 3, 'hold_days': 5, 'break_exit': True}",EVALUATED,22
+F4_daily_swing3_hold10,4,daily,"{'swing': 3, 'hold_days': 10, 'break_exit': True}",EVALUATED,22
+F4_60minute_swing2_hold1,4,60minute,"{'swing': 2, 'hold_days': 1, 'break_exit': True}",EVALUATED,2
+F4_60minute_swing2_hold3,4,60minute,"{'swing': 2, 'hold_days': 3, 'break_exit': True}",EVALUATED,2
+F4_60minute_swing3_hold1,4,60minute,"{'swing': 3, 'hold_days': 1, 'break_exit': True}",EVALUATED,2
+F4_60minute_swing3_hold3,4,60minute,"{'swing': 3, 'hold_days': 3, 'break_exit': True}",EVALUATED,2
+F5_rs20_top10,5,daily,"{'lookback': 20, 'top': 10}",EVALUATED,22
+F6_vol20_top10,6,daily,"{'lookback': 20, 'top': 10}",EVALUATED,22
+F5_rs20_top20,5,daily,"{'lookback': 20, 'top': 20}",EVALUATED,22
+F6_vol20_top20,6,daily,"{'lookback': 20, 'top': 20}",EVALUATED,22
+F5_rs60_top10,5,daily,"{'lookback': 60, 'top': 10}",EVALUATED,22
+F6_vol60_top10,6,daily,"{'lookback': 60, 'top': 10}",EVALUATED,20
+F5_rs60_top20,5,daily,"{'lookback': 60, 'top': 20}",EVALUATED,22
+F6_vol60_top20,6,daily,"{'lookback': 60, 'top': 20}",EVALUATED,20
+F5_rs120_top10,5,daily,"{'lookback': 120, 'top': 10}",EVALUATED,24
+F6_vol120_top10,6,daily,"{'lookback': 120, 'top': 10}",EVALUATED,20
+F5_rs120_top20,5,daily,"{'lookback': 120, 'top': 20}",EVALUATED,22
+F6_vol120_top20,6,daily,"{'lookback': 120, 'top': 20}",EVALUATED,19
+F7_go_gap2_hold1,7,60minute,"{'side': 'go', 'gap': 0.02, 'hold_days': 1}",EVALUATED,2
+F7_go_gap2_hold2,7,60minute,"{'side': 'go', 'gap': 0.02, 'hold_days': 2}",EVALUATED,2
+F7_go_gap3_hold1,7,60minute,"{'side': 'go', 'gap': 0.03, 'hold_days': 1}",EVALUATED,2
+F7_go_gap3_hold2,7,60minute,"{'side': 'go', 'gap': 0.03, 'hold_days': 2}",EVALUATED,2
+F7_fade_gap2_hold1,7,60minute,"{'side': 'fade', 'gap': 0.02, 'hold_days': 1}",EVALUATED,2
+F7_fade_gap2_hold2,7,60minute,"{'side': 'fade', 'gap': 0.02, 'hold_days': 2}",EVALUATED,2
+F7_fade_gap3_hold1,7,60minute,"{'side': 'fade', 'gap': 0.03, 'hold_days': 1}",EVALUATED,2
+F7_fade_gap3_hold2,7,60minute,"{'side': 'fade', 'gap': 0.03, 'hold_days': 2}",EVALUATED,2
+F8_tom_m1_p1,8,daily,"{'effect': 'turn_of_month', 'before': 1, 'after': 1}",EVALUATED,24
+F8_tom_m1_p2,8,daily,"{'effect': 'turn_of_month', 'before': 1, 'after': 2}",EVALUATED,24
+F8_tom_m2_p2,8,daily,"{'effect': 'turn_of_month', 'before': 2, 'after': 2}",EVALUATED,22
+F8_tom_m0_p2,8,daily,"{'effect': 'turn_of_month', 'before': 0, 'after': 2}",EVALUATED,24
+F8_tom_m3_p1,8,daily,"{'effect': 'turn_of_month', 'before': 3, 'after': 1}",EVALUATED,22
+F8_preholiday_hold1,8,daily,"{'effect': 'preholiday', 'hold': 1}",EVALUATED,2
+F8_preholiday_hold2,8,daily,"{'effect': 'preholiday', 'hold': 2}",EVALUATED,2
+F8_preholiday_hold3,8,daily,"{'effect': 'preholiday', 'hold': 3}",EVALUATED,2
+F8_preholiday_hold4,8,daily,"{'effect': 'preholiday', 'hold': 4}",EVALUATED,2
+F8_preholiday_hold5,8,daily,"{'effect': 'preholiday', 'hold': 5}",EVALUATED,2
