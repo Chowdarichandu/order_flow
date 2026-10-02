@@ -1,0 +1,5229 @@
+{
+  "label": "EXPLORATORY",
+  "registry_sha256": "2adaa9e6a2611cb460ac64789755ebc14130e38101402e65ec4e6af7495c6846",
+  "registered_trials": 60,
+  "research_cache_fingerprints": {
+    "daily": "7e6bd113b442640bdbaff096f64000c3165dd0979fde9c9b161a00c60eb94c46",
+    "60minute": "1aa88d34cdc7ae502a2ccfe466188cdc973619bed0b75232fa6ef7e8050297dd"
+  },
+  "families": [
+    {
+      "family": 1,
+      "name": "Cross-sectional momentum",
+      "common_oos": {
+        "cagr": 0.09084508720466133,
+        "max_drawdown": -0.24984178374334076,
+        "sharpe": 0.4970133491634752,
+        "trades": 110,
+        "orders": 151,
+        "win_pct": 59.09090909090909,
+        "average_hold_days": 87.7090909090909,
+        "average_move_pct": 15.074703114986182,
+        "average_cost_pct": 1.0420038110579457,
+        "net_pnl": 90780.16652789662,
+        "deflated_sharpe_probability": 0.002480655346441152,
+        "total_registered_trials": 60,
+        "return_observations": 247,
+        "effective_observations": 236.56846707073015,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2025": 0.09078016652789822
+        },
+        "best_year": {
+          "year": 2025,
+          "return": 0.09078016652789822
+        },
+        "worst_year": {
+          "year": 2025,
+          "return": 0.09078016652789822
+        }
+      },
+      "extended_oos": {
+        "cagr": 0.31867456543043593,
+        "max_drawdown": -0.6342680804200411,
+        "sharpe": 1.2909745542175177,
+        "trades": 3417,
+        "orders": 4948,
+        "win_pct": 61.45741878841089,
+        "average_hold_days": 74.31050629206906,
+        "average_move_pct": 14.426594016094121,
+        "average_cost_pct": 1.6740473632142416,
+        "net_pnl": 9233202.712984432,
+        "deflated_sharpe_probability": 0.0,
+        "total_registered_trials": 60,
+        "return_observations": 5438,
+        "effective_observations": 4626.289494671071,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2003": 0.9110249974017532,
+          "2004": -0.05317059020727066,
+          "2005": 0.657755681470269,
+          "2006": 0.2163380024194772,
+          "2007": 1.1632424515292143,
+          "2008": -0.5533711074527539,
+          "2009": 1.0156989436535375,
+          "2010": 0.2967476432298408,
+          "2011": -0.20721601946256896,
+          "2012": 0.31411612935003475,
+          "2013": 0.20828721148730733,
+          "2014": 0.9562155769042118,
+          "2016": 0.024098095320489454,
+          "2017": 0.7007874148497917,
+          "2018": -0.04508156728583412,
+          "2019": 0.10002166119143574,
+          "2020": 0.3691928946939842,
+          "2021": 0.9078643288557051,
+          "2022": 0.3614645034259856,
+          "2023": 0.9822639972068017,
+          "2024": 0.816142297875142,
+          "2025": 0.09078016652789822
+        },
+        "best_year": {
+          "year": 2007,
+          "return": 1.1632424515292143
+        },
+        "worst_year": {
+          "year": 2008,
+          "return": -0.5533711074527539
+        }
+      },
+      "partial_2026": {
+        "cagr": -0.1414435679031607,
+        "max_drawdown": -0.15271179404050794,
+        "sharpe": -0.5697593498286461,
+        "trades": 160,
+        "orders": 225,
+        "win_pct": 40.625,
+        "average_hold_days": 85.6375,
+        "average_move_pct": 3.6999825612941515,
+        "average_cost_pct": 1.835661558761068,
+        "net_pnl": -108101.77122098557,
+        "deflated_sharpe_probability": 0.0003044432941284869,
+        "total_registered_trials": 60,
+        "return_observations": 185,
+        "effective_observations": 185.0,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2026": -0.10810177122098497
+        },
+        "best_year": {
+          "year": 2026,
+          "return": -0.10810177122098497
+        },
+        "worst_year": {
+          "year": 2026,
+          "return": -0.10810177122098497
+        }
+      },
+      "regimes": {
+        "BULL": {
+          "observations": 144,
+          "total_return": 0.07803141706850947,
+          "sharpe": 0.9057285924252312,
+          "max_drawdown": -0.0713928579196571
+        },
+        "BEAR": {
+          "observations": 68,
+          "total_return": -0.06865119336904735,
+          "sharpe": -0.6124595324359773,
+          "max_drawdown": -0.22492927413391084
+        },
+        "SIDEWAYS": {
+          "observations": 35,
+          "total_return": 0.08640924468048694,
+          "sharpe": 2.5630581687951044,
+          "max_drawdown": -0.061054720190865996
+        },
+        "UNCLASSIFIED": {
+          "observations": 0,
+          "total_return": null,
+          "sharpe": null,
+          "max_drawdown": null
+        }
+      },
+      "common_start": "2024-12-31 18:30:00+00:00",
+      "common_end": "2025-12-30 18:30:00+00:00"
+    },
+    {
+      "family": 2,
+      "name": "52-week-high breakout",
+      "common_oos": {
+        "cagr": -0.10186944217802185,
+        "max_drawdown": -0.1980357784163036,
+        "sharpe": -0.8281447073924515,
+        "trades": 722,
+        "orders": 891,
+        "win_pct": 31.71745152354571,
+        "average_hold_days": 9.16759002770083,
+        "average_move_pct": 0.9984770345448107,
+        "average_cost_pct": 3.25297403490006,
+        "net_pnl": -101803.39252291911,
+        "deflated_sharpe_probability": 3.48565791088995e-05,
+        "total_registered_trials": 60,
+        "return_observations": 247,
+        "effective_observations": 216.66335602544547,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2025": -0.10180339252291737
+        },
+        "best_year": {
+          "year": 2025,
+          "return": -0.10180339252291737
+        },
+        "worst_year": {
+          "year": 2025,
+          "return": -0.10180339252291737
+        }
+      },
+      "extended_oos": {
+        "cagr": -0.004550953960515747,
+        "max_drawdown": -0.5701510664310254,
+        "sharpe": 0.04570914271265447,
+        "trades": 16637,
+        "orders": 20077,
+        "win_pct": 36.55707158742562,
+        "average_hold_days": 7.609064134158802,
+        "average_move_pct": 1.3904130488343749,
+        "average_cost_pct": 3.351634898372417,
+        "net_pnl": 123019.38798027765,
+        "deflated_sharpe_probability": 0.0,
+        "total_registered_trials": 60,
+        "return_observations": 5434,
+        "effective_observations": 5420.3163841759615,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2004": -0.22254536271253633,
+          "2005": 0.009792297769180447,
+          "2006": 0.14902376768076597,
+          "2007": 0.23779051917744543,
+          "2008": -0.20792206741224273,
+          "2009": -0.05551994967541263,
+          "2010": -0.18852228706836838,
+          "2011": -0.18757572896505026,
+          "2012": 0.07196118764843518,
+          "2013": -0.04202617726862268,
+          "2014": 0.035776073715148016,
+          "2015": -0.013430067262135914,
+          "2016": -0.09546323242781096,
+          "2017": 0.010408227913748958,
+          "2018": 0.0026891477225494675,
+          "2019": 0.00215444449445501,
+          "2020": 0.15118903036101816,
+          "2021": 0.37782690630026217,
+          "2022": -0.01151090402296262,
+          "2023": 0.12366933542487346,
+          "2024": 0.0770576191104575,
+          "2025": -0.10180339252291737
+        },
+        "best_year": {
+          "year": 2021,
+          "return": 0.37782690630026217
+        },
+        "worst_year": {
+          "year": 2004,
+          "return": -0.22254536271253633
+        }
+      },
+      "partial_2026": {
+        "cagr": -0.1591443187533771,
+        "max_drawdown": -0.17585513877142567,
+        "sharpe": -0.9230887882723487,
+        "trades": 636,
+        "orders": 784,
+        "win_pct": 30.974842767295595,
+        "average_hold_days": 9.180817610062894,
+        "average_move_pct": 0.36266005275360597,
+        "average_cost_pct": 2.790217456414033,
+        "net_pnl": -121931.86731550428,
+        "deflated_sharpe_probability": 0.0002583793732139905,
+        "total_registered_trials": 60,
+        "return_observations": 185,
+        "effective_observations": 146.79221842489545,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2026": -0.1219318673155052
+        },
+        "best_year": {
+          "year": 2026,
+          "return": -0.1219318673155052
+        },
+        "worst_year": {
+          "year": 2026,
+          "return": -0.1219318673155052
+        }
+      },
+      "regimes": {
+        "BULL": {
+          "observations": 144,
+          "total_return": 0.05351840717591738,
+          "sharpe": 0.8288094173759645,
+          "max_drawdown": -0.06248554568825815
+        },
+        "BEAR": {
+          "observations": 68,
+          "total_return": -0.13822405912681612,
+          "sharpe": -4.64452429750518,
+          "max_drawdown": -0.14996367869731253
+        },
+        "SIDEWAYS": {
+          "observations": 35,
+          "total_return": -0.010684263803011462,
+          "sharpe": -0.45815058860184404,
+          "max_drawdown": -0.05847569112927309
+        },
+        "UNCLASSIFIED": {
+          "observations": 0,
+          "total_return": null,
+          "sharpe": null,
+          "max_drawdown": null
+        }
+      },
+      "common_start": "2024-12-31 18:30:00+00:00",
+      "common_end": "2025-12-30 18:30:00+00:00"
+    },
+    {
+      "family": 3,
+      "name": "Short-term mean reversion",
+      "common_oos": {
+        "cagr": -0.21510147291313153,
+        "max_drawdown": -0.25614032920458374,
+        "sharpe": -1.326782875015849,
+        "trades": 1175,
+        "orders": 1595,
+        "win_pct": 30.5531914893617,
+        "average_hold_days": 4.953191489361702,
+        "average_move_pct": 0.6127822000518669,
+        "average_cost_pct": 3.2465787931632466,
+        "net_pnl": -214971.34366161947,
+        "deflated_sharpe_probability": 6.505529329681181e-07,
+        "total_registered_trials": 60,
+        "return_observations": 247,
+        "effective_observations": 247.0,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2025": -0.21497134366161819
+        },
+        "best_year": {
+          "year": 2025,
+          "return": -0.21497134366161819
+        },
+        "worst_year": {
+          "year": 2025,
+          "return": -0.21497134366161819
+        }
+      },
+      "extended_oos": {
+        "cagr": 0.02300530596470951,
+        "max_drawdown": -0.5201093485357198,
+        "sharpe": 0.22119878132085202,
+        "trades": 23090,
+        "orders": 30615,
+        "win_pct": 34.68168038111737,
+        "average_hold_days": 4.257124296232135,
+        "average_move_pct": 1.1483737140837516,
+        "average_cost_pct": 3.697349995604175,
+        "net_pnl": 1110645.8558533932,
+        "deflated_sharpe_probability": 0.0,
+        "total_registered_trials": 60,
+        "return_observations": 5685,
+        "effective_observations": 5287.192509223679,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2003": 0.37063702240606244,
+          "2004": -0.22563235954836358,
+          "2005": -0.10402681747116405,
+          "2006": -0.0016947104805211666,
+          "2007": 0.4812759062949401,
+          "2008": -0.18089432785123782,
+          "2009": 0.9797496984375678,
+          "2010": 0.0008183671830039874,
+          "2011": -0.09698656339020872,
+          "2012": 0.0007571246997684078,
+          "2013": 0.029675994138749662,
+          "2014": 0.19819423395474312,
+          "2015": 0.0013482744263000335,
+          "2016": 0.12702339856949973,
+          "2017": 0.01586694363593799,
+          "2018": -0.15699831666003528,
+          "2019": -0.02627158576319444,
+          "2020": -0.1435723263451799,
+          "2021": 0.09561058852804982,
+          "2022": -0.08017383284056967,
+          "2023": 0.05739154380659994,
+          "2024": -0.0164810562157377,
+          "2025": -0.21497134366161819
+        },
+        "best_year": {
+          "year": 2009,
+          "return": 0.9797496984375678
+        },
+        "worst_year": {
+          "year": 2004,
+          "return": -0.22563235954836358
+        }
+      },
+      "partial_2026": {
+        "cagr": -0.32479834816481856,
+        "max_drawdown": -0.26984760300942556,
+        "sharpe": -2.47023481999598,
+        "trades": 758,
+        "orders": 1015,
+        "win_pct": 24.934036939313984,
+        "average_hold_days": 4.779683377308707,
+        "average_move_pct": 0.11206572175738856,
+        "average_cost_pct": 3.814155648287292,
+        "net_pnl": -255189.25138956698,
+        "deflated_sharpe_probability": 3.1677693801412943e-10,
+        "total_registered_trials": 60,
+        "return_observations": 185,
+        "effective_observations": 185.0,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2026": -0.25518925138956683
+        },
+        "best_year": {
+          "year": 2026,
+          "return": -0.25518925138956683
+        },
+        "worst_year": {
+          "year": 2026,
+          "return": -0.25518925138956683
+        }
+      },
+      "regimes": {
+        "BULL": {
+          "observations": 144,
+          "total_return": -0.06040291017095101,
+          "sharpe": -0.7858615938964971,
+          "max_drawdown": -0.11146223775388187
+        },
+        "BEAR": {
+          "observations": 68,
+          "total_return": -0.179692192541696,
+          "sharpe": -2.7675089362123155,
+          "max_drawdown": -0.2409782514173302
+        },
+        "SIDEWAYS": {
+          "observations": 35,
+          "total_return": 0.018513998355971895,
+          "sharpe": 0.961201229872394,
+          "max_drawdown": -0.026468863333158787
+        },
+        "UNCLASSIFIED": {
+          "observations": 0,
+          "total_return": null,
+          "sharpe": null,
+          "max_drawdown": null
+        }
+      },
+      "common_start": "2024-12-31 18:30:00+00:00",
+      "common_end": "2025-12-30 18:30:00+00:00"
+    },
+    {
+      "family": 4,
+      "name": "Swing BOS/CHoCH",
+      "common_oos": {
+        "cagr": -0.08076381079772244,
+        "max_drawdown": -0.22190412002182136,
+        "sharpe": -0.3281703098184899,
+        "trades": 1157,
+        "orders": 1427,
+        "win_pct": 35.95505617977528,
+        "average_hold_days": 8.431287813310286,
+        "average_move_pct": 1.1448573559857953,
+        "average_cost_pct": 3.3213186794283183,
+        "net_pnl": -80710.82440681105,
+        "deflated_sharpe_probability": 0.0004367358933017318,
+        "total_registered_trials": 60,
+        "return_observations": 247,
+        "effective_observations": 193.19095153712001,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2025": -0.0807108244068121
+        },
+        "best_year": {
+          "year": 2025,
+          "return": -0.0807108244068121
+        },
+        "worst_year": {
+          "year": 2025,
+          "return": -0.0807108244068121
+        }
+      },
+      "extended_oos": {
+        "cagr": -0.0005965876448287277,
+        "max_drawdown": -0.9188302213247183,
+        "sharpe": 0.10863915094080519,
+        "trades": 30749,
+        "orders": 36548,
+        "win_pct": 36.42720088458161,
+        "average_hold_days": 8.084685680835149,
+        "average_move_pct": 1.5958422016721288,
+        "average_cost_pct": 3.866119717276238,
+        "net_pnl": 1944526.4853701787,
+        "deflated_sharpe_probability": 0.0,
+        "total_registered_trials": 60,
+        "return_observations": 5438,
+        "effective_observations": 4523.851247478031,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2003": 1.6486722973643841,
+          "2004": 0.21416954641878316,
+          "2005": 0.3294047411978791,
+          "2006": 0.4151809318861568,
+          "2007": 0.20894928251286338,
+          "2008": -0.6209992521819475,
+          "2009": 0.7490623672296237,
+          "2010": -0.06740892433405643,
+          "2011": -0.4952871913532525,
+          "2012": 0.04449576863463922,
+          "2013": -0.06498566154239627,
+          "2014": 0.1151727722775957,
+          "2016": -0.4784731544457338,
+          "2017": 0.18926605558483933,
+          "2018": -0.30807726379699507,
+          "2019": -0.12365002828909688,
+          "2020": -0.19306844594253492,
+          "2021": 0.1907814758827202,
+          "2022": -0.19144560805175148,
+          "2023": 0.43130133927205816,
+          "2024": 0.03217626145321195,
+          "2025": -0.0807108244068121
+        },
+        "best_year": {
+          "year": 2003,
+          "return": 1.6486722973643841
+        },
+        "worst_year": {
+          "year": 2008,
+          "return": -0.6209992521819475
+        }
+      },
+      "partial_2026": {
+        "cagr": -0.1933072377576014,
+        "max_drawdown": -0.16243800646168138,
+        "sharpe": -1.0327777294596958,
+        "trades": 788,
+        "orders": 994,
+        "win_pct": 35.27918781725889,
+        "average_hold_days": 8.501269035532994,
+        "average_move_pct": 0.8554472038021537,
+        "average_cost_pct": 2.465908731797961,
+        "net_pnl": -148832.25708140744,
+        "deflated_sharpe_probability": 5.4097358697879905e-05,
+        "total_registered_trials": 60,
+        "return_observations": 185,
+        "effective_observations": 185.0,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2026": -0.14883225708140713
+        },
+        "best_year": {
+          "year": 2026,
+          "return": -0.14883225708140713
+        },
+        "worst_year": {
+          "year": 2026,
+          "return": -0.14883225708140713
+        }
+      },
+      "regimes": {
+        "BULL": {
+          "observations": 144,
+          "total_return": 0.0604698423125718,
+          "sharpe": 0.7527032608607416,
+          "max_drawdown": -0.08014894107131498
+        },
+        "BEAR": {
+          "observations": 68,
+          "total_return": -0.12673267049519388,
+          "sharpe": -1.581460023051739,
+          "max_drawdown": -0.20359742147863424
+        },
+        "SIDEWAYS": {
+          "observations": 35,
+          "total_return": -0.007326081999378897,
+          "sharpe": -0.25871392036095453,
+          "max_drawdown": -0.0357563809178546
+        },
+        "UNCLASSIFIED": {
+          "observations": 0,
+          "total_return": null,
+          "sharpe": null,
+          "max_drawdown": null
+        }
+      },
+      "common_start": "2024-12-31 18:30:00+00:00",
+      "common_end": "2025-12-30 18:30:00+00:00"
+    },
+    {
+      "family": 5,
+      "name": "Sector relative strength",
+      "common_oos": {
+        "cagr": -0.07902529188259133,
+        "max_drawdown": -0.2754620168973875,
+        "sharpe": -0.24530653548338707,
+        "trades": 435,
+        "orders": 568,
+        "win_pct": 50.114942528735625,
+        "average_hold_days": 34.262068965517244,
+        "average_move_pct": 4.065438516525722,
+        "average_cost_pct": 2.0186294198831676,
+        "net_pnl": -78973.39642417284,
+        "deflated_sharpe_probability": 0.0004256946632497649,
+        "total_registered_trials": 60,
+        "return_observations": 247,
+        "effective_observations": 207.25690370171392,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2025": -0.0789733964241709
+        },
+        "best_year": {
+          "year": 2025,
+          "return": -0.0789733964241709
+        },
+        "worst_year": {
+          "year": 2025,
+          "return": -0.0789733964241709
+        }
+      },
+      "extended_oos": {
+        "cagr": 0.17951679668720377,
+        "max_drawdown": -0.6938342701601954,
+        "sharpe": 0.8231754125712337,
+        "trades": 14409,
+        "orders": 17904,
+        "win_pct": 52.4325074606149,
+        "average_hold_days": 44.58227496703449,
+        "average_move_pct": 11.108992296325702,
+        "average_cost_pct": 3.656004779019769,
+        "net_pnl": 5779703.3087812755,
+        "deflated_sharpe_probability": 0.0,
+        "total_registered_trials": 60,
+        "return_observations": 5187,
+        "effective_observations": 4266.666219433533,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2004": -0.05106941432436074,
+          "2005": 0.3115808499902133,
+          "2006": 0.05990201236691006,
+          "2007": 0.6609379829024982,
+          "2008": -0.6152128212359834,
+          "2009": 1.1466727216184207,
+          "2010": 0.23882215586222544,
+          "2011": -0.3091868215596584,
+          "2012": 0.19737795216947251,
+          "2013": -0.08502814511056256,
+          "2014": 0.6765479460334076,
+          "2016": 0.0889670818009003,
+          "2017": 0.3476329615449345,
+          "2018": -0.16820703133831905,
+          "2019": 0.008410785926304731,
+          "2020": 0.5392691076762937,
+          "2021": 1.0569776759220018,
+          "2022": 0.20775659592928108,
+          "2023": 1.0543458242712513,
+          "2024": 0.4921792847602202,
+          "2025": -0.0789733964241709
+        },
+        "best_year": {
+          "year": 2009,
+          "return": 1.1466727216184207
+        },
+        "worst_year": {
+          "year": 2008,
+          "return": -0.6152128212359834
+        }
+      },
+      "partial_2026": {
+        "cagr": -0.09269176717961991,
+        "max_drawdown": -0.18828605080211247,
+        "sharpe": -0.28385159166850915,
+        "trades": 320,
+        "orders": 396,
+        "win_pct": 45.0,
+        "average_hold_days": 37.54375,
+        "average_move_pct": 3.5712663393306414,
+        "average_cost_pct": 1.89352423224408,
+        "net_pnl": -70372.612382329,
+        "deflated_sharpe_probability": 0.000742906904750984,
+        "total_registered_trials": 60,
+        "return_observations": 185,
+        "effective_observations": 185.0,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2026": -0.07037261238233206
+        },
+        "best_year": {
+          "year": 2026,
+          "return": -0.07037261238233206
+        },
+        "worst_year": {
+          "year": 2026,
+          "return": -0.07037261238233206
+        }
+      },
+      "regimes": {
+        "BULL": {
+          "observations": 144,
+          "total_return": 0.06625038717269782,
+          "sharpe": 0.7418928659243731,
+          "max_drawdown": -0.09090573258830237
+        },
+        "BEAR": {
+          "observations": 68,
+          "total_return": -0.1552570503395354,
+          "sharpe": -1.713447786803499,
+          "max_drawdown": -0.25324006680063393
+        },
+        "SIDEWAYS": {
+          "observations": 35,
+          "total_return": 0.022559051083222093,
+          "sharpe": 0.8518050473864286,
+          "max_drawdown": -0.04972974680241449
+        },
+        "UNCLASSIFIED": {
+          "observations": 0,
+          "total_return": null,
+          "sharpe": null,
+          "max_drawdown": null
+        }
+      },
+      "common_start": "2024-12-31 18:30:00+00:00",
+      "common_end": "2025-12-30 18:30:00+00:00"
+    },
+    {
+      "family": 6,
+      "name": "Low-volatility tilt",
+      "common_oos": {
+        "cagr": 0.04555130582323974,
+        "max_drawdown": -0.09678682686679063,
+        "sharpe": 0.4987926722303627,
+        "trades": 384,
+        "orders": 432,
+        "win_pct": 41.66666666666667,
+        "average_hold_days": 105.84635416666667,
+        "average_move_pct": 2.1973632179632596,
+        "average_cost_pct": 2.713796603692053,
+        "net_pnl": 45519.42857938791,
+        "deflated_sharpe_probability": 0.0035561915367436914,
+        "total_registered_trials": 60,
+        "return_observations": 247,
+        "effective_observations": 213.44327584802255,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2025": 0.04551942857938629
+        },
+        "best_year": {
+          "year": 2025,
+          "return": 0.04551942857938629
+        },
+        "worst_year": {
+          "year": 2025,
+          "return": 0.04551942857938629
+        }
+      },
+      "extended_oos": {
+        "cagr": 0.16644693649688413,
+        "max_drawdown": -0.5533017932953039,
+        "sharpe": 1.1316109785772879,
+        "trades": 12111,
+        "orders": 15651,
+        "win_pct": 49.89678804392701,
+        "average_hold_days": 45.578564940962764,
+        "average_move_pct": 4.1598447386886965,
+        "average_cost_pct": 3.451161885963496,
+        "net_pnl": 4807814.676670169,
+        "deflated_sharpe_probability": 0.0,
+        "total_registered_trials": 60,
+        "return_observations": 5439,
+        "effective_observations": 4542.5884679226965,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2003": 0.7697860114839137,
+          "2004": 0.0030255303665560618,
+          "2005": 0.6908798912125342,
+          "2006": 0.4714987784115827,
+          "2007": 0.4832010340622921,
+          "2008": -0.429893279202309,
+          "2009": 1.0478003349691778,
+          "2010": 0.13613506482278792,
+          "2011": -0.1223826113341403,
+          "2012": 0.23028032258947007,
+          "2013": 0.14149332669250048,
+          "2014": 0.4541725000968293,
+          "2015": 0.0835329840625263,
+          "2017": 0.3203105207135679,
+          "2018": -0.042987535891290785,
+          "2019": -0.10988232543350152,
+          "2020": 0.2170985607755438,
+          "2021": 0.3124674458252412,
+          "2022": -0.10075741832695273,
+          "2023": 0.18340505440524146,
+          "2024": 0.023111057789212852,
+          "2025": 0.04551942857938629
+        },
+        "best_year": {
+          "year": 2009,
+          "return": 1.0478003349691778
+        },
+        "worst_year": {
+          "year": 2008,
+          "return": -0.429893279202309
+        }
+      },
+      "partial_2026": {
+        "cagr": -0.14419747495550184,
+        "max_drawdown": -0.14718732890305586,
+        "sharpe": -1.0597221933600272,
+        "trades": 266,
+        "orders": 318,
+        "win_pct": 35.338345864661655,
+        "average_hold_days": 58.31954887218045,
+        "average_move_pct": -0.49979617481869615,
+        "average_cost_pct": 2.2596907269034703,
+        "net_pnl": -110248.76250305896,
+        "deflated_sharpe_probability": 5.605550497878031e-05,
+        "total_registered_trials": 60,
+        "return_observations": 185,
+        "effective_observations": 185.0,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2026": -0.11024876250305848
+        },
+        "best_year": {
+          "year": 2026,
+          "return": -0.11024876250305848
+        },
+        "worst_year": {
+          "year": 2026,
+          "return": -0.11024876250305848
+        }
+      },
+      "regimes": {
+        "BULL": {
+          "observations": 144,
+          "total_return": -0.009525738839658793,
+          "sharpe": -0.162087085298995,
+          "max_drawdown": -0.04706496345400302
+        },
+        "BEAR": {
+          "observations": 68,
+          "total_return": 0.015340131933663903,
+          "sharpe": 0.5341176954937724,
+          "max_drawdown": -0.07978553679382772
+        },
+        "SIDEWAYS": {
+          "observations": 35,
+          "total_return": 0.03962654772302998,
+          "sharpe": 2.1753546862870787,
+          "max_drawdown": -0.028403710082080202
+        },
+        "UNCLASSIFIED": {
+          "observations": 0,
+          "total_return": null,
+          "sharpe": null,
+          "max_drawdown": null
+        }
+      },
+      "common_start": "2024-12-31 18:30:00+00:00",
+      "common_end": "2025-12-30 18:30:00+00:00"
+    },
+    {
+      "family": 7,
+      "name": "Gap-and-go / gap-fade",
+      "common_oos": {
+        "cagr": 0.08608856255920916,
+        "max_drawdown": -0.024866922821762616,
+        "sharpe": 1.8287293197453551,
+        "trades": 113,
+        "orders": 226,
+        "win_pct": 50.442477876106196,
+        "average_hold_days": 1.5416666666666667,
+        "average_move_pct": 1.2382158727997705,
+        "average_cost_pct": 0.49526871712627907,
+        "net_pnl": 86027.17332965368,
+        "deflated_sharpe_probability": 0.05397650021965361,
+        "total_registered_trials": 60,
+        "return_observations": 247,
+        "effective_observations": 213.94867871018567,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2025": 0.08602717332965315
+        },
+        "best_year": {
+          "year": 2025,
+          "return": 0.08602717332965315
+        },
+        "worst_year": {
+          "year": 2025,
+          "return": 0.08602717332965315
+        }
+      },
+      "extended_oos": {
+        "cagr": 0.08608856255920916,
+        "max_drawdown": -0.024866922821762616,
+        "sharpe": 1.8287293197453551,
+        "trades": 113,
+        "orders": 226,
+        "win_pct": 50.442477876106196,
+        "average_hold_days": 1.5416666666666667,
+        "average_move_pct": 1.2382158727997705,
+        "average_cost_pct": 0.49526871712627907,
+        "net_pnl": 86027.17332965368,
+        "deflated_sharpe_probability": 0.05397650021965361,
+        "total_registered_trials": 60,
+        "return_observations": 247,
+        "effective_observations": 213.94867871018567,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2025": 0.08602717332965315
+        },
+        "best_year": {
+          "year": 2025,
+          "return": 0.08602717332965315
+        },
+        "worst_year": {
+          "year": 2025,
+          "return": 0.08602717332965315
+        }
+      },
+      "partial_2026": {
+        "cagr": -0.05798087142835007,
+        "max_drawdown": -0.05995425682711597,
+        "sharpe": -1.068169959767394,
+        "trades": 93,
+        "orders": 186,
+        "win_pct": 39.784946236559136,
+        "average_hold_days": 1.3015232974910396,
+        "average_move_pct": 0.020534951278472643,
+        "average_cost_pct": 0.4960687726280264,
+        "net_pnl": -43818.46557545135,
+        "deflated_sharpe_probability": 2.0954474629353292e-06,
+        "total_registered_trials": 60,
+        "return_observations": 185,
+        "effective_observations": 172.2422495472163,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2026": -0.043818465575451326
+        },
+        "best_year": {
+          "year": 2026,
+          "return": -0.043818465575451326
+        },
+        "worst_year": {
+          "year": 2026,
+          "return": -0.043818465575451326
+        }
+      },
+      "regimes": {
+        "BULL": {
+          "observations": 144,
+          "total_return": 0.05333773315428747,
+          "sharpe": 2.5749885671768005,
+          "max_drawdown": -0.011805542264209712
+        },
+        "BEAR": {
+          "observations": 68,
+          "total_return": 0.024461472368595638,
+          "sharpe": 1.3525217982099886,
+          "max_drawdown": -0.02486692282176295
+        },
+        "SIDEWAYS": {
+          "observations": 35,
+          "total_return": 0.006415738244078151,
+          "sharpe": 1.2824697418522812,
+          "max_drawdown": -0.00797283712426533
+        },
+        "UNCLASSIFIED": {
+          "observations": 0,
+          "total_return": null,
+          "sharpe": null,
+          "max_drawdown": null
+        }
+      },
+      "common_start": "2024-12-31 18:30:00+00:00",
+      "common_end": "2025-12-30 18:30:00+00:00"
+    },
+    {
+      "family": 8,
+      "name": "Calendar effects",
+      "common_oos": {
+        "cagr": -0.09994886838182304,
+        "max_drawdown": -0.12014712187980026,
+        "sharpe": -2.0769577813630913,
+        "trades": 650,
+        "orders": 1300,
+        "win_pct": 32.15384615384615,
+        "average_hold_days": 5.6923076923076925,
+        "average_move_pct": -0.020136078282655654,
+        "average_cost_pct": 0.8191215087114324,
+        "net_pnl": -99883.99354676975,
+        "deflated_sharpe_probability": 2.996288994694396e-09,
+        "total_registered_trials": 60,
+        "return_observations": 247,
+        "effective_observations": 247.0,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2025": -0.0998839935467688
+        },
+        "best_year": {
+          "year": 2025,
+          "return": -0.0998839935467688
+        },
+        "worst_year": {
+          "year": 2025,
+          "return": -0.0998839935467688
+        }
+      },
+      "extended_oos": {
+        "cagr": 0.00992799745470574,
+        "max_drawdown": -0.40000721515255055,
+        "sharpe": 0.17419067632635682,
+        "trades": 11930,
+        "orders": 23756,
+        "win_pct": 45.58256496227997,
+        "average_hold_days": 4.863704945515507,
+        "average_move_pct": 0.7809987709656862,
+        "average_cost_pct": 0.7871307644781744,
+        "net_pnl": 342724.33387444064,
+        "deflated_sharpe_probability": 0.0,
+        "total_registered_trials": 60,
+        "return_observations": 5438,
+        "effective_observations": 4921.845593541439,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2003": 0.30360155258037125,
+          "2004": 0.051897266543774245,
+          "2005": 0.14128532650718317,
+          "2006": 0.10540423363470963,
+          "2007": 0.038321794077039284,
+          "2008": -0.07230552080719277,
+          "2009": 0.1414296938243116,
+          "2010": 0.08830150747333665,
+          "2011": -0.08506595115927718,
+          "2012": 0.07871372359835416,
+          "2013": -0.07221468746789372,
+          "2014": 0.007322220122295775,
+          "2016": -0.023618954813116155,
+          "2017": -0.013527365226572607,
+          "2018": -0.10428076692377586,
+          "2019": -0.07433392201544331,
+          "2020": -0.11808291234375312,
+          "2021": 0.12658680037307324,
+          "2022": -0.010087522831564,
+          "2023": 0.03437079858968595,
+          "2024": -0.10110898631434173,
+          "2025": -0.0998839935467688
+        },
+        "best_year": {
+          "year": 2003,
+          "return": 0.30360155258037125
+        },
+        "worst_year": {
+          "year": 2020,
+          "return": -0.11808291234375312
+        }
+      },
+      "partial_2026": {
+        "cagr": -0.04779416921797508,
+        "max_drawdown": -0.09603441161193038,
+        "sharpe": -0.5159050503982954,
+        "trades": 450,
+        "orders": 900,
+        "win_pct": 41.77777777777778,
+        "average_hold_days": 7.888888888888889,
+        "average_move_pct": 0.3936277547526456,
+        "average_cost_pct": 0.8176965278066001,
+        "net_pnl": -36072.2393802817,
+        "deflated_sharpe_probability": 0.00039502235245453265,
+        "total_registered_trials": 60,
+        "return_observations": 185,
+        "effective_observations": 185.0,
+        "label": "EXPLORATORY",
+        "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+        "annual_returns": {
+          "2026": -0.03607223938028081
+        },
+        "best_year": {
+          "year": 2026,
+          "return": -0.03607223938028081
+        },
+        "worst_year": {
+          "year": 2026,
+          "return": -0.03607223938028081
+        }
+      },
+      "regimes": {
+        "BULL": {
+          "observations": 144,
+          "total_return": -0.06305034650013708,
+          "sharpe": -3.1297777773024973,
+          "max_drawdown": -0.06305034650013708
+        },
+        "BEAR": {
+          "observations": 68,
+          "total_return": -0.03829744692239889,
+          "sharpe": -2.091658738208457,
+          "max_drawdown": -0.059946992216012074
+        },
+        "SIDEWAYS": {
+          "observations": 35,
+          "total_return": -0.0010552684271600832,
+          "sharpe": -0.08647901465446711,
+          "max_drawdown": -0.014948387812154684
+        },
+        "UNCLASSIFIED": {
+          "observations": 0,
+          "total_return": null,
+          "sharpe": null,
+          "max_drawdown": null
+        }
+      },
+      "common_start": "2024-12-31 18:30:00+00:00",
+      "common_end": "2025-12-30 18:30:00+00:00"
+    }
+  ],
+  "selections": [
+    {
+      "family": 1,
+      "test_year": 2003,
+      "selected_variant": "F1_m126_top10",
+      "train_sharpe": 0.6354859767559996,
+      "train_trades": 78,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2004,
+      "selected_variant": "F1_m63_top20",
+      "train_sharpe": 2.4619448425034274,
+      "train_trades": 221,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2005,
+      "selected_variant": "F1_m63_top20",
+      "train_sharpe": 1.5231662041954719,
+      "train_trades": 375,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2006,
+      "selected_variant": "F1_m63_top20",
+      "train_sharpe": 1.9796430700196186,
+      "train_trades": 579,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2007,
+      "selected_variant": "F1_m126_top20",
+      "train_sharpe": 1.4754570919911825,
+      "train_trades": 667,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2008,
+      "selected_variant": "F1_m126_top20",
+      "train_sharpe": 2.4922751796134093,
+      "train_trades": 697,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2009,
+      "selected_variant": "F1_m126_top10",
+      "train_sharpe": 0.7498925874775119,
+      "train_trades": 354,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2010,
+      "selected_variant": "F1_m63_top10",
+      "train_sharpe": 1.1573659592248602,
+      "train_trades": 349,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2011,
+      "selected_variant": "F1_m63_top10",
+      "train_sharpe": 0.5867983672055502,
+      "train_trades": 348,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2012,
+      "selected_variant": "F1_m63_top20",
+      "train_sharpe": 1.6372038115824066,
+      "train_trades": 677,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2013,
+      "selected_variant": "F1_m252_top20",
+      "train_sharpe": 1.1802911526010895,
+      "train_trades": 667,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2014,
+      "selected_variant": "F1_m252_top10",
+      "train_sharpe": 1.1797973099883066,
+      "train_trades": 331,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2015,
+      "selected_variant": "F1_m252_top20",
+      "train_sharpe": 2.801039038201766,
+      "train_trades": 650,
+      "test_valid": false
+    },
+    {
+      "family": 1,
+      "test_year": 2016,
+      "selected_variant": "F1_m126_top10",
+      "train_sharpe": 1.737030125202309,
+      "train_trades": 338,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2017,
+      "selected_variant": "F1_m252_top10",
+      "train_sharpe": 1.7423233050215419,
+      "train_trades": 338,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2018,
+      "selected_variant": "F1_m252_top20",
+      "train_sharpe": 1.5013752684970854,
+      "train_trades": 669,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2019,
+      "selected_variant": "F1_m63_top10",
+      "train_sharpe": 1.1310904433466968,
+      "train_trades": 338,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2020,
+      "selected_variant": "F1_m252_top20",
+      "train_sharpe": 1.3378548220364717,
+      "train_trades": 677,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2021,
+      "selected_variant": "F1_m126_top10",
+      "train_sharpe": 1.1176235629285454,
+      "train_trades": 334,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2022,
+      "selected_variant": "F1_m126_top10",
+      "train_sharpe": 1.9558087283790655,
+      "train_trades": 347,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2023,
+      "selected_variant": "F1_m252_top10",
+      "train_sharpe": 1.9305798891868695,
+      "train_trades": 342,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2024,
+      "selected_variant": "F1_m252_top10",
+      "train_sharpe": 2.356643988950113,
+      "train_trades": 355,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2025,
+      "selected_variant": "F1_m252_top10",
+      "train_sharpe": 2.0700167001029777,
+      "train_trades": 354,
+      "test_valid": true
+    },
+    {
+      "family": 1,
+      "test_year": 2026,
+      "selected_variant": "F1_m252_top20",
+      "train_sharpe": 1.9580142131754454,
+      "train_trades": 688,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2004,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 0.9108607748074159,
+      "train_trades": 36,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2005,
+      "selected_variant": "F2_vol150_ma100_hold5",
+      "train_sharpe": -0.3184611025483308,
+      "train_trades": 187,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2006,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 0.14872823684692593,
+      "train_trades": 801,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2007,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 0.21589214718542651,
+      "train_trades": 1526,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2008,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 1.1012136570700675,
+      "train_trades": 2427,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2009,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 0.414179697427137,
+      "train_trades": 1961,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2010,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 0.026277973478004327,
+      "train_trades": 2019,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2011,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": -0.9731606321727916,
+      "train_trades": 2231,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2012,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": -0.9378724556404701,
+      "train_trades": 2357,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2013,
+      "selected_variant": "F2_vol150_ma100_hold10",
+      "train_sharpe": -0.9015189317048594,
+      "train_trades": 1624,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2014,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": -0.5861287357481283,
+      "train_trades": 1234,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2015,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 0.31175048927601073,
+      "train_trades": 2401,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2016,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 0.10256237146013623,
+      "train_trades": 3001,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2017,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": -0.06137335418405421,
+      "train_trades": 2883,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2018,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": -0.17009703666803225,
+      "train_trades": 2591,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2019,
+      "selected_variant": "F2_vol150_ma100_hold10",
+      "train_sharpe": -0.16691961822442897,
+      "train_trades": 1784,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2020,
+      "selected_variant": "F2_vol150_ma100_hold10",
+      "train_sharpe": 0.22183478071781404,
+      "train_trades": 1128,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2021,
+      "selected_variant": "F2_vol125_ma100_hold5",
+      "train_sharpe": 0.714902266262379,
+      "train_trades": 1073,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2022,
+      "selected_variant": "F2_vol125_ma100_hold5",
+      "train_sharpe": 1.322246751589654,
+      "train_trades": 2742,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2023,
+      "selected_variant": "F2_vol125_ma100_hold5",
+      "train_sharpe": 1.1896051216265906,
+      "train_trades": 3574,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2024,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 1.1505514960026684,
+      "train_trades": 3366,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2025,
+      "selected_variant": "F2_vol125_ma100_hold10",
+      "train_sharpe": 0.780551936391966,
+      "train_trades": 2993,
+      "test_valid": true
+    },
+    {
+      "family": 2,
+      "test_year": 2026,
+      "selected_variant": "F2_vol150_ma100_hold10",
+      "train_sharpe": 0.8388351877211947,
+      "train_trades": 2780,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2003,
+      "selected_variant": "F3_rsi5_ma100_hold5",
+      "train_sharpe": 0.594938128927618,
+      "train_trades": 31,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2004,
+      "selected_variant": "F3_rsi10_ma100_hold5",
+      "train_sharpe": 1.9388066012536345,
+      "train_trades": 1033,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2005,
+      "selected_variant": "F3_rsi10_ma100_hold2",
+      "train_sharpe": 0.8251896719056008,
+      "train_trades": 1465,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2006,
+      "selected_variant": "F3_rsi10_ma100_hold5",
+      "train_sharpe": 1.03238624745606,
+      "train_trades": 3354,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2007,
+      "selected_variant": "F3_rsi5_ma100_hold5",
+      "train_sharpe": 0.4723141953612531,
+      "train_trades": 2525,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2008,
+      "selected_variant": "F3_rsi5_ma100_hold5",
+      "train_sharpe": 1.5773384470042178,
+      "train_trades": 2892,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2009,
+      "selected_variant": "F3_rsi5_ma100_hold5",
+      "train_sharpe": 0.7338427123756746,
+      "train_trades": 2282,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2010,
+      "selected_variant": "F3_rsi5_ma100_hold5",
+      "train_sharpe": 1.5695049556264062,
+      "train_trades": 2249,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2011,
+      "selected_variant": "F3_rsi5_ma100_hold5",
+      "train_sharpe": 0.9834638467454657,
+      "train_trades": 2725,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2012,
+      "selected_variant": "F3_rsi5_ma100_hold5",
+      "train_sharpe": 1.4870342406007264,
+      "train_trades": 2886,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2013,
+      "selected_variant": "F3_rsi5_ma200_hold5",
+      "train_sharpe": 0.3672738136278501,
+      "train_trades": 2679,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2014,
+      "selected_variant": "F3_rsi5_ma200_hold5",
+      "train_sharpe": -0.15476287156074048,
+      "train_trades": 2326,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2015,
+      "selected_variant": "F3_rsi10_ma200_hold5",
+      "train_sharpe": 0.9158577556824737,
+      "train_trades": 3927,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2016,
+      "selected_variant": "F3_rsi5_ma200_hold5",
+      "train_sharpe": 0.6002974570096904,
+      "train_trades": 3689,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2017,
+      "selected_variant": "F3_rsi5_ma200_hold5",
+      "train_sharpe": 0.7454888178978856,
+      "train_trades": 3617,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2018,
+      "selected_variant": "F3_rsi10_ma200_hold5",
+      "train_sharpe": 0.42478086924044933,
+      "train_trades": 4355,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2019,
+      "selected_variant": "F3_rsi5_ma100_hold5",
+      "train_sharpe": 0.1471634025762634,
+      "train_trades": 2449,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2020,
+      "selected_variant": "F3_rsi10_ma200_hold5",
+      "train_sharpe": 0.4849682205473225,
+      "train_trades": 2246,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2021,
+      "selected_variant": "F3_rsi5_ma100_hold2",
+      "train_sharpe": -0.23830256551262166,
+      "train_trades": 1684,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2022,
+      "selected_variant": "F3_rsi5_ma100_hold2",
+      "train_sharpe": 0.32878109755643686,
+      "train_trades": 2512,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2023,
+      "selected_variant": "F3_rsi5_ma100_hold2",
+      "train_sharpe": 0.3071987702498927,
+      "train_trades": 2563,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2024,
+      "selected_variant": "F3_rsi10_ma100_hold5",
+      "train_sharpe": 0.8945472227079556,
+      "train_trades": 4362,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2025,
+      "selected_variant": "F3_rsi10_ma200_hold5",
+      "train_sharpe": 0.47308055840198543,
+      "train_trades": 4174,
+      "test_valid": true
+    },
+    {
+      "family": 3,
+      "test_year": 2026,
+      "selected_variant": "F3_rsi5_ma100_hold5",
+      "train_sharpe": 0.6336824449867899,
+      "train_trades": 3096,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2003,
+      "selected_variant": "F4_daily_swing3_hold10",
+      "train_sharpe": -0.0993973940538201,
+      "train_trades": 132,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2004,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": 2.1192678915013867,
+      "train_trades": 1559,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2005,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": 2.2262100006271233,
+      "train_trades": 2734,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2006,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": 2.350152790355144,
+      "train_trades": 4036,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2007,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": 1.4959433039430061,
+      "train_trades": 3904,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2008,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": 1.4240864308988812,
+      "train_trades": 4133,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2009,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": -0.2909952058685269,
+      "train_trades": 4057,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2010,
+      "selected_variant": "F4_daily_swing3_hold10",
+      "train_sharpe": 0.05599419666957628,
+      "train_trades": 3825,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2011,
+      "selected_variant": "F4_daily_swing3_hold10",
+      "train_sharpe": -0.38971895939697865,
+      "train_trades": 4245,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2012,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": 0.3087678144564897,
+      "train_trades": 4981,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2013,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": -0.8505258531227395,
+      "train_trades": 4562,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2014,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": -1.1518165694212237,
+      "train_trades": 4414,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2015,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": 0.2610725828225386,
+      "train_trades": 4494,
+      "test_valid": false
+    },
+    {
+      "family": 4,
+      "test_year": 2016,
+      "selected_variant": "F4_daily_swing2_hold5",
+      "train_sharpe": -1.6330907460802855,
+      "train_trades": 5370,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2017,
+      "selected_variant": "F4_daily_swing3_hold10",
+      "train_sharpe": -0.06443350729969796,
+      "train_trades": 4337,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2018,
+      "selected_variant": "F4_daily_swing3_hold10",
+      "train_sharpe": -0.16357482899358927,
+      "train_trades": 3994,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2019,
+      "selected_variant": "F4_daily_swing3_hold10",
+      "train_sharpe": -0.5812793328823467,
+      "train_trades": 3766,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2020,
+      "selected_variant": "F4_daily_swing3_hold10",
+      "train_sharpe": -0.5314762753269628,
+      "train_trades": 3922,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2021,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": -1.178151449008015,
+      "train_trades": 4068,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2022,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": -0.1746290816575013,
+      "train_trades": 4569,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2023,
+      "selected_variant": "F4_daily_swing3_hold10",
+      "train_sharpe": 0.12774484163784872,
+      "train_trades": 3682,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2024,
+      "selected_variant": "F4_daily_swing3_hold10",
+      "train_sharpe": 1.1000199874406007,
+      "train_trades": 3960,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2025,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": 0.9475171119783915,
+      "train_trades": 3991,
+      "test_valid": true
+    },
+    {
+      "family": 4,
+      "test_year": 2026,
+      "selected_variant": "F4_daily_swing2_hold10",
+      "train_sharpe": 1.3032033470637452,
+      "train_trades": 4095,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2004,
+      "selected_variant": "F5_rs60_top20",
+      "train_sharpe": 2.241267075431662,
+      "train_trades": 679,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2005,
+      "selected_variant": "F5_rs20_top20",
+      "train_sharpe": 1.265596474662759,
+      "train_trades": 1617,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2006,
+      "selected_variant": "F5_rs120_top20",
+      "train_sharpe": 1.8529132473753875,
+      "train_trades": 2206,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2007,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 1.0727495742590771,
+      "train_trades": 1397,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2008,
+      "selected_variant": "F5_rs120_top20",
+      "train_sharpe": 1.7678856401804044,
+      "train_trades": 2883,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2009,
+      "selected_variant": "F5_rs120_top20",
+      "train_sharpe": -0.08210837603645221,
+      "train_trades": 2859,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2010,
+      "selected_variant": "F5_rs120_top20",
+      "train_sharpe": 0.61890464505533,
+      "train_trades": 2817,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2011,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 0.19177909737303525,
+      "train_trades": 1402,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2012,
+      "selected_variant": "F5_rs120_top20",
+      "train_sharpe": 1.1908696549293933,
+      "train_trades": 2851,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2013,
+      "selected_variant": "F5_rs120_top20",
+      "train_sharpe": 0.26589478679304485,
+      "train_trades": 2808,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2014,
+      "selected_variant": "F5_rs120_top20",
+      "train_sharpe": -0.44213866781356437,
+      "train_trades": 2748,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2015,
+      "selected_variant": "F5_rs120_top20",
+      "train_sharpe": 1.2358374656293334,
+      "train_trades": 2746,
+      "test_valid": false
+    },
+    {
+      "family": 5,
+      "test_year": 2016,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 0.8197038369649766,
+      "train_trades": 1375,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2017,
+      "selected_variant": "F5_rs120_top20",
+      "train_sharpe": 1.254782065568208,
+      "train_trades": 2771,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2018,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 1.0802413191697033,
+      "train_trades": 1403,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2019,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 0.8400855194454421,
+      "train_trades": 1417,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2020,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 0.7823337576093743,
+      "train_trades": 1421,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2021,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 0.489343464507512,
+      "train_trades": 1383,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2022,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 1.6348915691189398,
+      "train_trades": 1399,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2023,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 1.7014406026716502,
+      "train_trades": 1430,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2024,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 2.20722221602366,
+      "train_trades": 1477,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2025,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 1.8014801432178214,
+      "train_trades": 1486,
+      "test_valid": true
+    },
+    {
+      "family": 5,
+      "test_year": 2026,
+      "selected_variant": "F5_rs120_top10",
+      "train_sharpe": 1.5763648861196804,
+      "train_trades": 1482,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2003,
+      "selected_variant": "F6_vol120_top10",
+      "train_sharpe": 0.5335392546094263,
+      "train_trades": 371,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2004,
+      "selected_variant": "F6_vol60_top20",
+      "train_sharpe": 3.416416582172925,
+      "train_trades": 1065,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2005,
+      "selected_variant": "F6_vol20_top20",
+      "train_sharpe": 2.5360596324870834,
+      "train_trades": 1860,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2006,
+      "selected_variant": "F6_vol20_top20",
+      "train_sharpe": 3.2650763998503316,
+      "train_trades": 2668,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2007,
+      "selected_variant": "F6_vol20_top10",
+      "train_sharpe": 2.114229098213855,
+      "train_trades": 1387,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2008,
+      "selected_variant": "F6_vol20_top10",
+      "train_sharpe": 2.712564612766254,
+      "train_trades": 1442,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2009,
+      "selected_variant": "F6_vol60_top10",
+      "train_sharpe": 0.8710367071366394,
+      "train_trades": 1447,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2010,
+      "selected_variant": "F6_vol60_top10",
+      "train_sharpe": 1.2019967554007982,
+      "train_trades": 1399,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2011,
+      "selected_variant": "F6_vol60_top10",
+      "train_sharpe": 0.8807413124292152,
+      "train_trades": 1379,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2012,
+      "selected_variant": "F6_vol20_top10",
+      "train_sharpe": 1.8878282781546738,
+      "train_trades": 1388,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2013,
+      "selected_variant": "F6_vol120_top20",
+      "train_sharpe": 1.0397398007102885,
+      "train_trades": 2389,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2014,
+      "selected_variant": "F6_vol120_top20",
+      "train_sharpe": 0.9549779201461084,
+      "train_trades": 2344,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2015,
+      "selected_variant": "F6_vol60_top20",
+      "train_sharpe": 2.8537455929793674,
+      "train_trades": 2591,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2016,
+      "selected_variant": "F6_vol120_top10",
+      "train_sharpe": 1.9462704176603645,
+      "train_trades": 1310,
+      "test_valid": false
+    },
+    {
+      "family": 6,
+      "test_year": 2017,
+      "selected_variant": "F6_vol20_top10",
+      "train_sharpe": 1.4393764783022396,
+      "train_trades": 1366,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2018,
+      "selected_variant": "F6_vol20_top10",
+      "train_sharpe": 0.9862524073599807,
+      "train_trades": 1351,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2019,
+      "selected_variant": "F6_vol20_top10",
+      "train_sharpe": 1.0011759181908455,
+      "train_trades": 1327,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2020,
+      "selected_variant": "F6_vol120_top10",
+      "train_sharpe": 1.42585173818513,
+      "train_trades": 1064,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2021,
+      "selected_variant": "F6_vol20_top10",
+      "train_sharpe": 0.9992825732832231,
+      "train_trades": 1315,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2022,
+      "selected_variant": "F6_vol20_top10",
+      "train_sharpe": 1.6666382852855197,
+      "train_trades": 1330,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2023,
+      "selected_variant": "F6_vol20_top10",
+      "train_sharpe": 1.6199890810691664,
+      "train_trades": 1354,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2024,
+      "selected_variant": "F6_vol60_top20",
+      "train_sharpe": 1.4015040357257602,
+      "train_trades": 2059,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2025,
+      "selected_variant": "F6_vol120_top10",
+      "train_sharpe": 1.3892515267131456,
+      "train_trades": 1198,
+      "test_valid": true
+    },
+    {
+      "family": 6,
+      "test_year": 2026,
+      "selected_variant": "F6_vol120_top10",
+      "train_sharpe": 1.4400057937022253,
+      "train_trades": 1171,
+      "test_valid": true
+    },
+    {
+      "family": 7,
+      "test_year": 2025,
+      "selected_variant": "F7_go_gap3_hold1",
+      "train_sharpe": 0.40486713564628435,
+      "train_trades": 348,
+      "test_valid": true
+    },
+    {
+      "family": 7,
+      "test_year": 2026,
+      "selected_variant": "F7_go_gap3_hold1",
+      "train_sharpe": 1.1276536740957972,
+      "train_trades": 361,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2003,
+      "selected_variant": "F8_tom_m3_p1",
+      "train_sharpe": 0.8684582676085346,
+      "train_trades": 72,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2004,
+      "selected_variant": "F8_tom_m3_p1",
+      "train_sharpe": 2.0179991583872723,
+      "train_trades": 416,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2005,
+      "selected_variant": "F8_tom_m1_p2",
+      "train_sharpe": 1.8152184436195138,
+      "train_trades": 766,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2006,
+      "selected_variant": "F8_tom_m2_p2",
+      "train_sharpe": 2.3740256129201116,
+      "train_trades": 1194,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2007,
+      "selected_variant": "F8_tom_m1_p2",
+      "train_sharpe": 2.006533387758146,
+      "train_trades": 1226,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2008,
+      "selected_variant": "F8_tom_m1_p2",
+      "train_sharpe": 1.546737827957949,
+      "train_trades": 1276,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2009,
+      "selected_variant": "F8_tom_m1_p2",
+      "train_sharpe": 0.43175116232157557,
+      "train_trades": 1329,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2010,
+      "selected_variant": "F8_tom_m2_p2",
+      "train_sharpe": 0.588388643754297,
+      "train_trades": 1425,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2011,
+      "selected_variant": "F8_tom_m2_p2",
+      "train_sharpe": 0.9401894287754818,
+      "train_trades": 1496,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2012,
+      "selected_variant": "F8_tom_m1_p2",
+      "train_sharpe": 1.0166710167205735,
+      "train_trades": 1499,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2013,
+      "selected_variant": "F8_tom_m1_p2",
+      "train_sharpe": 0.8781535797353421,
+      "train_trades": 1535,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2014,
+      "selected_variant": "F8_tom_m2_p2",
+      "train_sharpe": 0.019061980970648307,
+      "train_trades": 1591,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2015,
+      "selected_variant": "F8_tom_m2_p2",
+      "train_sharpe": 0.5537990338818904,
+      "train_trades": 1591,
+      "test_valid": false
+    },
+    {
+      "family": 8,
+      "test_year": 2016,
+      "selected_variant": "F8_tom_m1_p2",
+      "train_sharpe": -0.24976057471186122,
+      "train_trades": 1549,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2017,
+      "selected_variant": "F8_tom_m3_p1",
+      "train_sharpe": 0.9586614213263173,
+      "train_trades": 1644,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2018,
+      "selected_variant": "F8_tom_m3_p1",
+      "train_sharpe": 0.9405920859447795,
+      "train_trades": 1672,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2019,
+      "selected_variant": "F8_tom_m3_p1",
+      "train_sharpe": 0.061868997774850554,
+      "train_trades": 1676,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2020,
+      "selected_variant": "F8_tom_m3_p1",
+      "train_sharpe": -1.1444751735057699,
+      "train_trades": 1716,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2021,
+      "selected_variant": "F8_tom_m2_p2",
+      "train_sharpe": -0.8866686938263247,
+      "train_trades": 1744,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2022,
+      "selected_variant": "F8_tom_m0_p2",
+      "train_sharpe": 0.425665940797782,
+      "train_trades": 1713,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2023,
+      "selected_variant": "F8_tom_m2_p2",
+      "train_sharpe": 1.1709416606532888,
+      "train_trades": 1786,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2024,
+      "selected_variant": "F8_tom_m2_p2",
+      "train_sharpe": 1.523768077748242,
+      "train_trades": 1811,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2025,
+      "selected_variant": "F8_tom_m3_p1",
+      "train_sharpe": 1.061025584045414,
+      "train_trades": 1830,
+      "test_valid": true
+    },
+    {
+      "family": 8,
+      "test_year": 2026,
+      "selected_variant": "F8_preholiday_hold4",
+      "train_sharpe": -0.1162509637957827,
+      "train_trades": 1794,
+      "test_valid": true
+    }
+  ],
+  "variants": [
+    {
+      "variant": "F1_m63_top10",
+      "family": 1,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 63,
+        "skip": 21,
+        "top": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F1_m63_top20",
+      "family": 1,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 63,
+        "skip": 21,
+        "top": 20
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F1_m126_top10",
+      "family": 1,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 126,
+        "skip": 21,
+        "top": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F1_m126_top20",
+      "family": 1,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 126,
+        "skip": 21,
+        "top": 20
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F1_m252_top10",
+      "family": 1,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "skip": 21,
+        "top": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F1_m252_top20",
+      "family": 1,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "skip": 21,
+        "top": 20
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F2_vol125_ma100_hold5",
+      "family": 2,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "volume_window": 20,
+        "volume_multiple": 1.25,
+        "trend": 100,
+        "hold": 5
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F2_vol125_ma100_hold10",
+      "family": 2,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "volume_window": 20,
+        "volume_multiple": 1.25,
+        "trend": 100,
+        "hold": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F2_vol125_ma200_hold5",
+      "family": 2,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "volume_window": 20,
+        "volume_multiple": 1.25,
+        "trend": 200,
+        "hold": 5
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F2_vol125_ma200_hold10",
+      "family": 2,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "volume_window": 20,
+        "volume_multiple": 1.25,
+        "trend": 200,
+        "hold": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F2_vol150_ma100_hold5",
+      "family": 2,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "volume_window": 20,
+        "volume_multiple": 1.5,
+        "trend": 100,
+        "hold": 5
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F2_vol150_ma100_hold10",
+      "family": 2,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "volume_window": 20,
+        "volume_multiple": 1.5,
+        "trend": 100,
+        "hold": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F2_vol150_ma200_hold5",
+      "family": 2,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "volume_window": 20,
+        "volume_multiple": 1.5,
+        "trend": 200,
+        "hold": 5
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F2_vol150_ma200_hold10",
+      "family": 2,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 252,
+        "volume_window": 20,
+        "volume_multiple": 1.5,
+        "trend": 200,
+        "hold": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F3_rsi5_ma100_hold2",
+      "family": 3,
+      "timeframe": "daily",
+      "parameters": {
+        "rsi_period": 2,
+        "threshold": 5,
+        "trend": 100,
+        "hold": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F3_rsi5_ma100_hold5",
+      "family": 3,
+      "timeframe": "daily",
+      "parameters": {
+        "rsi_period": 2,
+        "threshold": 5,
+        "trend": 100,
+        "hold": 5
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F3_rsi5_ma200_hold2",
+      "family": 3,
+      "timeframe": "daily",
+      "parameters": {
+        "rsi_period": 2,
+        "threshold": 5,
+        "trend": 200,
+        "hold": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F3_rsi5_ma200_hold5",
+      "family": 3,
+      "timeframe": "daily",
+      "parameters": {
+        "rsi_period": 2,
+        "threshold": 5,
+        "trend": 200,
+        "hold": 5
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F3_rsi10_ma100_hold2",
+      "family": 3,
+      "timeframe": "daily",
+      "parameters": {
+        "rsi_period": 2,
+        "threshold": 10,
+        "trend": 100,
+        "hold": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F3_rsi10_ma100_hold5",
+      "family": 3,
+      "timeframe": "daily",
+      "parameters": {
+        "rsi_period": 2,
+        "threshold": 10,
+        "trend": 100,
+        "hold": 5
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F3_rsi10_ma200_hold2",
+      "family": 3,
+      "timeframe": "daily",
+      "parameters": {
+        "rsi_period": 2,
+        "threshold": 10,
+        "trend": 200,
+        "hold": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F3_rsi10_ma200_hold5",
+      "family": 3,
+      "timeframe": "daily",
+      "parameters": {
+        "rsi_period": 2,
+        "threshold": 10,
+        "trend": 200,
+        "hold": 5
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F4_daily_swing2_hold5",
+      "family": 4,
+      "timeframe": "daily",
+      "parameters": {
+        "swing": 2,
+        "hold_days": 5,
+        "break_exit": true
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F4_daily_swing2_hold10",
+      "family": 4,
+      "timeframe": "daily",
+      "parameters": {
+        "swing": 2,
+        "hold_days": 10,
+        "break_exit": true
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F4_daily_swing3_hold5",
+      "family": 4,
+      "timeframe": "daily",
+      "parameters": {
+        "swing": 3,
+        "hold_days": 5,
+        "break_exit": true
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F4_daily_swing3_hold10",
+      "family": 4,
+      "timeframe": "daily",
+      "parameters": {
+        "swing": 3,
+        "hold_days": 10,
+        "break_exit": true
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F4_60minute_swing2_hold1",
+      "family": 4,
+      "timeframe": "60minute",
+      "parameters": {
+        "swing": 2,
+        "hold_days": 1,
+        "break_exit": true
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F4_60minute_swing2_hold3",
+      "family": 4,
+      "timeframe": "60minute",
+      "parameters": {
+        "swing": 2,
+        "hold_days": 3,
+        "break_exit": true
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F4_60minute_swing3_hold1",
+      "family": 4,
+      "timeframe": "60minute",
+      "parameters": {
+        "swing": 3,
+        "hold_days": 1,
+        "break_exit": true
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F4_60minute_swing3_hold3",
+      "family": 4,
+      "timeframe": "60minute",
+      "parameters": {
+        "swing": 3,
+        "hold_days": 3,
+        "break_exit": true
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F5_rs20_top10",
+      "family": 5,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 20,
+        "top": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F6_vol20_top10",
+      "family": 6,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 20,
+        "top": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F5_rs20_top20",
+      "family": 5,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 20,
+        "top": 20
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F6_vol20_top20",
+      "family": 6,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 20,
+        "top": 20
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F5_rs60_top10",
+      "family": 5,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 60,
+        "top": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F6_vol60_top10",
+      "family": 6,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 60,
+        "top": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 20
+    },
+    {
+      "variant": "F5_rs60_top20",
+      "family": 5,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 60,
+        "top": 20
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F6_vol60_top20",
+      "family": 6,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 60,
+        "top": 20
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 20
+    },
+    {
+      "variant": "F5_rs120_top10",
+      "family": 5,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 120,
+        "top": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F6_vol120_top10",
+      "family": 6,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 120,
+        "top": 10
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 20
+    },
+    {
+      "variant": "F5_rs120_top20",
+      "family": 5,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 120,
+        "top": 20
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F6_vol120_top20",
+      "family": 6,
+      "timeframe": "daily",
+      "parameters": {
+        "lookback": 120,
+        "top": 20
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 19
+    },
+    {
+      "variant": "F7_go_gap2_hold1",
+      "family": 7,
+      "timeframe": "60minute",
+      "parameters": {
+        "side": "go",
+        "gap": 0.02,
+        "hold_days": 1
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F7_go_gap2_hold2",
+      "family": 7,
+      "timeframe": "60minute",
+      "parameters": {
+        "side": "go",
+        "gap": 0.02,
+        "hold_days": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F7_go_gap3_hold1",
+      "family": 7,
+      "timeframe": "60minute",
+      "parameters": {
+        "side": "go",
+        "gap": 0.03,
+        "hold_days": 1
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F7_go_gap3_hold2",
+      "family": 7,
+      "timeframe": "60minute",
+      "parameters": {
+        "side": "go",
+        "gap": 0.03,
+        "hold_days": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F7_fade_gap2_hold1",
+      "family": 7,
+      "timeframe": "60minute",
+      "parameters": {
+        "side": "fade",
+        "gap": 0.02,
+        "hold_days": 1
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F7_fade_gap2_hold2",
+      "family": 7,
+      "timeframe": "60minute",
+      "parameters": {
+        "side": "fade",
+        "gap": 0.02,
+        "hold_days": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F7_fade_gap3_hold1",
+      "family": 7,
+      "timeframe": "60minute",
+      "parameters": {
+        "side": "fade",
+        "gap": 0.03,
+        "hold_days": 1
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F7_fade_gap3_hold2",
+      "family": 7,
+      "timeframe": "60minute",
+      "parameters": {
+        "side": "fade",
+        "gap": 0.03,
+        "hold_days": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F8_tom_m1_p1",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "turn_of_month",
+        "before": 1,
+        "after": 1
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F8_tom_m1_p2",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "turn_of_month",
+        "before": 1,
+        "after": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F8_tom_m2_p2",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "turn_of_month",
+        "before": 2,
+        "after": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F8_tom_m0_p2",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "turn_of_month",
+        "before": 0,
+        "after": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 24
+    },
+    {
+      "variant": "F8_tom_m3_p1",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "turn_of_month",
+        "before": 3,
+        "after": 1
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 22
+    },
+    {
+      "variant": "F8_preholiday_hold1",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "preholiday",
+        "hold": 1
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F8_preholiday_hold2",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "preholiday",
+        "hold": 2
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F8_preholiday_hold3",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "preholiday",
+        "hold": 3
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F8_preholiday_hold4",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "preholiday",
+        "hold": 4
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    },
+    {
+      "variant": "F8_preholiday_hold5",
+      "family": 8,
+      "timeframe": "daily",
+      "parameters": {
+        "effect": "preholiday",
+        "hold": 5
+      },
+      "status": "EVALUATED",
+      "valid_oos_folds": 2
+    }
+  ],
+  "variant_common_oos": {
+    "F1_m63_top10": {
+      "cagr": -0.12441241121721114,
+      "max_drawdown": -0.209737614478248,
+      "sharpe": -0.519695916519674,
+      "trades": 106,
+      "orders": 176,
+      "win_pct": 48.113207547169814,
+      "average_hold_days": 46.74528301886792,
+      "average_move_pct": 0.4276606216322073,
+      "average_cost_pct": 0.8540814645842146,
+      "net_pnl": -124332.78361033282,
+      "deflated_sharpe_probability": 0.0020664278481676845,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 243.55612199424235,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.1243327836103324
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.1243327836103324
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.1243327836103324
+      }
+    },
+    "F1_m63_top20": {
+      "cagr": -0.07468311337546851,
+      "max_drawdown": -0.22647650161034216,
+      "sharpe": -0.32734518517920175,
+      "trades": 206,
+      "orders": 332,
+      "win_pct": 52.42718446601942,
+      "average_hold_days": 52.35436893203884,
+      "average_move_pct": 1.724729842403859,
+      "average_cost_pct": 1.242923695965569,
+      "net_pnl": -74633.9524597754,
+      "deflated_sharpe_probability": 0.003832275974122279,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 224.97128275646787,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.07463395245977689
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.07463395245977689
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.07463395245977689
+      }
+    },
+    "F1_m126_top10": {
+      "cagr": -0.07942252883325318,
+      "max_drawdown": -0.2841873637832528,
+      "sharpe": -0.23411805775306033,
+      "trades": 108,
+      "orders": 166,
+      "win_pct": 53.70370370370371,
+      "average_hold_days": 57.68518518518518,
+      "average_move_pct": 2.5485079786076987,
+      "average_cost_pct": 0.9814095397355493,
+      "net_pnl": -79370.38390791429,
+      "deflated_sharpe_probability": 0.004869974868419946,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.07937038390791562
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.07937038390791562
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.07937038390791562
+      }
+    },
+    "F1_m126_top20": {
+      "cagr": -0.08797209920960924,
+      "max_drawdown": -0.2251685394610492,
+      "sharpe": -0.3701887227784907,
+      "trades": 196,
+      "orders": 291,
+      "win_pct": 41.83673469387755,
+      "average_hold_days": 67.19897959183673,
+      "average_move_pct": 1.6141244549150628,
+      "average_cost_pct": 1.3688587703872457,
+      "net_pnl": -87914.61361131862,
+      "deflated_sharpe_probability": 0.0032989273571022992,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 232.37290204024802,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.08791461361132025
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.08791461361132025
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.08791461361132025
+      }
+    },
+    "F1_m252_top10": {
+      "cagr": 0.09084508720466133,
+      "max_drawdown": -0.24984178374334076,
+      "sharpe": 0.4970133491634752,
+      "trades": 110,
+      "orders": 151,
+      "win_pct": 59.09090909090909,
+      "average_hold_days": 87.7090909090909,
+      "average_move_pct": 15.074703114986182,
+      "average_cost_pct": 1.0420038110579457,
+      "net_pnl": 90780.16652789662,
+      "deflated_sharpe_probability": 0.032055667196942306,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 236.56846707073015,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.09078016652789822
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.09078016652789822
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.09078016652789822
+      }
+    },
+    "F1_m252_top20": {
+      "cagr": 0.14699502727543345,
+      "max_drawdown": -0.2297267497472668,
+      "sharpe": 0.7594875417429574,
+      "trades": 205,
+      "orders": 280,
+      "win_pct": 63.90243902439025,
+      "average_hold_days": 98.65853658536585,
+      "average_move_pct": 13.632560305189841,
+      "average_cost_pct": 1.281111855542511,
+      "net_pnl": 146887.3627807953,
+      "deflated_sharpe_probability": 0.05456550995723097,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 229.23939000684697,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.14688736278079517
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.14688736278079517
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.14688736278079517
+      }
+    },
+    "F2_vol125_ma100_hold5": {
+      "cagr": -0.14896087745514253,
+      "max_drawdown": -0.20865574254280117,
+      "sharpe": -1.8022155690936132,
+      "trades": 687,
+      "orders": 914,
+      "win_pct": 26.346433770014556,
+      "average_hold_days": 4.7933042212518195,
+      "average_move_pct": 0.5131622966763967,
+      "average_cost_pct": 3.171576742335121,
+      "net_pnl": -148866.91593054793,
+      "deflated_sharpe_probability": 4.973792799589649e-05,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 221.85667004552516,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.14886691593054746
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.14886691593054746
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.14886691593054746
+      }
+    },
+    "F2_vol125_ma100_hold10": {
+      "cagr": -0.10186944217802185,
+      "max_drawdown": -0.1980357784163036,
+      "sharpe": -0.8281447073924515,
+      "trades": 722,
+      "orders": 891,
+      "win_pct": 31.71745152354571,
+      "average_hold_days": 9.16759002770083,
+      "average_move_pct": 0.9984770345448107,
+      "average_cost_pct": 3.25297403490006,
+      "net_pnl": -101803.39252291911,
+      "deflated_sharpe_probability": 0.0008275570187810111,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 216.66335602544547,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.10180339252291737
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.10180339252291737
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.10180339252291737
+      }
+    },
+    "F2_vol125_ma200_hold5": {
+      "cagr": -0.14896087745514253,
+      "max_drawdown": -0.20865574254280117,
+      "sharpe": -1.8022155690936132,
+      "trades": 687,
+      "orders": 914,
+      "win_pct": 26.346433770014556,
+      "average_hold_days": 4.7933042212518195,
+      "average_move_pct": 0.5131622966763967,
+      "average_cost_pct": 3.171576742335121,
+      "net_pnl": -148866.91593054793,
+      "deflated_sharpe_probability": 4.973792799589649e-05,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 221.85667004552516,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.14886691593054746
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.14886691593054746
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.14886691593054746
+      }
+    },
+    "F2_vol125_ma200_hold10": {
+      "cagr": -0.10186944217802185,
+      "max_drawdown": -0.1980357784163036,
+      "sharpe": -0.8281447073924515,
+      "trades": 722,
+      "orders": 891,
+      "win_pct": 31.71745152354571,
+      "average_hold_days": 9.16759002770083,
+      "average_move_pct": 0.9984770345448107,
+      "average_cost_pct": 3.25297403490006,
+      "net_pnl": -101803.39252291911,
+      "deflated_sharpe_probability": 0.0008275570187810111,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 216.66335602544547,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.10180339252291737
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.10180339252291737
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.10180339252291737
+      }
+    },
+    "F2_vol150_ma100_hold5": {
+      "cagr": -0.0683662447032144,
+      "max_drawdown": -0.13466088653317476,
+      "sharpe": -0.8349265037456811,
+      "trades": 528,
+      "orders": 720,
+      "win_pct": 30.87121212121212,
+      "average_hold_days": 4.886363636363637,
+      "average_move_pct": 0.8326895361607598,
+      "average_cost_pct": 2.640709157919611,
+      "net_pnl": -68321.08678635498,
+      "deflated_sharpe_probability": 0.0010316088618303465,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 227.82045779558308,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.06832108678635596
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.06832108678635596
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.06832108678635596
+      }
+    },
+    "F2_vol150_ma100_hold10": {
+      "cagr": -0.06655650807727431,
+      "max_drawdown": -0.1808060227338828,
+      "sharpe": -0.5628875525330312,
+      "trades": 621,
+      "orders": 773,
+      "win_pct": 35.26570048309179,
+      "average_hold_days": 9.077294685990339,
+      "average_move_pct": 1.2087343702877833,
+      "average_cost_pct": 3.076286574278948,
+      "net_pnl": -66512.50239813662,
+      "deflated_sharpe_probability": 0.001874691271380513,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 232.83970806935764,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.06651250239813744
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.06651250239813744
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.06651250239813744
+      }
+    },
+    "F2_vol150_ma200_hold5": {
+      "cagr": -0.0683662447032144,
+      "max_drawdown": -0.13466088653317476,
+      "sharpe": -0.8349265037456811,
+      "trades": 528,
+      "orders": 720,
+      "win_pct": 30.87121212121212,
+      "average_hold_days": 4.886363636363637,
+      "average_move_pct": 0.8326895361607598,
+      "average_cost_pct": 2.640709157919611,
+      "net_pnl": -68321.08678635498,
+      "deflated_sharpe_probability": 0.0010316088618303465,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 227.82045779558308,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.06832108678635596
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.06832108678635596
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.06832108678635596
+      }
+    },
+    "F2_vol150_ma200_hold10": {
+      "cagr": -0.06655650807727431,
+      "max_drawdown": -0.1808060227338828,
+      "sharpe": -0.5628875525330312,
+      "trades": 621,
+      "orders": 773,
+      "win_pct": 35.26570048309179,
+      "average_hold_days": 9.077294685990339,
+      "average_move_pct": 1.2087343702877833,
+      "average_cost_pct": 3.076286574278948,
+      "net_pnl": -66512.50239813662,
+      "deflated_sharpe_probability": 0.001874691271380513,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 232.83970806935764,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.06651250239813744
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.06651250239813744
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.06651250239813744
+      }
+    },
+    "F3_rsi5_ma100_hold2": {
+      "cagr": -0.1747138053886247,
+      "max_drawdown": -0.19908717765247164,
+      "sharpe": -1.8838472975903047,
+      "trades": 677,
+      "orders": 1119,
+      "win_pct": 35.15509601181684,
+      "average_hold_days": 2.350073855243722,
+      "average_move_pct": 0.3791700714352603,
+      "average_cost_pct": 1.7342501286325864,
+      "net_pnl": -174605.32760766344,
+      "deflated_sharpe_probability": 2.8583533190351673e-07,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 235.5851958594563,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.17460532760766356
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.17460532760766356
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.17460532760766356
+      }
+    },
+    "F3_rsi5_ma100_hold5": {
+      "cagr": -0.06859359329971737,
+      "max_drawdown": -0.14266229788100693,
+      "sharpe": -0.5131978314639716,
+      "trades": 789,
+      "orders": 1075,
+      "win_pct": 32.826362484157166,
+      "average_hold_days": 4.806083650190114,
+      "average_move_pct": 0.7548554889746447,
+      "average_cost_pct": 3.1442164556544254,
+      "net_pnl": -68548.29080264339,
+      "deflated_sharpe_probability": 0.001952174859744471,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.06854829080264324
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.06854829080264324
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.06854829080264324
+      }
+    },
+    "F3_rsi5_ma200_hold2": {
+      "cagr": -0.22120279928535436,
+      "max_drawdown": -0.24734220299816012,
+      "sharpe": -2.268711865782637,
+      "trades": 780,
+      "orders": 1292,
+      "win_pct": 35.76923076923077,
+      "average_hold_days": 2.3461538461538463,
+      "average_move_pct": 0.4233888308229674,
+      "average_cost_pct": 1.880988576783781,
+      "net_pnl": -221069.5210224242,
+      "deflated_sharpe_probability": 1.8408114355050742e-07,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 234.56488219558145,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.22106952102242383
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.22106952102242383
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.22106952102242383
+      }
+    },
+    "F3_rsi5_ma200_hold5": {
+      "cagr": -0.12638202819892652,
+      "max_drawdown": -0.15792727902022852,
+      "sharpe": -0.8295795598154967,
+      "trades": 909,
+      "orders": 1240,
+      "win_pct": 32.45324532453245,
+      "average_hold_days": 4.947194719471947,
+      "average_move_pct": 0.6652719586926494,
+      "average_cost_pct": 2.9191436730759603,
+      "net_pnl": -126301.23297735659,
+      "deflated_sharpe_probability": 0.0006612691876433652,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.1263012329773573
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.1263012329773573
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.1263012329773573
+      }
+    },
+    "F3_rsi10_ma100_hold2": {
+      "cagr": -0.20314083528380966,
+      "max_drawdown": -0.2400465380006198,
+      "sharpe": -1.7552002114289744,
+      "trades": 1159,
+      "orders": 1894,
+      "win_pct": 33.64969801553063,
+      "average_hold_days": 2.3727351164797237,
+      "average_move_pct": 0.5171891298548466,
+      "average_cost_pct": 2.0253937000672417,
+      "net_pnl": -203016.97306042377,
+      "deflated_sharpe_probability": 1.0154254510119642e-05,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 230.8444766870007,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.2030169730604222
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.2030169730604222
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.2030169730604222
+      }
+    },
+    "F3_rsi10_ma100_hold5": {
+      "cagr": -0.09880682993538914,
+      "max_drawdown": -0.20903526673738226,
+      "sharpe": -0.6068490653915253,
+      "trades": 1013,
+      "orders": 1401,
+      "win_pct": 31.98420533070089,
+      "average_hold_days": 4.976307996051332,
+      "average_move_pct": 0.7146280237370418,
+      "average_cost_pct": 3.0694295491501995,
+      "net_pnl": -98742.65501774887,
+      "deflated_sharpe_probability": 0.0013893350042518682,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 239.0822375484805,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.09874265501775004
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.09874265501775004
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.09874265501775004
+      }
+    },
+    "F3_rsi10_ma200_hold2": {
+      "cagr": -0.31774369105989375,
+      "max_drawdown": -0.35907863785052874,
+      "sharpe": -2.7679889132461537,
+      "trades": 1203,
+      "orders": 1998,
+      "win_pct": 33.66583541147132,
+      "average_hold_days": 2.392352452202826,
+      "average_move_pct": 0.3861768513091743,
+      "average_cost_pct": 2.0473463727034265,
+      "net_pnl": -317565.1183359659,
+      "deflated_sharpe_probability": 5.702396388418407e-08,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 245.6940798140749,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.31756511833596635
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.31756511833596635
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.31756511833596635
+      }
+    },
+    "F3_rsi10_ma200_hold5": {
+      "cagr": -0.21510147291313153,
+      "max_drawdown": -0.25614032920458374,
+      "sharpe": -1.326782875015849,
+      "trades": 1175,
+      "orders": 1595,
+      "win_pct": 30.5531914893617,
+      "average_hold_days": 4.953191489361702,
+      "average_move_pct": 0.6127822000518669,
+      "average_cost_pct": 3.2465787931632466,
+      "net_pnl": -214971.34366161947,
+      "deflated_sharpe_probability": 8.169156945664335e-05,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.21497134366161819
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.21497134366161819
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.21497134366161819
+      }
+    },
+    "F4_daily_swing2_hold5": {
+      "cagr": -0.2282040236418844,
+      "max_drawdown": -0.24531179281469417,
+      "sharpe": -1.4392450908900005,
+      "trades": 1463,
+      "orders": 1952,
+      "win_pct": 29.665071770334926,
+      "average_hold_days": 4.799726589200273,
+      "average_move_pct": 0.6655191728502189,
+      "average_cost_pct": 3.0854543282211098,
+      "net_pnl": -228067.17221941875,
+      "deflated_sharpe_probability": 0.00013204610953787554,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 193.94497943845113,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.2280671722194192
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.2280671722194192
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.2280671722194192
+      }
+    },
+    "F4_daily_swing2_hold10": {
+      "cagr": -0.08076381079772244,
+      "max_drawdown": -0.22190412002182136,
+      "sharpe": -0.3281703098184899,
+      "trades": 1157,
+      "orders": 1427,
+      "win_pct": 35.95505617977528,
+      "average_hold_days": 8.431287813310286,
+      "average_move_pct": 1.1448573559857953,
+      "average_cost_pct": 3.3213186794283183,
+      "net_pnl": -80710.82440681105,
+      "deflated_sharpe_probability": 0.0037538227540324653,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 193.19095153712001,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.0807108244068121
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.0807108244068121
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.0807108244068121
+      }
+    },
+    "F4_daily_swing3_hold5": {
+      "cagr": -0.2884687862045876,
+      "max_drawdown": -0.30028679231135624,
+      "sharpe": -2.018078441481865,
+      "trades": 1349,
+      "orders": 1831,
+      "win_pct": 29.355077835433658,
+      "average_hold_days": 4.808747220163084,
+      "average_move_pct": 0.5145945396923918,
+      "average_cost_pct": 3.0659552150627825,
+      "net_pnl": -288303.0176290223,
+      "deflated_sharpe_probability": 9.553043497367852e-06,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 203.25956412419555,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.2883030176290218
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.2883030176290218
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.2883030176290218
+      }
+    },
+    "F4_daily_swing3_hold10": {
+      "cagr": -0.07804320732618697,
+      "max_drawdown": -0.22158918038277053,
+      "sharpe": -0.3718349710904685,
+      "trades": 1120,
+      "orders": 1382,
+      "win_pct": 33.92857142857143,
+      "average_hold_days": 8.739285714285714,
+      "average_move_pct": 1.0510434846688512,
+      "average_cost_pct": 3.013814334243055,
+      "net_pnl": -77991.92912503607,
+      "deflated_sharpe_probability": 0.0035803011880504165,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 202.5231776068571,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.07799192912503583
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.07799192912503583
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.07799192912503583
+      }
+    },
+    "F4_60minute_swing2_hold1": {
+      "cagr": -0.7251332344086275,
+      "max_drawdown": -0.727812821650135,
+      "sharpe": -6.515457872633023,
+      "trades": 3043,
+      "orders": 5585,
+      "win_pct": 29.510351626684194,
+      "average_hold_days": 1.2605570161025303,
+      "average_move_pct": 0.10116988448488684,
+      "average_cost_pct": 1.9408806974376362,
+      "net_pnl": -724890.1551547023,
+      "deflated_sharpe_probability": 5.551115123125783e-17,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 211.27163891970048,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.7248901551547018
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.7248901551547018
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.7248901551547018
+      }
+    },
+    "F4_60minute_swing2_hold3": {
+      "cagr": -0.3474539588663086,
+      "max_drawdown": -0.3989375898033274,
+      "sharpe": -2.0647424086151442,
+      "trades": 2937,
+      "orders": 4011,
+      "win_pct": 25.366019748042216,
+      "average_hold_days": 2.389555669050051,
+      "average_move_pct": 0.7247516536690926,
+      "average_cost_pct": 3.8540811268798096,
+      "net_pnl": -347263.27073261543,
+      "deflated_sharpe_probability": 6.57585204183464e-06,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.34726327073261565
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.34726327073261565
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.34726327073261565
+      }
+    },
+    "F4_60minute_swing3_hold1": {
+      "cagr": -0.698368688247184,
+      "max_drawdown": -0.7023475716364114,
+      "sharpe": -6.265667349473427,
+      "trades": 2902,
+      "orders": 5377,
+      "win_pct": 31.11647139903515,
+      "average_hold_days": 1.2923127728003676,
+      "average_move_pct": 0.12305022213097391,
+      "average_cost_pct": 1.8147855799457302,
+      "net_pnl": -698121.139659486,
+      "deflated_sharpe_probability": 5.551115123125783e-16,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 201.07848583702358,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.698121139659486
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.698121139659486
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.698121139659486
+      }
+    },
+    "F4_60minute_swing3_hold3": {
+      "cagr": -0.43860352162458494,
+      "max_drawdown": -0.46380417565302623,
+      "sharpe": -2.8138525911866,
+      "trades": 2589,
+      "orders": 3566,
+      "win_pct": 23.90884511394361,
+      "average_hold_days": 2.564841637697953,
+      "average_move_pct": 0.5563121920851359,
+      "average_cost_pct": 4.41285558346461,
+      "net_pnl": -438381.63669018634,
+      "deflated_sharpe_probability": 7.302218579807729e-08,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 233.8054317450398,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.4383816366901859
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.4383816366901859
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.4383816366901859
+      }
+    },
+    "F5_rs20_top10": {
+      "cagr": -0.03016349015411035,
+      "max_drawdown": -0.2703161633385929,
+      "sharpe": -0.0657130898484513,
+      "trades": 475,
+      "orders": 751,
+      "win_pct": 52.63157894736842,
+      "average_hold_days": 13.40842105263158,
+      "average_move_pct": 3.3202247415818307,
+      "average_cost_pct": 1.2755542472298285,
+      "net_pnl": -30143.15871043531,
+      "deflated_sharpe_probability": 0.008037059445279215,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 196.7950612042238,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.0301431587104366
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.0301431587104366
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.0301431587104366
+      }
+    },
+    "F6_vol20_top10": {
+      "cagr": 0.00010426098457472222,
+      "max_drawdown": -0.09954409189888536,
+      "sharpe": 0.05865207839472789,
+      "trades": 433,
+      "orders": 664,
+      "win_pct": 42.494226327944574,
+      "average_hold_days": 19.413394919168592,
+      "average_move_pct": 0.9941896020445357,
+      "average_cost_pct": 1.7069190249909632,
+      "net_pnl": 104.18961810115434,
+      "deflated_sharpe_probability": 0.01100862637827349,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 224.07402229252222,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.00010418961810265692
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.00010418961810265692
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.00010418961810265692
+      }
+    },
+    "F5_rs20_top20": {
+      "cagr": -0.07627300812971027,
+      "max_drawdown": -0.2359711885399749,
+      "sharpe": -0.3975821811104504,
+      "trades": 871,
+      "orders": 1356,
+      "win_pct": 46.498277841561425,
+      "average_hold_days": 14.835820895522389,
+      "average_move_pct": 3.114469713396576,
+      "average_cost_pct": 2.2190708617576047,
+      "net_pnl": -76222.84433649552,
+      "deflated_sharpe_probability": 0.0032657777459659254,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 183.4538954300128,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.07622284433649629
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.07622284433649629
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.07622284433649629
+      }
+    },
+    "F6_vol20_top20": {
+      "cagr": 0.002270880051492341,
+      "max_drawdown": -0.10000544043831061,
+      "sharpe": 0.07698898152828497,
+      "trades": 713,
+      "orders": 1052,
+      "win_pct": 38.288920056100984,
+      "average_hold_days": 27.723702664796633,
+      "average_move_pct": 1.2084921387252632,
+      "average_cost_pct": 2.4895909563026275,
+      "net_pnl": 2269.3239564984797,
+      "deflated_sharpe_probability": 0.011543324321156234,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 217.6379920039329,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.0022693239564990364
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.0022693239564990364
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.0022693239564990364
+      }
+    },
+    "F5_rs60_top10": {
+      "cagr": 0.06489276395155796,
+      "max_drawdown": -0.2584678298901608,
+      "sharpe": 0.4073030160538222,
+      "trades": 440,
+      "orders": 597,
+      "win_pct": 52.04545454545455,
+      "average_hold_days": 22.861363636363638,
+      "average_move_pct": 3.9816003062877527,
+      "average_cost_pct": 1.824709436102619,
+      "net_pnl": 64846.9373008915,
+      "deflated_sharpe_probability": 0.02582250096226868,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 220.9924973030275,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.06484693730089153
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.06484693730089153
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.06484693730089153
+      }
+    },
+    "F6_vol60_top10": {
+      "cagr": 0.05191414837310848,
+      "max_drawdown": -0.08156920060525219,
+      "sharpe": 0.5359780694728679,
+      "trades": 381,
+      "orders": 474,
+      "win_pct": 47.76902887139108,
+      "average_hold_days": 62.93700787401575,
+      "average_move_pct": 2.7586454715738906,
+      "average_cost_pct": 2.689028534264877,
+      "net_pnl": 51877.70892484288,
+      "deflated_sharpe_probability": 0.034984225868119,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.051877708924842336
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.051877708924842336
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.051877708924842336
+      }
+    },
+    "F5_rs60_top20": {
+      "cagr": 0.003533066125958273,
+      "max_drawdown": -0.2365999472592416,
+      "sharpe": 0.11037699887114925,
+      "trades": 763,
+      "orders": 1040,
+      "win_pct": 49.41022280471822,
+      "average_hold_days": 27.230668414154653,
+      "average_move_pct": 4.497333261567608,
+      "average_cost_pct": 2.7042501989473458,
+      "net_pnl": 3530.6436100135616,
+      "deflated_sharpe_probability": 0.012639065408619088,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 212.33107352328213,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.0035306436100137617
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.0035306436100137617
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.0035306436100137617
+      }
+    },
+    "F6_vol60_top20": {
+      "cagr": 0.084924062591196,
+      "max_drawdown": -0.08643082135485158,
+      "sharpe": 0.8335402716349691,
+      "trades": 626,
+      "orders": 792,
+      "win_pct": 43.13099041533546,
+      "average_hold_days": 66.76357827476038,
+      "average_move_pct": 2.6487618891725564,
+      "average_cost_pct": 3.062589910966954,
+      "net_pnl": 84863.53576753591,
+      "deflated_sharpe_probability": 0.05758316887928083,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 214.58656451401305,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.08486353576753469
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.08486353576753469
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.08486353576753469
+      }
+    },
+    "F5_rs120_top10": {
+      "cagr": -0.07902529188259133,
+      "max_drawdown": -0.2754620168973875,
+      "sharpe": -0.24530653548338707,
+      "trades": 435,
+      "orders": 568,
+      "win_pct": 50.114942528735625,
+      "average_hold_days": 34.262068965517244,
+      "average_move_pct": 4.065438516525722,
+      "average_cost_pct": 2.0186294198831676,
+      "net_pnl": -78973.39642417284,
+      "deflated_sharpe_probability": 0.004945290302452721,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 207.25690370171392,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.0789733964241709
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.0789733964241709
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.0789733964241709
+      }
+    },
+    "F6_vol120_top10": {
+      "cagr": 0.04555130582323974,
+      "max_drawdown": -0.09678682686679063,
+      "sharpe": 0.4987926722303627,
+      "trades": 384,
+      "orders": 432,
+      "win_pct": 41.66666666666667,
+      "average_hold_days": 105.84635416666667,
+      "average_move_pct": 2.1973632179632596,
+      "average_cost_pct": 2.713796603692053,
+      "net_pnl": 45519.42857938791,
+      "deflated_sharpe_probability": 0.029283204096355764,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 213.44327584802255,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.04551942857938629
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.04551942857938629
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.04551942857938629
+      }
+    },
+    "F5_rs120_top20": {
+      "cagr": -0.1331934061056692,
+      "max_drawdown": -0.2557323908709286,
+      "sharpe": -0.6950459776980509,
+      "trades": 738,
+      "orders": 971,
+      "win_pct": 45.25745257452575,
+      "average_hold_days": 38.078590785907856,
+      "average_move_pct": 4.178792046004177,
+      "average_cost_pct": 2.7949873866760404,
+      "net_pnl": -133108.596470106,
+      "deflated_sharpe_probability": 0.0011965593762733318,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 222.7019657255095,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.13310859647010653
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.13310859647010653
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.13310859647010653
+      }
+    },
+    "F6_vol120_top20": {
+      "cagr": 0.0471013389235293,
+      "max_drawdown": -0.09590226373694621,
+      "sharpe": 0.5254280939030515,
+      "trades": 581,
+      "orders": 690,
+      "win_pct": 41.13597246127367,
+      "average_hold_days": 91.36660929432014,
+      "average_move_pct": 2.3046673844521877,
+      "average_cost_pct": 3.0845900695928536,
+      "net_pnl": 47068.3527285993,
+      "deflated_sharpe_probability": 0.031989660300344835,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 227.0806109476519,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.04706835272859933
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.04706835272859933
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.04706835272859933
+      }
+    },
+    "F7_go_gap2_hold1": {
+      "cagr": 0.03625987277064602,
+      "max_drawdown": -0.05601441769776816,
+      "sharpe": 0.5790699275129284,
+      "trades": 251,
+      "orders": 502,
+      "win_pct": 45.81673306772908,
+      "average_hold_days": 1.4199867197875164,
+      "average_move_pct": 0.643111983082749,
+      "average_cost_pct": 0.4952918546108021,
+      "net_pnl": 36234.60993188643,
+      "deflated_sharpe_probability": 0.03754132593251003,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.03623460993188665
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.03623460993188665
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.03623460993188665
+      }
+    },
+    "F7_go_gap2_hold2": {
+      "cagr": 0.13882792192598226,
+      "max_drawdown": -0.050232127333749266,
+      "sharpe": 1.465465065425133,
+      "trades": 329,
+      "orders": 558,
+      "win_pct": 48.02431610942249,
+      "average_hold_days": 2.457320162107396,
+      "average_move_pct": 1.2711748255175468,
+      "average_cost_pct": 1.3385612524918742,
+      "net_pnl": 138726.59366996892,
+      "deflated_sharpe_probability": 0.15519021116545784,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 213.44841097777328,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.1387265936699671
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.1387265936699671
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.1387265936699671
+      }
+    },
+    "F7_go_gap3_hold1": {
+      "cagr": 0.08608856255920916,
+      "max_drawdown": -0.024866922821762616,
+      "sharpe": 1.8287293197453551,
+      "trades": 113,
+      "orders": 226,
+      "win_pct": 50.442477876106196,
+      "average_hold_days": 1.5416666666666667,
+      "average_move_pct": 1.2382158727997705,
+      "average_cost_pct": 0.49526871712627907,
+      "net_pnl": 86027.17332965368,
+      "deflated_sharpe_probability": 0.233253692766209,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 213.94867871018567,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.08602717332965315
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.08602717332965315
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.08602717332965315
+      }
+    },
+    "F7_go_gap3_hold2": {
+      "cagr": 0.09791039327045281,
+      "max_drawdown": -0.05472529490395295,
+      "sharpe": 1.387035456979112,
+      "trades": 147,
+      "orders": 251,
+      "win_pct": 51.02040816326531,
+      "average_hold_days": 2.5391156462585034,
+      "average_move_pct": 1.7859415729025225,
+      "average_cost_pct": 1.0422344876942151,
+      "net_pnl": 97840.20084201712,
+      "deflated_sharpe_probability": 0.12607777905368778,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 218.94770907144095,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": 0.09784020084201672
+      },
+      "best_year": {
+        "year": 2025,
+        "return": 0.09784020084201672
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": 0.09784020084201672
+      }
+    },
+    "F7_fade_gap2_hold1": {
+      "cagr": -0.08618006653029797,
+      "max_drawdown": -0.09349447403855615,
+      "sharpe": -1.1000348265212843,
+      "trades": 274,
+      "orders": 548,
+      "win_pct": 42.33576642335766,
+      "average_hold_days": 1.5513990267639903,
+      "average_move_pct": 0.17374593522892678,
+      "average_cost_pct": 0.4980664334415148,
+      "net_pnl": -86123.69583958556,
+      "deflated_sharpe_probability": 0.000626952459477581,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.08612369583958723
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.08612369583958723
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.08612369583958723
+      }
+    },
+    "F7_fade_gap2_hold2": {
+      "cagr": -0.13326037918315858,
+      "max_drawdown": -0.142863642884698,
+      "sharpe": -1.2991268001128455,
+      "trades": 354,
+      "orders": 614,
+      "win_pct": 35.87570621468927,
+      "average_hold_days": 2.5313088512241055,
+      "average_move_pct": 0.28780724976727995,
+      "average_cost_pct": 1.3714589060421238,
+      "net_pnl": -133175.5302570521,
+      "deflated_sharpe_probability": 0.0002061973931385963,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.1331755302570522
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.1331755302570522
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.1331755302570522
+      }
+    },
+    "F7_fade_gap3_hold1": {
+      "cagr": -0.01562115110625506,
+      "max_drawdown": -0.05853907739429587,
+      "sharpe": -0.21048020275365914,
+      "trades": 141,
+      "orders": 282,
+      "win_pct": 43.262411347517734,
+      "average_hold_days": 1.6879432624113475,
+      "average_move_pct": 0.4017631096084579,
+      "average_cost_pct": 0.4958951921218832,
+      "net_pnl": -15610.542903576254,
+      "deflated_sharpe_probability": 0.006649979899281511,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 202.84698455249372,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.015610542903576774
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.015610542903576774
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.015610542903576774
+      }
+    },
+    "F7_fade_gap3_hold2": {
+      "cagr": -0.052489530185590216,
+      "max_drawdown": -0.07400697352782415,
+      "sharpe": -0.5692572792988488,
+      "trades": 172,
+      "orders": 308,
+      "win_pct": 42.44186046511628,
+      "average_hold_days": 2.616279069767442,
+      "average_move_pct": 0.3449247674912739,
+      "average_cost_pct": 1.0076962397908251,
+      "net_pnl": -52454.56225848562,
+      "deflated_sharpe_probability": 0.0024773173115938962,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.052454562258486215
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.052454562258486215
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.052454562258486215
+      }
+    },
+    "F8_tom_m1_p1": {
+      "cagr": -0.10043647913240639,
+      "max_drawdown": -0.1071021651117603,
+      "sharpe": -2.6571915486836315,
+      "trades": 600,
+      "orders": 1200,
+      "win_pct": 28.166666666666668,
+      "average_hold_days": 3.6666666666666665,
+      "average_move_pct": -0.09455531405624176,
+      "average_cost_pct": 0.8210769633359393,
+      "net_pnl": -100371.30575881584,
+      "deflated_sharpe_probability": 1.536947458191662e-09,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.10037130575881581
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.10037130575881581
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.10037130575881581
+      }
+    },
+    "F8_tom_m1_p2": {
+      "cagr": -0.06678252744465463,
+      "max_drawdown": -0.09899609430374945,
+      "sharpe": -1.3741405852704596,
+      "trades": 600,
+      "orders": 1200,
+      "win_pct": 36.666666666666664,
+      "average_hold_days": 4.916666666666667,
+      "average_move_pct": 0.21587830734730143,
+      "average_cost_pct": 0.8107401481162808,
+      "net_pnl": -66738.37773043652,
+      "deflated_sharpe_probability": 0.00014095571203959212,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.06673837773043423
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.06673837773043423
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.06673837773043423
+      }
+    },
+    "F8_tom_m2_p2": {
+      "cagr": -0.0940684874544907,
+      "max_drawdown": -0.12745735655425672,
+      "sharpe": -1.8429298441348936,
+      "trades": 650,
+      "orders": 1300,
+      "win_pct": 35.23076923076923,
+      "average_hold_days": 5.615384615384615,
+      "average_move_pct": 0.019431097464602615,
+      "average_cost_pct": 0.813360726085403,
+      "net_pnl": -94007.22707015664,
+      "deflated_sharpe_probability": 2.9666477105783073e-05,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.09400722707015552
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.09400722707015552
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.09400722707015552
+      }
+    },
+    "F8_tom_m0_p2": {
+      "cagr": -0.03937840874155263,
+      "max_drawdown": -0.06571477335248643,
+      "sharpe": -0.987828519092041,
+      "trades": 600,
+      "orders": 1200,
+      "win_pct": 37.5,
+      "average_hold_days": 2.6666666666666665,
+      "average_move_pct": 0.4505674896192764,
+      "average_cost_pct": 0.8055716014086575,
+      "net_pnl": -39351.99311697992,
+      "deflated_sharpe_probability": 0.000954156344834145,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.03935199311698068
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.03935199311698068
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.03935199311698068
+      }
+    },
+    "F8_tom_m3_p1": {
+      "cagr": -0.09994886838182304,
+      "max_drawdown": -0.12014712187980026,
+      "sharpe": -2.0769577813630913,
+      "trades": 650,
+      "orders": 1300,
+      "win_pct": 32.15384615384615,
+      "average_hold_days": 5.6923076923076925,
+      "average_move_pct": -0.020136078282655654,
+      "average_cost_pct": 0.8191215087114324,
+      "net_pnl": -99883.99354676975,
+      "deflated_sharpe_probability": 1.260167181604821e-06,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 247.0,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.0998839935467688
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.0998839935467688
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.0998839935467688
+      }
+    },
+    "F8_preholiday_hold1": {
+      "cagr": -0.05296195471504528,
+      "max_drawdown": -0.053226403681840395,
+      "sharpe": -1.328830970714903,
+      "trades": 600,
+      "orders": 1200,
+      "win_pct": 34.333333333333336,
+      "average_hold_days": 3.0833333333333335,
+      "average_move_pct": 0.33825981376784575,
+      "average_cost_pct": 0.8110050676209387,
+      "net_pnl": -52926.6809344674,
+      "deflated_sharpe_probability": 0.000890757735273362,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 156.9314156703572,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.05292668093446751
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.05292668093446751
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.05292668093446751
+      }
+    },
+    "F8_preholiday_hold2": {
+      "cagr": -0.04784553048218376,
+      "max_drawdown": -0.06358805827382807,
+      "sharpe": -1.0047353710311016,
+      "trades": 600,
+      "orders": 1200,
+      "win_pct": 38.166666666666664,
+      "average_hold_days": 4.583333333333333,
+      "average_move_pct": 0.3839347785641319,
+      "average_cost_pct": 0.8079036106209173,
+      "net_pnl": -47813.577701827446,
+      "deflated_sharpe_probability": 0.0015386815023611389,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 173.5820558111365,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.047813577701827925
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.047813577701827925
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.047813577701827925
+      }
+    },
+    "F8_preholiday_hold3": {
+      "cagr": -0.02179611286508698,
+      "max_drawdown": -0.05533229739053935,
+      "sharpe": -0.3536609652535126,
+      "trades": 550,
+      "orders": 1100,
+      "win_pct": 41.81818181818181,
+      "average_hold_days": 6.818181818181818,
+      "average_move_pct": 0.6231420832279547,
+      "average_cost_pct": 0.8039759242841478,
+      "net_pnl": -21781.357905925324,
+      "deflated_sharpe_probability": 0.004625409791648771,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 158.09708773858478,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.021781357905924614
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.021781357905924614
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.021781357905924614
+      }
+    },
+    "F8_preholiday_hold4": {
+      "cagr": -0.007755745223898658,
+      "max_drawdown": -0.05151427925567431,
+      "sharpe": -0.09216464128219158,
+      "trades": 550,
+      "orders": 1100,
+      "win_pct": 42.36363636363637,
+      "average_hold_days": 7.818181818181818,
+      "average_move_pct": 0.7579639847070853,
+      "average_cost_pct": 0.8032605606274948,
+      "net_pnl": -7750.457330701407,
+      "deflated_sharpe_probability": 0.007866599262364049,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 159.99790228531046,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.007750457330701344
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.007750457330701344
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.007750457330701344
+      }
+    },
+    "F8_preholiday_hold5": {
+      "cagr": -0.049880868775544096,
+      "max_drawdown": -0.09400990767299067,
+      "sharpe": -0.5426549996041587,
+      "trades": 550,
+      "orders": 1100,
+      "win_pct": 44.72727272727273,
+      "average_hold_days": 8.909090909090908,
+      "average_move_pct": 0.3820384539233521,
+      "average_cost_pct": 0.815101288213523,
+      "net_pnl": -49847.59262705992,
+      "deflated_sharpe_probability": 0.0014630171374495626,
+      "total_registered_trials": 60,
+      "return_observations": 247,
+      "effective_observations": 145.1773081658806,
+      "label": "EXPLORATORY",
+      "trade_count_definition": "FIFO realized lot fragments; partial exits counted separately",
+      "annual_returns": {
+        "2025": -0.04984759262705829
+      },
+      "best_year": {
+        "year": 2025,
+        "return": -0.04984759262705829
+      },
+      "worst_year": {
+        "year": 2025,
+        "return": -0.04984759262705829
+      }
+    }
+  },
+  "failed_folds": [
+    {
+      "variant": "F1_m63_top10",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m63_top10",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m63_top20",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m63_top20",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m126_top20",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m126_top20",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m252_top10",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m252_top10",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m252_top20",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m252_top20",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F4_daily_swing2_hold10",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F4_daily_swing2_hold10",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F4_daily_swing3_hold5",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F4_daily_swing3_hold5",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F4_daily_swing3_hold10",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F4_daily_swing3_hold10",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs20_top10",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs20_top10",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol20_top10",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol20_top10",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs20_top20",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs20_top20",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol20_top20",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol20_top20",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs60_top10",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs60_top10",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol60_top10",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol60_top10",
+      "test_year": 2017,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol60_top10",
+      "test_year": 2018,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol60_top10",
+      "test_year": 2019,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs60_top20",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs60_top20",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol60_top20",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol60_top20",
+      "test_year": 2017,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol60_top20",
+      "test_year": 2018,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol60_top20",
+      "test_year": 2019,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol120_top10",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol120_top10",
+      "test_year": 2017,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol120_top10",
+      "test_year": 2018,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol120_top10",
+      "test_year": 2019,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs120_top20",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F5_rs120_top20",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol120_top20",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol120_top20",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol120_top20",
+      "test_year": 2017,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol120_top20",
+      "test_year": 2018,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F6_vol120_top20",
+      "test_year": 2019,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F8_tom_m2_p2",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F8_tom_m2_p2",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F8_tom_m3_p1",
+      "test_year": 2015,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F8_tom_m3_p1",
+      "test_year": 2016,
+      "reason": "fold cannot be declared flat: missing terminal opens"
+    },
+    {
+      "variant": "F1_m252_top20",
+      "test_year": 2015,
+      "family": 1,
+      "reason": "SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution"
+    },
+    {
+      "variant": "F4_daily_swing2_hold10",
+      "test_year": 2015,
+      "family": 4,
+      "reason": "SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution"
+    },
+    {
+      "variant": "F5_rs120_top20",
+      "test_year": 2015,
+      "family": 5,
+      "reason": "SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution"
+    },
+    {
+      "variant": "F6_vol120_top10",
+      "test_year": 2016,
+      "family": 6,
+      "reason": "SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution"
+    },
+    {
+      "variant": "F8_tom_m2_p2",
+      "test_year": 2015,
+      "family": 8,
+      "reason": "SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution"
+    }
+  ],
+  "elapsed_seconds": 422.54303236900887,
+  "primary_window": "2025-01-01 through 2025-12-31 complete common OOS year; 2026 separately partial",
+  "selection_rule": "maximum preceding3-calendar-year after-cost Sharpe; >=30 realized lot fragments; stable ID ties",
+  "initial_fold_capital": 1000000.0,
+  "costs": {
+    "stt": 0.001,
+    "stamp_buy": 0.00015,
+    "exchange": 2.97e-05,
+    "sebi": 1e-06,
+    "gst": 0.18,
+    "brokerage_per_order": 20.0,
+    "brokerage_cap_rate": null,
+    "dp_sell": 20.0,
+    "slippage": 0.001
+  }
+}

@@ -41,3 +41,23 @@ behavior. Configuration values marked `null` require a documented choice in
 the relevant task; no unprovided metric parameter has an invented default.
 
 Recorder owner steps are deferred to [RUNBOOK.md](docs/RUNBOOK.md), pending T18.
+
+## EXPLORATORY Edge Scout
+
+The public-candle research study is independent of the unfinished local
+zone/setup roadmap. See [EDGE_SCOUT_REPORT.md](docs/EDGE_SCOUT_REPORT.md) for
+out-of-sample family results and the exact local verification shortlist.
+It uses no tokens, websocket or broker order endpoint. The user explicitly
+requested unauthenticated public downloads for this study; tests stay offline.
+
+```bash
+python -m pip install -e '.[dev,research]'
+python -m orderflow.research.edge_data --through 2026-10-01
+python -m orderflow.research.edge_scout
+python -m orderflow.research.edge_report
+pytest -q
+```
+
+Raw data and resumable response/fold caches live under gitignored `data/`.
+Current constituents, uncertified corporate-action adjustments and current
+sector-index backcasts limit what these exploratory statistics establish.

@@ -1,0 +1,57 @@
+variant,test_year,reason
+F1_m63_top10,2015,fold cannot be declared flat: missing terminal opens
+F1_m63_top10,2016,fold cannot be declared flat: missing terminal opens
+F1_m63_top20,2015,fold cannot be declared flat: missing terminal opens
+F1_m63_top20,2016,fold cannot be declared flat: missing terminal opens
+F1_m126_top20,2015,fold cannot be declared flat: missing terminal opens
+F1_m126_top20,2016,fold cannot be declared flat: missing terminal opens
+F1_m252_top10,2015,fold cannot be declared flat: missing terminal opens
+F1_m252_top10,2016,fold cannot be declared flat: missing terminal opens
+F1_m252_top20,2015,fold cannot be declared flat: missing terminal opens
+F1_m252_top20,2016,fold cannot be declared flat: missing terminal opens
+F4_daily_swing2_hold10,2015,fold cannot be declared flat: missing terminal opens
+F4_daily_swing2_hold10,2016,fold cannot be declared flat: missing terminal opens
+F4_daily_swing3_hold5,2015,fold cannot be declared flat: missing terminal opens
+F4_daily_swing3_hold5,2016,fold cannot be declared flat: missing terminal opens
+F4_daily_swing3_hold10,2015,fold cannot be declared flat: missing terminal opens
+F4_daily_swing3_hold10,2016,fold cannot be declared flat: missing terminal opens
+F5_rs20_top10,2015,fold cannot be declared flat: missing terminal opens
+F5_rs20_top10,2016,fold cannot be declared flat: missing terminal opens
+F6_vol20_top10,2015,fold cannot be declared flat: missing terminal opens
+F6_vol20_top10,2016,fold cannot be declared flat: missing terminal opens
+F5_rs20_top20,2015,fold cannot be declared flat: missing terminal opens
+F5_rs20_top20,2016,fold cannot be declared flat: missing terminal opens
+F6_vol20_top20,2015,fold cannot be declared flat: missing terminal opens
+F6_vol20_top20,2016,fold cannot be declared flat: missing terminal opens
+F5_rs60_top10,2015,fold cannot be declared flat: missing terminal opens
+F5_rs60_top10,2016,fold cannot be declared flat: missing terminal opens
+F6_vol60_top10,2016,fold cannot be declared flat: missing terminal opens
+F6_vol60_top10,2017,fold cannot be declared flat: missing terminal opens
+F6_vol60_top10,2018,fold cannot be declared flat: missing terminal opens
+F6_vol60_top10,2019,fold cannot be declared flat: missing terminal opens
+F5_rs60_top20,2015,fold cannot be declared flat: missing terminal opens
+F5_rs60_top20,2016,fold cannot be declared flat: missing terminal opens
+F6_vol60_top20,2016,fold cannot be declared flat: missing terminal opens
+F6_vol60_top20,2017,fold cannot be declared flat: missing terminal opens
+F6_vol60_top20,2018,fold cannot be declared flat: missing terminal opens
+F6_vol60_top20,2019,fold cannot be declared flat: missing terminal opens
+F6_vol120_top10,2016,fold cannot be declared flat: missing terminal opens
+F6_vol120_top10,2017,fold cannot be declared flat: missing terminal opens
+F6_vol120_top10,2018,fold cannot be declared flat: missing terminal opens
+F6_vol120_top10,2019,fold cannot be declared flat: missing terminal opens
+F5_rs120_top20,2015,fold cannot be declared flat: missing terminal opens
+F5_rs120_top20,2016,fold cannot be declared flat: missing terminal opens
+F6_vol120_top20,2015,fold cannot be declared flat: missing terminal opens
+F6_vol120_top20,2016,fold cannot be declared flat: missing terminal opens
+F6_vol120_top20,2017,fold cannot be declared flat: missing terminal opens
+F6_vol120_top20,2018,fold cannot be declared flat: missing terminal opens
+F6_vol120_top20,2019,fold cannot be declared flat: missing terminal opens
+F8_tom_m2_p2,2015,fold cannot be declared flat: missing terminal opens
+F8_tom_m2_p2,2016,fold cannot be declared flat: missing terminal opens
+F8_tom_m3_p1,2015,fold cannot be declared flat: missing terminal opens
+F8_tom_m3_p1,2016,fold cannot be declared flat: missing terminal opens
+F1_m252_top20,2015,SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution
+F4_daily_swing2_hold10,2015,SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution
+F5_rs120_top20,2015,SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution
+F6_vol120_top10,2016,SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution
+F8_tom_m2_p2,2015,SELECTED_TRAIN_WINNER_HAS_INVALID_OOS; no substitution

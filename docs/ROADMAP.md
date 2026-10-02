@@ -146,3 +146,14 @@ dependency order → T14 → T15 → T16 → T17/T19.
 GitHub connector write access was verified on 2026-10-02 and the initialized
 remote main was reconciled into this branch. Full publication is being retried
 from the recovered workspace; the previous denial is retained as audit history.
+
+## Separate authorized research: EDGE SCOUT
+
+The owner requested public unauthenticated candle research, explicitly overriding
+the simulator-only Cloud rule for these downloads. The study does not complete
+T15–T17 or enable trading/live research. Its frozen60-variant ledger covers eight
+families, with three-year training/one-year out-of-sample tests and delivery costs.
+Complete2025 is the common comparison;2026 is partial and separate. See
+[EXPLORATORY report](EDGE_SCOUT_REPORT.md), [status](status/EDGE_SCOUT.md),
+[data audit](EDGE_SCOUT_DATA.md) and [independent review](EDGE_SCOUT_REVIEW.md).
+All source cache files remain gitignored; automated tests never access the network.
