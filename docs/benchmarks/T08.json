@@ -9,8 +9,8 @@
     "kyle": 19080,
     "events": 35800
   },
-  "elapsed_seconds": 214.09481038399827,
-  "ticks_per_second": 5347.163707269216,
+  "elapsed_seconds": 227.82550993800396,
+  "ticks_per_second": 5024.898222817646,
   "mode": "cached simulation; T06 footprint dependency plus T08 VPIN/impact/events; sequential instruments",
   "benchmark_parameters": {
     "bucket_size": 10000,
