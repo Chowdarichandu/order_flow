@@ -1,0 +1,12 @@
+{
+  "task": "T13",
+  "stock_symbols": 50,
+  "simulated_hours": 6,
+  "input_bars": 19080,
+  "tick_equivalents": 1144800,
+  "output_rows": 50,
+  "elapsed_seconds": 4.053417213002831,
+  "bars_per_second": 4707.139432574042,
+  "tick_equivalents_per_second": 282428.36595444253,
+  "mode": "final context snapshot; cached bars; absent optional historical contexts are null and flagged"
+}

@@ -132,7 +132,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T10 | T04 | layers/vwap/core.py | 15 known-answer/availability/truncation cases; staged suite green | 17,138 ticks/s; 50 stocks+3 indices, six-hour cached VWAP features | DONE |
 | T11 | T04 | layers/smc/core.py | 13 known-answer/availability/truncation cases; staged suite green | 234,095 tick-equivalents/s; cached 1m bars, SMA/strict/eq fixture | STUCK |
 | T12 | T04 | layers/levels/core.py | 13 known-answer/availability/truncation cases; staged suite green | 274,065 tick-equivalents/s; 4,568 bars/s; cached six-hour day | DONE |
-| T13 | T03, T04 | Index/VIX/RS/breadth/context | Not run; T03/T04 pending | Not run for this task | NOT STARTED |
+| T13 | T03, T04 | layers/context/core.py | 10 known-answer/availability/truncation cases; staged suite green | 282,428 tick-equivalents/s; 4,707 bars/s; final cached context snapshot | DONE |
 | T14 | T09–T12 | Zone engine | Not run; T09–T12 pending | Not run for this task | NOT STARTED |
 | T15 | T08, T13, T14 | S1–S5/plans/cost gate/sizing | Not run; dependencies pending | Not run for this task | NOT STARTED |
 | T16 | T15 | Unified live/replay engine | Not run; T15 pending | Not run for this task | NOT STARTED |
