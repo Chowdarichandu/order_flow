@@ -2,7 +2,7 @@
 
 **This repository is a T00 scaffold, not a deployable recorder.** T02 (auth),
 T03 (recorder), T05 (history/import) and T18 (ops) are dependency-blocked by
-unfinished T01 simulator/decoder task. No install script, OAuth CLI, systemd
+unfinished auth, recorder and history/import tasks. No install script, OAuth CLI, systemd
 units or recorder start command exists yet. Do not attempt to start live
 recording from this branch.
 
@@ -17,7 +17,7 @@ python -m pytest
 ```
 
 These commands validate the scaffold. They do not install or start a recorder.
-T00 now passes all 10 tests. Execute the dependency roadmap, prioritizing
+T00 and T01 now pass all 30 tests. Execute the dependency roadmap, prioritizing
 T01 → T02/T03/T05 → T18. T18 must supply the exact credential file paths,
 permissions, initial OAuth command, import command, replay verification,
 installation command, services, holiday calendar and start/stop commands.

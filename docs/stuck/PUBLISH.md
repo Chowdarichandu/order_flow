@@ -1,4 +1,12 @@
-# PR publication — STUCK
+# PR publication — historical blocker
+
+## Update (2026-10-02)
+
+Connector write access succeeded: the canonical package initializer was
+published on main in commit 56af5b7. The restarted workspace is accessible and
+that remote commit has been merged into the local scaffold without losing any
+work. Publication of the full branch is being retried. The failures below are
+retained as historical evidence, not proof of current denial.
 
 The user authorized one PR to `Chowdarichandu/order_flow`. The repository was
 empty; the local source-only main baseline and T00 scaffold branch are committed.

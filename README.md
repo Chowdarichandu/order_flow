@@ -8,11 +8,12 @@ The supplied [BOOTSTRAP.md](BOOTSTRAP.md) v2 is the source of truth. The origina
 [definitions](docs/DEFINITIONS.md), [architecture](docs/ARCHITECTURE.md),
 [data contracts](docs/DATA_CONTRACTS.md), and [source notes](docs/SOURCE_NOTES.md).
 
-Current status: T00 DONE, with all 10 tests passing. The owner authorized
-package installation and the official V3 protobuf is available from Upstox SDK
-2.30.0. T01 is ready; T01–T19 are not implemented. This is not a deployable
-recorder or a working research system. GitHub publishing remains blocked by
-HTTP 403; see [publication evidence](docs/stuck/PUBLISH.md).
+Current status: T00 and T01 DONE, with all 30 tests passing. Official V3
+feed/history simulators and decoders are implemented; the simulated six-hour
+50-stock benchmark achieved 29,992 ticks/second for generation plus decoding.
+See [T01 details](docs/SIMULATORS.md). T02/T03/T04/T05 are ready; T02–T19 remain
+unimplemented. The recorder is not deployable yet. GitHub write access was
+verified and publication is resuming.
 
 ## Offline development setup
 

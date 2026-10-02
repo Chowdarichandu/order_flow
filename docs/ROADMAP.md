@@ -112,38 +112,37 @@ accumulating while the layers are built.
 
 ## Execution status
 
-T00 is DONE as of 2026-10-02: all 10 tests pass, including Arrow contracts.
-The owner authorized package installation; the official V3 classes are available
-from Upstox SDK 2.30.0. T01 is READY, not implemented. Later tasks remain NOT
-STARTED pending their dependencies. No benchmark measurement is claimed.
-See [resolved T00 evidence](stuck/T00.md). Empty package directories remain
-scaffolding only.
+T00 and T01 are DONE as of 2026-10-02. All 30 tests pass; T01's official V3
+feed/history simulators and decoders are implemented, with the six-hour
+50-stock benchmark recorded. T02/T03/T04/T05 are eligible next. Later tasks
+await their dependencies. See [simulator evidence](SIMULATORS.md).
 
 | Task | Depends | Modules | Tests | 50-symbol simulated-day benchmark | Status |
 |---|---|---|---|---|---|
 | T00 | — | Scaffold, docs, config, schema | 10 pytest tests pass | N/A: scaffold; simulator begins at T01 | DONE |
-| T01 | T00 | V3 feed/history simulators, decode | Not run; eligible next | Not run: T01 not implemented | READY |
-| T02 | T01 | OAuth/token refresh, preflight | Not run; T01 pending | Not run: T01 unavailable | NOT STARTED |
-| T03 | T01 | Feed/queue/Parquet recorder, quality | Not run; T01 pending | Not run: T01 unavailable | NOT STARTED |
-| T04 | T01 | Trades, time/volume bars | Not run; T01 pending | Not run: T01 unavailable | NOT STARTED |
-| T05 | T01 | History downloader, bhavcopy, importer | Not run; T01 pending | Not run: T01 unavailable | NOT STARTED |
-| T06 | T04 | Footprint/delta/CVD/imbalances | Not run; T04 pending | Not run: T01 unavailable | NOT STARTED |
-| T07 | T04 | Depth/OFI/sweeps/iceberg | Not run; T04 pending | Not run: T01 unavailable | NOT STARTED |
-| T08 | T06 | Flow events/VPIN/Kyle | Not run; T06 pending | Not run: T01 unavailable | NOT STARTED |
-| T09 | T04 | Profiles/naked POC/IB | Not run; T04 pending | Not run: T01 unavailable | NOT STARTED |
-| T10 | T04 | VWAP/bands/anchors/events | Not run; T04 pending | Not run: T01 unavailable | NOT STARTED |
-| T11 | T04 | SMC structures/pools/sweeps | Not run; T04 pending | Not run: T01 unavailable | NOT STARTED |
-| T12 | T04 | Prior levels/opening ranges/gaps | Not run; T04 pending | Not run: T01 unavailable | NOT STARTED |
-| T13 | T03, T04 | Index/VIX/RS/breadth/context | Not run; T03/T04 pending | Not run: T01 unavailable | NOT STARTED |
-| T14 | T09–T12 | Zone engine | Not run; T09–T12 pending | Not run: T01 unavailable | NOT STARTED |
-| T15 | T08, T13, T14 | S1–S5/plans/cost gate/sizing | Not run; dependencies pending | Not run: T01 unavailable | NOT STARTED |
-| T16 | T15 | Unified live/replay engine | Not run; T15 pending | Not run: T01 unavailable | NOT STARTED |
-| T17 | T16 | Backtest/event study/shadow/edge board | Not run; T16 pending | Not run: T01 unavailable | NOT STARTED |
-| T18 | T02, T03, T05 | Ops/install/systemd/runbook | Not run; dependencies pending | Not run: T01 unavailable | NOT STARTED |
-| T19 | T16 | Read-only live view | Not run; T16 pending | Not run: T01 unavailable | NOT STARTED |
+| T01 | T00 | Official V3 feed/history simulators, decode | 20 T01 cases; full suite 30 passing | 29,992 ticks/s; 50 stocks + 3 indices, 6h | DONE |
+| T02 | T01 | OAuth/token refresh, preflight | Not run; eligible next | Not run for this task | READY |
+| T03 | T01 | Feed/queue/Parquet recorder, quality | Not run; eligible next | Not run for this task | READY |
+| T04 | T01 | Trades, time/volume bars | Not run; eligible next | Not run for this task | READY |
+| T05 | T01 | History downloader, bhavcopy, importer | Not run; eligible next | Not run for this task | READY |
+| T06 | T04 | Footprint/delta/CVD/imbalances | Not run; T04 pending | Not run for this task | NOT STARTED |
+| T07 | T04 | Depth/OFI/sweeps/iceberg | Not run; T04 pending | Not run for this task | NOT STARTED |
+| T08 | T06 | Flow events/VPIN/Kyle | Not run; T06 pending | Not run for this task | NOT STARTED |
+| T09 | T04 | Profiles/naked POC/IB | Not run; T04 pending | Not run for this task | NOT STARTED |
+| T10 | T04 | VWAP/bands/anchors/events | Not run; T04 pending | Not run for this task | NOT STARTED |
+| T11 | T04 | SMC structures/pools/sweeps | Not run; T04 pending | Not run for this task | NOT STARTED |
+| T12 | T04 | Prior levels/opening ranges/gaps | Not run; T04 pending | Not run for this task | NOT STARTED |
+| T13 | T03, T04 | Index/VIX/RS/breadth/context | Not run; T03/T04 pending | Not run for this task | NOT STARTED |
+| T14 | T09–T12 | Zone engine | Not run; T09–T12 pending | Not run for this task | NOT STARTED |
+| T15 | T08, T13, T14 | S1–S5/plans/cost gate/sizing | Not run; dependencies pending | Not run for this task | NOT STARTED |
+| T16 | T15 | Unified live/replay engine | Not run; T15 pending | Not run for this task | NOT STARTED |
+| T17 | T16 | Backtest/event study/shadow/edge board | Not run; T16 pending | Not run for this task | NOT STARTED |
+| T18 | T02, T03, T05 | Ops/install/systemd/runbook | Not run; dependencies pending | Not run for this task | NOT STARTED |
+| T19 | T16 | Read-only live view | Not run; T16 pending | Not run for this task | NOT STARTED |
 
 Requested priority on resume: T01 → T02/T03/T05 → T18 → T04 → T06–T13 in
 dependency order → T14 → T15 → T16 → T17/T19.
 
-PR publication is also STUCK: Git and connector writes both returned HTTP 403.
-See [publication evidence](stuck/PUBLISH.md). Commits are preserved locally.
+GitHub connector write access was verified on 2026-10-02 and the initialized
+remote main was reconciled into this branch. Full publication is being retried
+from the recovered workspace; the previous denial is retained as audit history.
