@@ -5,7 +5,7 @@
   "simulated_hours": 6,
   "ticks": 1144800,
   "output_rows": 53,
-  "elapsed_seconds": 32.5838137819992,
-  "ticks_per_second": 35134.00879526387,
-  "mode": "feature only; cached official simulation"
+  "elapsed_seconds": 35.498540406995744,
+  "ticks_per_second": 32249.21325988921,
+  "mode": "final session profile only; cached official simulation; minute-by-minute update benchmark excluded"
 }
