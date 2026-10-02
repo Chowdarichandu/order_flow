@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orderflow-zero"
+version = "0.1.0"
+description = "Read-only NSE cash-equity market data and point-in-time research"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pyarrow>=16", "polars>=1", "numpy>=1.26", "protobuf>=5",
+  "websockets>=13", "requests>=2.32", "PyYAML>=6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "hypothesis>=6", "build>=1", "grpcio-tools>=1.64"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+orderflow = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 100
