@@ -125,7 +125,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T03 | T01 | ingest/recorder.py | 8 new tests; full suite 52 passing; 6h lossless | 73,660 tick-equivalents/s; 50 stocks+3 indices; 21,600 frames, zero drops | DONE |
 | T04 | T01 | trades/core.py, bars/core.py, schema mid_price | 13 T04 cases; full suite 96 passing | 15,153 ticks/s; 50 stocks+3 indices, 6h; classification+1m bars | DONE |
 | T05 | T01 | ingest/history.py | 6 new tests; full suite 58 passing | N/A: daily REST/import I/O; no per-tick metric | DONE |
-| T06 | T04 | Footprint/delta/CVD/imbalances | Not run; T04 pending | Not run for this task | NOT STARTED |
+| T06 | T04 | layers/orderflow/footprint.py | 6 known-answer/truncation cases; full staged task suite green | 19,132 ticks/s; 50 stocks+3 indices, six-hour cached simulation | DONE |
 | T07 | T04 | Depth/OFI/sweeps/iceberg | Not run; T04 pending | Not run for this task | NOT STARTED |
 | T08 | T06 | Flow events/VPIN/Kyle | Not run; T06 pending | Not run for this task | NOT STARTED |
 | T09 | T04 | Profiles/naked POC/IB | Not run; T04 pending | Not run for this task | NOT STARTED |
