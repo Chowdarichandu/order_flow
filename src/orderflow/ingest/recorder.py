@@ -16,7 +16,8 @@ from zoneinfo import ZoneInfo
 
 import pyarrow as pa
 import pyarrow.parquet as pq
-from orderflow.schema import RAW_MESSAGE_SCHEMA
+from orderflow.schema import RAW_MESSAGE_SCHEMA, TICK_SCHEMA
+from orderflow.auth.core import aware, sanitized_body, secure_json
 
 LOG = logging.getLogger(__name__)
 
@@ -57,7 +58,9 @@ class Recorder:
         self.root, self.batch_size, self.flush_seconds = Path(root), batch_size, flush_seconds
         self.queue: Queue = Queue(maxsize=capacity)
         self.metrics: Counter = Counter(received=0, written=0, dropped=0, disconnects=0,
-                                        max_queue_lag_ms=0)
+                                        max_queue_lag_ms=0, max_exchange_lag_ms=0,
+                                        negative_exchange_lag_count=0, max_clock_skew_ms=0,
+                                        missing_exchange_timestamps=0, decode_failures=0)
         self.decoder = decoder
         self.on_flush = on_flush
         self.error: Exception | None = None
@@ -92,7 +95,24 @@ class Recorder:
         for frame in batch:
             if self.decoder is not None:
                 try:
-                    self.decoder.decode(frame)
+                    decoded = self.decoder.decode(frame)
+                    if not decoded.schema.equals(TICK_SCHEMA):
+                        raise ValueError('canonical TickEvent schema required')
+                    # Quality/lag analysis belongs to the writer, never receive.
+                    # Count skew per decoded instrument snapshot, not per packet.
+                    for receipt, exchange in zip(decoded['receipt_ts'].to_pylist(),
+                                                 decoded['exchange_ts'].to_pylist()):
+                        if exchange is None:
+                            self.metrics['missing_exchange_timestamps'] += 1
+                            continue
+                        lag = (aware(receipt)-aware(exchange)).total_seconds()*1000
+                        if lag < 0:
+                            self.metrics['negative_exchange_lag_count'] += 1
+                            self.metrics['max_clock_skew_ms'] = max(
+                                self.metrics['max_clock_skew_ms'], -lag)
+                        else:
+                            self.metrics['max_exchange_lag_ms'] = max(
+                                self.metrics['max_exchange_lag_ms'], lag)
                 except Exception:
                     self.metrics['decode_failures'] += 1
                     frame['flags'] = [*frame['flags'], 'DECODE_ERROR']
@@ -169,7 +189,13 @@ class Recorder:
             raise RuntimeError('writer failed or shutdown timed out') from self.error
 
     def quality(self, counters: Counter | None = None) -> dict[str, Any]:
-        """Daily quality counters distinguish drops from snapshot data anomalies."""
+        """Daily quality: drops, anomalies, queue lag and receipt-exchange lag.
+
+        Exchange lag is the maximum nonnegative receipt-minus-exchange duration
+        over decoded snapshots in UTC, independent of local queue waiting time.
+        Future exchange clocks are counted separately with maximum skew size.
+        Without a decoder, exchange metrics are unobserved and stay zero.
+        """
         c = counters if counters is not None else (self.decoder.counters if self.decoder is not None else Counter())
         return dict(self.metrics, gaps=c['GAP'], resets=c['VOLUME_RESET'],
                     duplicates=c['DUPLICATE'], out_of_order=c['OUT_OF_ORDER'],
@@ -192,6 +218,53 @@ class FeedClient:
         self.api, self.connect, self.recorder = api, connect, recorder
         self.instruments, self.mode, self.retry_seconds = instruments, mode, retry_seconds
         self.stopped = False
+
+    def _log_failure(self, error: Exception) -> None:
+        """Rule 4: retain known handshake status/body with credential redaction.
+
+        Current websockets InvalidStatus exposes response.status_code/body;
+        legacy adapters may expose status_code/body directly. Exception strings,
+        response URLs and websocket URLs are never logged. A token is read only
+        from the secure credential file for redaction, including after expiry.
+        """
+        response = getattr(error, 'response', None)
+        raw_status = getattr(response, 'status_code', None)
+        if raw_status is None:
+            raw_status = getattr(error, 'status_code', None)
+        status = (str(raw_status) if isinstance(raw_status, int)
+                  and 100 <= raw_status <= 599 else 'unavailable')
+        body = getattr(response, 'body', None)
+        if body is None:
+            body = getattr(error, 'body', None)
+        if body is None and response is not None:
+            body = getattr(response, 'text', None)
+        if body is None:
+            body = 'connection failed' if status == 'unavailable' else 'response body unavailable'
+        if isinstance(body, (bytes, bytearray)):
+            body = bytes(body).decode('utf-8', errors='replace')
+        if not isinstance(body, (str, dict, list)):
+            body = 'response body unavailable'
+        secrets: tuple[str, ...] = ()
+        token_file = getattr(self.api, 'token_file', None)
+        token_path = getattr(token_file, 'path', None)
+        if token_path is not None:
+            try:
+                token = secure_json(Path(token_path)).get('access_token')
+                if isinstance(token, str):
+                    secrets = (token,)
+            except Exception:
+                # Unsafe/unreadable credentials are never printed or bypassed.
+                pass
+
+        class Body:
+            """Local response adapter for the shared JSON/plaintext sanitizer."""
+            text = body
+
+            def json(self) -> Any:
+                return json.loads(body) if isinstance(body, str) else body
+
+        LOG.error('connect/stream failure status=%s body=%s', status,
+                  sanitized_body(Body(), secrets))
 
     async def run(self, *, max_connections: int | None = None) -> None:
         """One socket at a time; reconnect rereads authorization and resubscribes.
@@ -224,9 +297,9 @@ class FeedClient:
                     connection_frames += 1
             except asyncio.CancelledError:
                 raise
-            except Exception:
+            except Exception as error:
                 self.recorder.metrics['disconnects'] += 1
-                LOG.error('connect/stream failure status=unavailable body="connection failed"')
+                self._log_failure(error)
                 if self.recorder.error:
                     raise RuntimeError('writer failed') from self.recorder.error
             finally:

@@ -169,7 +169,10 @@ receipt dates. No disk operation occurs in the websocket receive loop. Queue
 capacity, batching, flush and reconnect/heartbeat settings are in owner config.
 The daily quality report counts gaps/resets/duplicates/out-of-order, drops,
 disconnects, decode failures and unwritten packets. Max queue lag measures writer
-backlog, not inferred exchange/trade latency. Degraded metrics deserve an alert.
+backlog, not inferred exchange/trade latency. With decoding enabled, maximum
+exchange lag measures receipt minus exchange time off the receive loop. Negative
+lag is counted separately as clock skew; missing exchange timestamps are counted.
+These are snapshot timing metrics. Degraded metrics deserve an alert.
 
 ## 6. Stop, repair and resume
 
