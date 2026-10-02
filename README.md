@@ -8,12 +8,19 @@ The supplied [BOOTSTRAP.md](BOOTSTRAP.md) v2 is the source of truth. The origina
 [definitions](docs/DEFINITIONS.md), [architecture](docs/ARCHITECTURE.md),
 [data contracts](docs/DATA_CONTRACTS.md), and [source notes](docs/SOURCE_NOTES.md).
 
-Current status: T00 and T01 DONE, with all 30 tests passing. Official V3
-feed/history simulators and decoders are implemented; the simulated six-hour
-50-stock benchmark achieved 29,992 ticks/second for generation plus decoding.
-See [T01 details](docs/SIMULATORS.md). T02/T03/T04/T05 are ready; T02–T19 remain
-unimplemented. The recorder is not deployable yet. GitHub write access was
-verified and publication is resuming.
+RECORDER DEPLOYABLE: T02/T03/T05/T18 provide secure file-based OAuth,
+preflight, one feed owner, a bounded queue, atomic batched Parquet recording,
+holiday-aware systemd jobs, alerts, status and installation. All verification is
+offline against simulators; no live account has been tested. Daily OAuth requires
+owner login. Follow [RUNBOOK.md](docs/RUNBOOK.md) to install and start the recorder.
+
+Trades/bars, footprint, depth, flow, profile, VWAP, levels and context have causal
+known-answer tests. SMC and zone APIs are implemented with explicit policies,
+but T11/T14 remain STUCK on the source's FVG comparator; downstream setup,
+unified-engine, validation and view tasks are dependency blocked. Research
+outputs remain disabled. See [task status](docs/ROADMAP.md) and
+[source blockers](docs/stuck/T11.md). Benchmarks state their measured stage and
+separate ticks from bar-derived tick equivalents.
 
 ## Offline development setup
 
@@ -28,7 +35,7 @@ python -m pytest
 
 The setup script only installs from local files. Tests need no token and must
 never contact a live feed. The official V3 protobuf or generated SDK classes
-must also be supplied before T01.
+are supplied by the pinned official SDK dependency.
 
 Limited scaffold checks can run with Python and PyYAML:
 
@@ -40,4 +47,4 @@ These checks do not replace the full pytest gate or validate Arrow runtime
 behavior. Configuration values marked `null` require a documented choice in
 the relevant task; no unprovided metric parameter has an invented default.
 
-Recorder owner steps are deferred to [RUNBOOK.md](docs/RUNBOOK.md), pending T18.
+Recorder owner steps are in [RUNBOOK.md](docs/RUNBOOK.md).

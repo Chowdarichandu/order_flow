@@ -112,10 +112,13 @@ accumulating while the layers are built.
 
 ## Execution status
 
-T00 and T01 are DONE as of 2026-10-02. All 30 tests pass; T01's official V3
-feed/history simulators and decoders are implemented, with the six-hour
-50-stock benchmark recorded. T02/T03/T04/T05 are eligible next. Later tasks
-await their dependencies. See [simulator evidence](SIMULATORS.md).
+RECORDER DEPLOYABLE: T02/T03/T05/T18 and all eligible independent layers
+are complete. Final offline suite: **217 passed plus 92 subtests**. Fourteen
+tasks are DONE, including the already-merged T00/T01 foundation; six are STUCK.
+T11 has tested explicit-policy APIs but the source FVG comparator is unresolved.
+T14 has tested zone APIs but requires T11; T15/T16/T17/T19 are dependency blocked.
+See [final report](FINAL_REPORT.md), [owner runbook](RUNBOOK.md), individual
+[status files](status/) and [blocker reports](stuck/). No live account was used.
 
 | Task | Depends | Modules | Tests | 50-symbol simulated-day benchmark | Status |
 |---|---|---|---|---|---|
@@ -137,12 +140,12 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T15 | T08, T13, T14 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
 | T16 | T15 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
 | T17 | T16 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
-| T18 | T02, T03, T05 | ops/runtime.py, ops/cli.py, systemd, install.sh, RUNBOOK | 9 ops tests; full suite 67 passing; unit verification and offline clean-container install dry-run | N/A: ops; T03 recorder benchmark 73,660 tick-equivalents/s | DONE |
+| T18 | T02, T03, T05 | ops/runtime.py, ops/cli.py, systemd, install.sh, RUNBOOK | 8 ops cases plus recorder status-writer coverage; systemd verification and clean-container install dry-run | N/A: ops; see T03 recorder benchmark | DONE |
 | T19 | T16 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
 
 Requested priority on resume: T01 → T02/T03/T05 → T18 → T04 → T06–T13 in
 dependency order → T14 → T15 → T16 → T17/T19.
 
-GitHub connector write access was verified on 2026-10-02 and the initialized
-remote main was reconciled into this branch. Full publication is being retried
-from the recovered workspace; the previous denial is retained as audit history.
+This branch contains task-scoped commits and the complete simulator-verified
+recorder milestone. One review PR targets main; remaining source-policy choices
+and resume criteria are documented rather than silently defaulted.

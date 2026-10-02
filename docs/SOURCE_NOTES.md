@@ -22,9 +22,11 @@ risk per trade; and walk-forward fold/purge/embargo lengths. Their configuration
 values are `null`. This explicitly records missing requirements and avoids
 claiming an exact definition for an invented parameter.
 
-Operational queue/batch/flush sizes, rescue/history schedule times, retry delay,
-volume bar size, instrument/calendar paths and credentials paths are also unset.
-Resolve them in their task; they are not Cloud secrets.
+Operational queue/batch/flush sizes, rescue/history schedules and retry delay
+were resolved in T03/T18. Owner paths are documented in config/owner.yaml and
+RUNBOOK.md; no credentials are supplied in Cloud. Volume-bar size remains an
+explicit caller parameter. Other source-unspecified research policies remain
+required caller choices, not implicit live defaults.
 
 The source's parallel-group sentence puts T18 late, while its task row depends
 only on T02/T03/T05. The user's explicit deployment priority and that dependency
