@@ -129,7 +129,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T07 | T04 | layers/orderflow/depth.py | 15 known-answer/availability/truncation cases; staged suite green | 986 ticks/s; 50 stocks+3 indices, 6h; 19.46m feature rows | DONE |
 | T08 | T06 | layers/orderflow/flow.py | 21 known-answer/availability/truncation cases; staged suite green | 5,025 ticks/s; cached six-hour simulation; includes T06 footprint, excludes daily VPIN parameter derivation | DONE |
 | T09 | T04 | layers/profile/core.py | 6 known-answer/truncation cases; staged suite green | 32,249 ticks/s; cached six-hour simulation; final session profile only, excludes minute updates/composite/IB | DONE |
-| T10 | T04 | layers/vwap/core.py | 15 known-answer/availability/truncation cases; staged suite green | 17,138 ticks/s; 50 stocks+3 indices, six-hour cached VWAP features | DONE |
+| T10 | T04 | layers/vwap/core.py | 15 known-answer/availability/truncation cases; staged suite green | 14,728 ticks/s; cached six-hour simulation; VWAP features only, excludes event detection | DONE |
 | T11 | T04 | layers/smc/core.py | 13 known-answer/availability/truncation cases; staged suite green | 234,095 tick-equivalents/s; cached 1m bars, SMA/strict/eq fixture | STUCK |
 | T12 | T04 | layers/levels/core.py | 13 known-answer/availability/truncation cases; staged suite green | 274,065 tick-equivalents/s; 4,568 bars/s; cached six-hour day | DONE |
 | T13 | T03, T04 | layers/context/core.py | 10 known-answer/availability/truncation cases; staged suite green | 282,428 tick-equivalents/s; 4,707 bars/s; final cached context snapshot | DONE |
