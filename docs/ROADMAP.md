@@ -138,7 +138,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T16 | T15 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
 | T17 | T16 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
 | T18 | T02, T03, T05 | ops/runtime.py, ops/cli.py, systemd, install.sh, RUNBOOK | 9 ops tests; full suite 67 passing; unit verification and offline clean-container install dry-run | N/A: ops; T03 recorder benchmark 73,660 tick-equivalents/s | DONE |
-| T19 | T16 | Read-only live view | Not run; T16 pending | Not run for this task | NOT STARTED |
+| T19 | T16 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
 
 Requested priority on resume: T01 → T02/T03/T05 → T18 → T04 → T06–T13 in
 dependency order → T14 → T15 → T16 → T17/T19.
