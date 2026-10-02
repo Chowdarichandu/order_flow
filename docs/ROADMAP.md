@@ -121,7 +121,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 |---|---|---|---|---|---|
 | T00 | — | Scaffold, docs, config, schema | 10 pytest tests pass | N/A: scaffold; simulator begins at T01 | DONE |
 | T01 | T00 | Official V3 feed/history simulators, decode | 20 T01 cases; full suite 30 passing | 29,992 ticks/s; 50 stocks + 3 indices, 6h | DONE |
-| T02 | T01 | OAuth/token refresh, preflight | Not run; eligible next | Not run for this task | READY |
+| T02 | T01 | auth/core.py, ops/preflight.py | 14 new tests; full suite 44 passing | N/A: auth/preflight, not a per-tick feature | DONE |
 | T03 | T01 | Feed/queue/Parquet recorder, quality | Not run; eligible next | Not run for this task | READY |
 | T04 | T01 | Trades, time/volume bars | Not run; eligible next | Not run for this task | READY |
 | T05 | T01 | History downloader, bhavcopy, importer | Not run; eligible next | Not run for this task | READY |
