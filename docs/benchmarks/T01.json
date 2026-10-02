@@ -1,0 +1,12 @@
+{
+  "task": "T01",
+  "stock_symbols": 50,
+  "context_instruments": 3,
+  "simulated_hours": 6,
+  "snapshots": 21600,
+  "ticks": 1144800,
+  "elapsed_seconds": 38.16981551800018,
+  "ticks_per_second": 29992.28538215317,
+  "mode": "official V3 generation + Arrow decode",
+  "depth": 5
+}

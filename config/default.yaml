@@ -1,0 +1,263 @@
+# Numeric definitions are from BOOTSTRAP.md v2 section 4.
+# null means the source gives no default: resolve before implementing that task.
+runtime:
+  mode: REPLAY
+  comparison_timezone: UTC
+  display_timezone: Asia/Kolkata
+  market: NSE_CASH
+  user_agent: orderflow-zero/0.1.0
+  token_file: null
+  token_file_mode: '0600'
+  holiday_calendar_file: null
+  depth_levels: 5
+  supported_depth_levels: [5, 30]
+  feed_mode: full
+  feed_owners: 1
+  session_open: '09:15'
+  session_close: '15:30'
+
+bars:
+  timeframes_minutes: [1, 5, 15, 60]
+  volume_bar_size: null
+
+orderflow:
+  volume:
+    first_tick_volume: 0
+    reset_volume: 0
+    first_tick_flag: FIRST_TICK
+    reset_flag: VOLUME_RESET
+  aggressor:
+    quote_policy: strictly_before_trade
+    fallback: last_different_trade_price
+    unknown_allocation: separate
+    method: ESTIMATE
+  delta:
+    definition: buy_volume_minus_sell_volume
+    cvd_reset: session_open
+  footprint:
+    alignment: instrument_tick_size
+    bid_volume_side: SELL
+    ask_volume_side: BUY
+  diagonal:
+    ratio: 3.0
+    min_volume_percentile: 20
+    percentile_scope: symbol_day_so_far
+    stacked_levels: 3
+  depth:
+    levels: 5
+  multi_level_ofi:
+    trailing_snapshots: null
+    normalization: average_depth_per_level
+  sweep:
+    levels: 3
+    min_traded_volume_exclusive: 0
+  iceberg:
+    volume_factor: 3
+    min_refills: 2
+    window_snapshots: null
+    method: HEURISTIC
+  absorption:
+    window_bars: 3
+    radius_ticks: 1
+    volume_factor: 3
+    max_extension_ticks: 2
+    dominant_fraction: null
+  exhaustion:
+    extreme_bars: 20
+    delta_percentile: 90
+    confirmation_bars: 3
+  divergence:
+    swing_confirmation: smc.swing_bars_each_side
+  vpin:
+    daily_volume_lookback_sessions: 20
+    buckets_per_day: 50
+    rolling_buckets: 50
+    bucket_size_fixed_for_day: true
+    unknown_buy_fraction: 0.5
+    report_unknown_share: true
+  kyle:
+    window_minutes: 30
+    bar_minutes: 1
+    return_definition: null
+    report: [slope, r_squared, n]
+
+profile:
+  alignment: instrument_tick_size
+  history_allocation: uniform_high_low
+  history_method: APPROXIMATE
+  poc_tie_break: nearest_session_vwap
+  equal_distance_tie_break: null
+  value_area_fraction: 0.70
+  value_area_side_tie_break: null
+  smoothing_ticks: 3
+  composite_sessions: [5, 20]
+  naked_poc_retirement: first_touch
+  initial_balance_minutes: 60
+  initial_balance_extensions: null
+  developing_update_minutes: 1
+
+vwap:
+  history_price: typical_hlc3
+  history_method: APPROXIMATE
+  variance: volume_weighted_population
+  sigma_bands: [1, 2, 3]
+  anchors: [session_open, gap_open, prior_day_high_bar, prior_day_low_bar,
+            confirmed_swing_high, confirmed_swing_low, event_time, week_open, month_open]
+  reclaim_prior_closes: 2
+  band_tag_sigma: [2, 3]
+  band_acceptance_closes: 3
+
+smc:
+  timeframes_minutes: [1, 5, 15, 60]
+  swing_bars_each_side: 2
+  swing_tie_policy: null
+  atr_period: 14
+  atr_smoothing: null
+  break_basis: close # Alternative: wick.
+  displacement:
+    range_atr_multiple: 1.5
+    min_body_fraction: 0.60
+  order_block:
+    bullish_bounds: low_high # Alternative: low_open; bearish is mirrored.
+    mitigation: first_return
+    invalidation: close_beyond_far_edge
+  fvg:
+    bars: 3
+    min_ticks: 2
+    min_atr_multiple: 0.1
+    atr_comparator: null # PDF renders '= 0.1 x ATR'; see SOURCE_NOTES.md.
+    full_fill: close_beyond_far_edge
+  pools:
+    min_swings: 2
+    tolerance_atr_multiple: 0.1
+    sources: [equal_swings, prior_day, prior_week, session, initial_balance]
+  sweep:
+    penetration_ticks: 1
+    confirmation_bars: 3
+  dealing_range:
+    midpoint: 0.5
+    ote_fraction: [0.62, 0.79]
+  bias_timeframes_minutes: [60, 15]
+
+levels:
+  prior_day: [high, low, close]
+  prior_week: [high, low]
+  opening_range_minutes: [5, 15, 30]
+  track_gap_fill: true
+  round_numbers:
+    enabled: false
+    interval: null
+
+context:
+  index_instruments: [NIFTY_50, BANK_NIFTY]
+  index_structure_minutes: 15
+  vix:
+    lookback_years: 1
+    low_percentile: null
+    high_percentile: null
+  relative_strength:
+    since_open: true
+    lookback_sessions: 5
+  breadth:
+    above_session_vwap: true
+    advancers_decliners: true
+  time_of_day:
+    open: ['09:15', '09:45']
+    morning: null
+    midday: null
+    afternoon: null
+    close: ['14:45', '15:15']
+  liquidity:
+    lookback_sessions: 20
+    tiers: [1, 2, 3]
+    traded_value_thresholds: null
+    spread_thresholds: null
+  events:
+    announcement_lookback_minutes: 60
+    flags: [results_day, recent_announcement, expiry_day, budget_day]
+
+zones:
+  update_minutes: 1
+  cluster_atr_multiple: 0.25
+  atr_period: 14
+  atr_timeframe_minutes: 5
+  components: [OB, FVG, POC, VAH, VAL, NAKED_POC, HVN, VWAP, VWAP_BAND,
+               ANCHORED_VWAP, PRIOR_DAY_LEVEL, LIQUIDITY_POOL]
+  cluster_linkage: null
+  invalidation_policy: null
+  touch_policy: null
+
+setups:
+  s1:
+    min_component_types: 2
+    live_triggers: [absorption, delta_flip]
+    history_trigger: reclaim_close
+  s2:
+    retest_components: [OB, FVG]
+    bias_timeframes_minutes: [15, 60]
+    live_triggers: [positive_ofi, positive_delta]
+    history_trigger: rejection_close
+  s3:
+    band_sigma: 2
+    regime: RANGE
+    triggers: [exhaustion, absorption]
+    target: VWAP
+  s4:
+    regime: TREND
+    breakout_levels: [VAH, PDH, VAL, PDL]
+    live_triggers: [stacked_imbalance, rising_cvd]
+    history_acceptance_closes: 3
+    targets: [next_zone, initial_balance_extension]
+  s5:
+    requires_direction_confirmation: true
+    target: nearest_naked_poc
+    direction_confirmation_policy: null
+  plan:
+    stop_buffer_atr_multiple: 0.1
+    min_reward_risk: 1.5
+    min_target_cost_multiple: 3
+    include_spread_in_target_gate: true
+    targets: [next_opposing_zone, liquidity_pool]
+    risk_per_trade: null
+    sizing: volatility
+    forced_exit: '15:15'
+
+validation:
+  history_start: '2022-01-01'
+  history_bar_minutes: 1
+  costs_bps: [10, 20, 30]
+  walk_forward:
+    purged: true
+    train_sessions: null
+    test_sessions: null
+    purge_minutes: null
+    embargo_minutes: null
+  holdout_uses: 1
+  count_every_variant: true
+  require_matched_ablation: true
+  live:
+    outcome_minutes: [5, 15, 60]
+    outcome_at_close: true
+    evaluation_recorded_days: [20, 60]
+  metrics: [gross_pf, net_pf, profitable_folds, loss_autopsy]
+
+ops:
+  timezone: Asia/Kolkata
+  token_expiry_approx: '03:30'
+  refresh: '03:45'
+  refresh_rescue: null
+  preflight_start: '08:30'
+  preflight_end: '09:10'
+  preflight_retry_seconds: null
+  recorder_start: '09:00'
+  recorder_stop: '15:35'
+  history_nightly: null
+  discord_webhook_file: null
+  recorder_queue_capacity: null
+  writer_batch_size: null
+  writer_flush_seconds: null
+
+benchmark:
+  symbols: 50
+  simulated_session_hours: 6
+  seed: 0
