@@ -103,6 +103,16 @@ def sanitized_body(response: Any, secrets: tuple[str, ...]) -> str:
         if isinstance(value, list):
             return [clean(item) for item in value]
         text = str(value)
+        # Non-JSON failures may echo form/query fields, headers, or quoted
+        # credentials that are different from the token we sent. Redact those
+        # before known-secret replacement can alter a credential field name.
+        text = re.sub(r'(?i)bearer\s+\S+', 'Bearer [REDACTED]', text)
+        text = re.sub(
+            r"(?i)(?<![\w])((?:access[_-]?token|refresh[_-]?token|id[_-]?token|token|"
+            r"client[_-]?secret|secret|password|authorization|oauth[_-]?code|"
+            r"authorization[_-]?code|code|api[_-]?key)[\"']?\s*[:=]\s*)"
+            r"(?:\"[^\"]*\"|'[^']*'|[^\s,;&<>{}]+)",
+            lambda match: match.group(1) + '[REDACTED]', text)
         for secret in secrets:
             if secret:
                 text = text.replace(secret, '[REDACTED]')
@@ -123,9 +133,10 @@ class Api:
 
     def request(self, method: str, path: str, **kwargs: Any) -> Any:
         """Section 1 rule 2: on 401/403 reread the token once and retry once."""
+        extra_headers = dict(kwargs.pop('headers', {}))
         for attempt in range(2):
             token = self.token_file.read(self.now())
-            headers = dict(kwargs.pop('headers', {}))
+            headers = dict(extra_headers)
             headers.update({'User-Agent': USER_AGENT, 'Authorization': 'Bearer ' + token})
             try:
                 response = self.http.request(method, BASE_URL + path, headers=headers,

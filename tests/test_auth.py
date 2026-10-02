@@ -147,3 +147,32 @@ def test_oauth_failure_redacts_code_and_secret(tmp_path, caplog):
         oauth.exchange('daily-code', TokenFile(tmp_path/'token'), now=NOW)
     assert all(value not in caplog.text for value in ('secret', 'daily-code', 'fresh'))
     assert 'status=400' in caplog.text
+
+
+@pytest.mark.parametrize('status',[401,403])
+def test_retry_preserves_custom_headers_without_mutating_caller(tmp_path,status):
+    headers={'Accept':'application/json','X-Request-ID':'request-123'}
+    http=HTTP([Reply(status,{'message':'retry'}),Reply(200,{'ok':True})])
+    Api(http,token(tmp_path),now=lambda:NOW).request('GET','/test',headers=headers)
+    assert headers=={'Accept':'application/json','X-Request-ID':'request-123'}
+    assert all(call[2]['headers']['X-Request-ID']=='request-123' and call[2]['headers']['Accept']=='application/json' for call in http.calls)
+
+
+class PlainReply:
+    status_code=403
+    def __init__(self,text):self.text=text
+    def json(self):raise ValueError('not JSON')
+
+
+@pytest.mark.parametrize('body,secrets',[
+    ('access_token=unknown-token&client_secret=unknown-secret&message=denied',('unknown-token','unknown-secret')),
+    ('"access_token": "unknown token with spaces", password=unknown-password; message=denied',('unknown token with spaces','unknown-password')),
+    ("oauth_code='unknown code'\nAPI-Key: unknown-key\nmessage: denied",('unknown code','unknown-key')),
+    ('Authorization: Bearer unknown-bearer\nmessage: denied',('unknown-bearer',)),
+    ('refresh-token=unknown-refresh id_token=unknown-id\nmessage=denied',('unknown-refresh','unknown-id')),
+])
+def test_plain_failure_redacts_unknown_credential_values(tmp_path,body,secrets,caplog):
+    http=HTTP([PlainReply(body),PlainReply(body)])
+    with pytest.raises(AuthError):Api(http,token(tmp_path),now=lambda:NOW).request('GET','/test')
+    assert all(secret not in caplog.text for secret in secrets)
+    assert 'denied' in caplog.text and 'status=403' in caplog.text
