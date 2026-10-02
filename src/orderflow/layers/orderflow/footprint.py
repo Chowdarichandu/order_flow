@@ -47,7 +47,7 @@ def footprint(trades:pa.Table,bars:pa.Table,*,tick_size:Decimal,ratio:float=3,
     if tick_size<=0 or not 0<=percentile<=100:raise ValueError('invalid footprint parameters')
     indexed={}
     for row in trades.to_pylist():
-        if {'DUPLICATE','OUT_OF_ORDER'}&set(row['flags']):continue
+        if {'DUPLICATE','OUT_OF_ORDER','OUTSIDE_SESSION'}&set(row['flags']):continue
         indexed.setdefault((row['instrument_key'],row['session_date']),[]).append(row)
     for key,rows in indexed.items():
         rows.sort(key=lambda row:(row['exchange_ts'] or row['receipt_ts'],row['sequence']))

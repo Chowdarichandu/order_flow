@@ -174,6 +174,12 @@ exchange lag measures receipt minus exchange time off the receive loop. Negative
 lag is counted separately as clock skew; missing exchange timestamps are counted.
 These are snapshot timing metrics. Degraded metrics deserve an alert.
 
+Recorder coverage is 09:00–15:35 IST. Derived cash-session trades/bars and
+profile/VWAP inputs use [09:15, 15:30) IST by default; outside messages remain
+in the audit data. A historical candle ending at 15:30 is eligible. Final time
+buckets extending beyond close remain unclosed and omitted: the 60-minute
+15:15–16:15 bucket is never represented as a completed bar.
+
 ## 6. Stop, repair and resume
 
 ```bash

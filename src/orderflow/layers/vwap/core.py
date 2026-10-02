@@ -1,11 +1,12 @@
 """BOOTSTRAP 4.3: volume-weighted population bands and confirmed anchors."""
-from datetime import datetime,timedelta
+from datetime import datetime,timedelta,time
 from decimal import Decimal
 from math import sqrt
 from zoneinfo import ZoneInfo
 from typing import Any,Iterable
 import pyarrow as pa
 from orderflow.auth.core import aware
+from orderflow.trades.core import _session_bounds
 from orderflow.schema import TRADE_SCHEMA,CANDLE_SCHEMA,FEATURE_SCHEMA
 
 
@@ -21,22 +22,29 @@ def weighted_vwap(samples:Iterable[tuple[Decimal,int]]) -> dict[str,float|None]:
 
 
 def vwap_features(data:pa.Table,*,as_of:datetime,anchors:list[dict[str,Any]]|None=None,
-                  bands:tuple[int,...]=(1,2,3)) -> pa.Table:
+                  bands:tuple[int,...]=(1,2,3),session_open:time=time(9,15),
+                  session_close:time=time(15,30)) -> pa.Table:
     """Session/week/month and supplied confirmed-anchor VWAP at as_of.
 
     Caller supplies gap, prior-day high/low, swing and event origins with actual
-    confirmation availability. History uses HLC3 and is APPROXIMATE; snapshot
+    confirmation availability. Only regular-session inputs contribute. History uses HLC3 and is APPROXIMATE; snapshot
     volume is ESTIMATE. Every source and anchor must be available by as_of.
     """
     cutoff=aware(as_of);history=data.schema.equals(CANDLE_SCHEMA)
     if not history and not data.schema.equals(TRADE_SCHEMA):raise ValueError('canonical trade/candle schema required')
     local=cutoff.astimezone(ZoneInfo('Asia/Kolkata'));day=local.date()
     origins={'SESSION':day,'WEEK':day-timedelta(days=day.weekday()),'MONTH':day.replace(day=1)}
-    groups={}
+    groups={};bounds={}
     for batch in data.to_batches(max_chunksize=10000):
         for row in batch.to_pylist():
-            if row['available_at']>cutoff or {'DUPLICATE','OUT_OF_ORDER'}&set(row['flags']):continue
+            if row['available_at']>cutoff or {'DUPLICATE','OUT_OF_ORDER','OUTSIDE_SESSION'}&set(row['flags']):continue
             if history and row['bar_end']>cutoff:continue
+            source_day=row['session_date']
+            if source_day not in bounds:bounds[source_day]=_session_bounds(source_day,session_open,session_close)
+            opening,closing=bounds[source_day]
+            if history:
+                if row['bar_start']<opening or row['bar_end']>closing:continue
+            elif not opening<=(row['exchange_ts'] or row['receipt_ts'])<closing:continue
             price=(row['high']+row['low']+row['close'])/3 if history else row['price']
             timestamp=row['bar_start'] if history else row['exchange_ts'] or row['receipt_ts']
             if timestamp>cutoff:continue
@@ -151,6 +159,7 @@ def vwap_event_table(bars:pa.Table,features:pa.Table,*,as_of:datetime) -> pa.Tab
                 snapshots[key].append((minute,max(mean['_effective'],sigma['_effective']),mean,sigma))
     joined=[]
     for bar in bars.to_pylist():
+        if 'OUTSIDE_SESSION' in bar['flags']:continue
         ready=availability(bar,bar=True)
         if ready>cutoff:continue
         candidates=[(max(ready,published),minute,mean,sigma) for minute,published,mean,sigma in
@@ -193,7 +202,7 @@ def vwap_event_table(bars:pa.Table,features:pa.Table,*,as_of:datetime) -> pa.Tab
                 row['flags'].add('DUPLICATE' if bar['bar_end']==state['last_end'] else 'OUT_OF_ORDER');sequential=False
             elif bar['bar_start']!=state['last_end']:
                 row['flags'].add('GAP');state['below']=[];state['bands']={}
-        if {'DUPLICATE','OUT_OF_ORDER'}&row['flags']:sequential=False
+        if {'DUPLICATE','OUT_OF_ORDER','OUTSIDE_SESSION'}&row['flags']:sequential=False
         if not sequential or 'GAP' in row['flags']:state['below']=[];state['bands']={}
         state['last_end']=max(state['last_end'],bar['bar_end']) if state['last_end'] else bar['bar_end']
         row['flags'].update(state['pending_flags'])

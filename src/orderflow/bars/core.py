@@ -1,10 +1,10 @@
 """Point-in-time time/volume bars from estimated snapshot trades."""
-from datetime import datetime,time,timedelta,timezone
+from datetime import datetime,time,timedelta
 from typing import Any
-from zoneinfo import ZoneInfo
 import pyarrow as pa
 from orderflow.schema import TRADE_SCHEMA,BAR_SCHEMA
 from orderflow.auth.core import aware
+from orderflow.trades.core import _session_bounds
 
 
 def _bar(rows:list[dict[str,Any]], start:datetime, end:datetime, bar_id:str,
@@ -25,26 +25,32 @@ def _bar(rows:list[dict[str,Any]], start:datetime, end:datetime, bar_id:str,
         inputs=[dict(record_id=f"{r['instrument_key']}:{r['sequence']}",available_at=r['available_at']) for r in rows])
 
 
-def time_bars(trades:pa.Table,*,minutes:int,as_of:datetime) -> pa.Table:
+def time_bars(trades:pa.Table,*,minutes:int,as_of:datetime,
+              session_open:time=time(9,15),session_close:time=time(15,30)) -> pa.Table:
     """Section 3: 1/5/15/60m bars anchored at 09:15 IST; emit only after close.
 
     Half-open intervals assign a boundary trade to the next bar. Only input
     available by as_of is used, and stale/duplicate events do not affect OHLC.
     No empty gap bar or volume is invented. CVD resets each symbol/session.
+    Only regular [open,close) snapshots contribute. Defaults match runtime
+    config. Buckets extending beyond close remain unclosed and are omitted:
+    the default final 60m bucket 15:15–16:15 is never emitted as a full bar.
     """
     cutoff=aware(as_of)
     if not trades.schema.equals(TRADE_SCHEMA) or minutes not in (1,5,15,60):
         raise ValueError('canonical trades and 1/5/15/60 minute interval required')
-    groups={}
+    groups={};bounds={}
     for row in trades.to_pylist():
-        if row['available_at']>cutoff or {'DUPLICATE','OUT_OF_ORDER'}&set(row['flags']):continue
+        if row['available_at']>cutoff or {'DUPLICATE','OUT_OF_ORDER','OUTSIDE_SESSION'}&set(row['flags']):continue
         ts=row['exchange_ts'] or row['receipt_ts']
-        anchor=datetime.combine(row['session_date'],time(9,15),ZoneInfo('Asia/Kolkata')).astimezone(timezone.utc)
-        if ts<anchor:continue
+        day=row['session_date']
+        if day not in bounds:bounds[day]=_session_bounds(day,session_open,session_close)
+        anchor,closing=bounds[day]
+        if not anchor<=ts<closing:continue
         offset=int((ts-anchor).total_seconds()//(minutes*60))
         start=anchor+timedelta(minutes=offset*minutes)
         end=start+timedelta(minutes=minutes)
-        if end>cutoff:continue
+        if end>cutoff or end>closing:continue
         key=(row['instrument_key'],row['session_date'],start,end)
         groups.setdefault(key,[]).append(row)
     output=[];cvd={}
@@ -57,18 +63,24 @@ def time_bars(trades:pa.Table,*,minutes:int,as_of:datetime) -> pa.Table:
     return pa.Table.from_pylist(output,schema=BAR_SCHEMA)
 
 
-def volume_bars(trades:pa.Table,*,target:int,as_of:datetime) -> pa.Table:
+def volume_bars(trades:pa.Table,*,target:int,as_of:datetime,
+                session_open:time=time(9,15),session_close:time=time(15,30)) -> pa.Table:
     """Section 3: complete fixed-volume bars, splitting skipped-trade snapshots.
 
     Snapshot splits are explicitly ESTIMATE; incomplete final buckets are not
     emitted. UNKNOWN volume remains UNKNOWN. Availability is completion receipt.
+    Only regular [open,close) snapshots contribute; defaults match runtime config.
     """
     cutoff=aware(as_of)
     if target<1 or not trades.schema.equals(TRADE_SCHEMA):
         raise ValueError('positive volume target and canonical trades required')
-    states={};output=[]
+    states={};output=[];bounds={}
     for row in trades.to_pylist():
-        if row['available_at']>cutoff or {'DUPLICATE','OUT_OF_ORDER'}&set(row['flags']):continue
+        if row['available_at']>cutoff or {'DUPLICATE','OUT_OF_ORDER','OUTSIDE_SESSION'}&set(row['flags']):continue
+        day=row['session_date']
+        if day not in bounds:bounds[day]=_session_bounds(day,session_open,session_close)
+        opening,closing=bounds[day]
+        if not opening<=(row['exchange_ts'] or row['receipt_ts'])<closing:continue
         key=(row['instrument_key'],row['session_date'])
         state=states.setdefault(key,dict(rows=[],volume=0,cvd=0,n=0))
         remaining=row['volume']
@@ -85,23 +97,29 @@ def volume_bars(trades:pa.Table,*,target:int,as_of:datetime) -> pa.Table:
     return pa.Table.from_pylist(output,schema=BAR_SCHEMA)
 
 
-def candle_bars(candles:pa.Table,*,minutes:int,as_of:datetime) -> pa.Table:
+def candle_bars(candles:pa.Table,*,minutes:int,as_of:datetime,
+                session_open:time=time(9,15),session_close:time=time(15,30)) -> pa.Table:
     """Section 3: history OHLCV resampling, with flow UNKNOWN and APPROXIMATE label.
 
     Candle volume is observed; aggressor flow is unavailable and never assigned
     to BUY/SELL. Only closed/available candles contribute. Missing minutes are
     flagged, not filled; no aggregation is emitted before its closing boundary.
+    Coverage must lie wholly within the regular session. Final buckets extending
+    beyond close remain unclosed and omitted, matching the live bar policy.
     """
     from orderflow.schema import CANDLE_SCHEMA
     if not candles.schema.equals(CANDLE_SCHEMA) or minutes not in (1,5,15,60):
         raise ValueError('canonical candles and supported timeframe required')
-    cutoff=aware(as_of);groups={};output=[]
+    cutoff=aware(as_of);groups={};output=[];bounds={}
     for row in candles.to_pylist():
         if row['available_at']>cutoff or row['bar_end']>cutoff:continue
-        anchor=datetime.combine(row['session_date'],time(9,15),ZoneInfo('Asia/Kolkata')).astimezone(timezone.utc)
+        day=row['session_date']
+        if day not in bounds:bounds[day]=_session_bounds(day,session_open,session_close)
+        anchor,closing=bounds[day]
+        if row['bar_start']<anchor or row['bar_end']>closing:continue
         offset=int((row['bar_start']-anchor).total_seconds()//(minutes*60))
         start=anchor+timedelta(minutes=offset*minutes);end=start+timedelta(minutes=minutes)
-        if end>cutoff:continue
+        if end>cutoff or end>closing:continue
         groups.setdefault((row['instrument_key'],row['session_date'],start,end),[]).append(row)
     for (key,day,start,end),rows in sorted(groups.items()):
         rows.sort(key=lambda row:row['bar_start'])

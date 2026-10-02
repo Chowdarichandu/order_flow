@@ -123,7 +123,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T01 | T00 | Official V3 feed/history simulators, decode | 20 T01 cases; full suite 30 passing | 29,992 ticks/s; 50 stocks + 3 indices, 6h | DONE |
 | T02 | T01 | auth/core.py, ops/preflight.py | 21 auth tests; full staged task suite green | N/A: auth/preflight | DONE |
 | T03 | T01 | ingest/recorder.py | 15 recorder cases; staged suite green; six-hour lossless benchmark | 73,537 tick-equivalents/s; 50 stocks+3 indices, 21,600 raw frames, zero drops | DONE |
-| T04 | T01 | trades/core.py, bars/core.py, schema mid_price | 13 T04 cases; full suite 96 passing | 15,153 ticks/s; 50 stocks+3 indices, 6h; classification+1m bars | DONE |
+| T04 | T01 | trades/core.py, bars/core.py, schema mid_price | 22 T04 cases + 3 session guards; full suite 217 passing + 92 subtests | 14,231 ticks/s; 50 stocks+3 indices, 6h; classification+1m bars | DONE |
 | T05 | T01 | ingest/history.py | 6 new tests; full suite 58 passing | N/A: daily REST/import I/O; no per-tick metric | DONE |
 | T06 | T04 | layers/orderflow/footprint.py | 6 known-answer/truncation cases; full staged task suite green | 19,132 ticks/s; 50 stocks+3 indices, six-hour cached simulation | DONE |
 | T07 | T04 | layers/orderflow/depth.py | 15 known-answer/availability/truncation cases; staged suite green | 986 ticks/s; 50 stocks+3 indices, 6h; 19.46m feature rows | DONE |

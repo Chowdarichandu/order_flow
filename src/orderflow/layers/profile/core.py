@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 import pyarrow as pa
 from orderflow.schema import TRADE_SCHEMA,CANDLE_SCHEMA,PROFILE_SCHEMA,BAR_SCHEMA
 from orderflow.auth.core import aware
+from orderflow.trades.core import _session_bounds
 
 D=Decimal
 
@@ -40,20 +41,27 @@ def profile_values(levels:dict[Decimal,float],*,tick_size:Decimal,vwap:Decimal|N
     return dict(poc=prices[center],val=prices[lower],vah=prices[upper],hvn=hvn,lvn=lvn)
 
 
-def session_profile(data:pa.Table,*,tick_size:Decimal,as_of:datetime,value_area:float=.7) -> pa.Table:
+def session_profile(data:pa.Table,*,tick_size:Decimal,as_of:datetime,value_area:float=.7,
+                    session_open:time=time(9,15),session_close:time=time(15,30)) -> pa.Table:
     """Session/developing volume per tick; candles uniform high-low APPROXIMATE.
 
     Live snapshot allocation is ESTIMATE. Historical VWAP uses typical HLC3;
-    only available closed candles/trades are used. Each output's availability is
+    only available regular-session closed candles/trades are used. Each output's availability is
     its developing evaluation cutoff, never a retrospective earlier timestamp.
     """
     cutoff=aware(as_of)
     history=data.schema.equals(CANDLE_SCHEMA)
     if not history and not data.schema.equals(TRADE_SCHEMA):raise ValueError('canonical trades/candles required')
-    groups={}
+    groups={};bounds={}
     for row in data.to_pylist():
-        if row['available_at']>cutoff or {'DUPLICATE','OUT_OF_ORDER'}&set(row['flags']):continue
+        if row['available_at']>cutoff or {'DUPLICATE','OUT_OF_ORDER','OUTSIDE_SESSION'}&set(row['flags']):continue
         if history and row['bar_end']>cutoff:continue
+        day=row['session_date']
+        if day not in bounds:bounds[day]=_session_bounds(day,session_open,session_close)
+        opening,closing=bounds[day]
+        if history:
+            if row['bar_start']<opening or row['bar_end']>closing:continue
+        elif not opening<=(row['exchange_ts'] or row['receipt_ts'])<closing:continue
         key=(row['instrument_key'],row['session_date'])
         group=groups.setdefault(key,dict(first=row,levels={},pv=D(0),volume=0,flags=set(),inputs=[]))
         volume=row['volume'];group['volume']+=volume

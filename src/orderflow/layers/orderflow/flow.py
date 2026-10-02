@@ -70,7 +70,7 @@ def vpin(trades: pa.Table, *, bucket_size: int | float | Decimal | Mapping[tuple
         if key in last_available and row['available_at'] < last_available[key]:
             raise ValueError('trade availability must be ordered per symbol-day')
         last_available[key]=row['available_at']
-        if {'DUPLICATE','OUT_OF_ORDER'} & set(row['flags']):
+        if {'DUPLICATE','OUT_OF_ORDER','OUTSIDE_SESSION'} & set(row['flags']):
             continue
         if sizes is not None and key not in sizes:
             raise ValueError('missing fixed bucket size for symbol-day')
@@ -125,7 +125,7 @@ def kyle_lambda(bars: pa.Table, *, as_of: datetime, return_definition: Literal['
         previous=None;pairs=deque();observations=deque()
         for row in rows:
             flags=set(row['flags']);pair=None
-            if {'DUPLICATE','OUT_OF_ORDER'} & flags:
+            if {'DUPLICATE','OUT_OF_ORDER','OUTSIDE_SESSION'} & flags:
                 continue
             # A later-arriving previous bar must never revise an earlier value.
             if previous is not None and previous['available_at'] <= row['available_at']:
@@ -209,7 +209,7 @@ def flow_events(bars: pa.Table, footprints: pa.Table, *, tick_size: Decimal, dom
     for row in bars.to_pylist():
         if row['available_at']>as_of or row['bar_end']>as_of:
             continue
-        if {'DUPLICATE','OUT_OF_ORDER'}&set(row['flags']):
+        if {'DUPLICATE','OUT_OF_ORDER','OUTSIDE_SESSION'}&set(row['flags']):
             continue
         groups.setdefault((row['instrument_key'],row['session_date'],row['bar_kind'],row['timeframe_minutes'],row['volume_target']),[]).append(row)
     for level in footprints.to_pylist():
@@ -322,6 +322,8 @@ def vpin_bucket_parameters(candles:pa.Table,*,for_session:date,as_of:datetime,
             covered=set();volume=0;unique={};refs=[];valid=True;methods=[]
             for row in sorted(rows,key=lambda r:(r['bar_start'],r['bar_end'],r['available_at'])):
                 flags.update(row['flags'])
+                if 'OUTSIDE_SESSION' in row['flags']:
+                    continue
                 if {'DUPLICATE','OUT_OF_ORDER'}&set(row['flags']):
                     flags.add('DUPLICATE_CANDLE' if 'DUPLICATE' in row['flags'] else 'OUT_OF_ORDER_CANDLE')
                     continue
