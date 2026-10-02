@@ -108,6 +108,7 @@ TRADE_SCHEMA: Final = _derived('trade', [
     pa.field('exchange_ts', TIMESTAMP),
     pa.field('receipt_ts', TIMESTAMP, nullable=False),
     pa.field('price', PRICE, nullable=False),
+    pa.field('mid_price', PRICE),
     pa.field('volume', QUANTITY, nullable=False),
     pa.field('side', pa.string(), nullable=False),
     pa.field('quote_ts', TIMESTAMP),

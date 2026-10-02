@@ -1,0 +1,11 @@
+{
+  "task": "T10",
+  "stock_symbols": 50,
+  "context_instruments": 3,
+  "simulated_hours": 6,
+  "ticks": 1144800,
+  "output_rows": 1272,
+  "elapsed_seconds": 77.72733827000047,
+  "ticks_per_second": 14728.408633051638,
+  "mode": "VWAP features only; cached official simulation; event detection excluded"
+}

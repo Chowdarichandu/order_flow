@@ -1,0 +1,10 @@
+[Unit]
+Description=orderflow stop schedule
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 15:35:00 Asia/Kolkata
+Unit=orderflow-stop.service
+Persistent=false
+
+[Install]
+WantedBy=timers.target

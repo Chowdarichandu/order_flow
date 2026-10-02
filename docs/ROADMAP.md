@@ -112,37 +112,40 @@ accumulating while the layers are built.
 
 ## Execution status
 
-T00 and T01 are DONE as of 2026-10-02. All 30 tests pass; T01's official V3
-feed/history simulators and decoders are implemented, with the six-hour
-50-stock benchmark recorded. T02/T03/T04/T05 are eligible next. Later tasks
-await their dependencies. See [simulator evidence](SIMULATORS.md).
+RECORDER DEPLOYABLE: T02/T03/T05/T18 and all eligible independent layers
+are complete. Final offline suite: **217 passed plus 92 subtests**. Fourteen
+tasks are DONE, including the already-merged T00/T01 foundation; six are STUCK.
+T11 has tested explicit-policy APIs but the source FVG comparator is unresolved.
+T14 has tested zone APIs but requires T11; T15/T16/T17/T19 are dependency blocked.
+See [final report](FINAL_REPORT.md), [owner runbook](RUNBOOK.md), individual
+[status files](status/) and [blocker reports](stuck/). No live account was used.
 
 | Task | Depends | Modules | Tests | 50-symbol simulated-day benchmark | Status |
 |---|---|---|---|---|---|
 | T00 | — | Scaffold, docs, config, schema | 10 pytest tests pass | N/A: scaffold; simulator begins at T01 | DONE |
 | T01 | T00 | Official V3 feed/history simulators, decode | 20 T01 cases; full suite 30 passing | 29,992 ticks/s; 50 stocks + 3 indices, 6h | DONE |
-| T02 | T01 | OAuth/token refresh, preflight | Not run; eligible next | Not run for this task | READY |
-| T03 | T01 | Feed/queue/Parquet recorder, quality | Not run; eligible next | Not run for this task | READY |
-| T04 | T01 | Trades, time/volume bars | Not run; eligible next | Not run for this task | READY |
-| T05 | T01 | History downloader, bhavcopy, importer | Not run; eligible next | Not run for this task | READY |
-| T06 | T04 | Footprint/delta/CVD/imbalances | Not run; T04 pending | Not run for this task | NOT STARTED |
-| T07 | T04 | Depth/OFI/sweeps/iceberg | Not run; T04 pending | Not run for this task | NOT STARTED |
-| T08 | T06 | Flow events/VPIN/Kyle | Not run; T06 pending | Not run for this task | NOT STARTED |
-| T09 | T04 | Profiles/naked POC/IB | Not run; T04 pending | Not run for this task | NOT STARTED |
-| T10 | T04 | VWAP/bands/anchors/events | Not run; T04 pending | Not run for this task | NOT STARTED |
-| T11 | T04 | SMC structures/pools/sweeps | Not run; T04 pending | Not run for this task | NOT STARTED |
-| T12 | T04 | Prior levels/opening ranges/gaps | Not run; T04 pending | Not run for this task | NOT STARTED |
-| T13 | T03, T04 | Index/VIX/RS/breadth/context | Not run; T03/T04 pending | Not run for this task | NOT STARTED |
-| T14 | T09–T12 | Zone engine | Not run; T09–T12 pending | Not run for this task | NOT STARTED |
-| T15 | T08, T13, T14 | S1–S5/plans/cost gate/sizing | Not run; dependencies pending | Not run for this task | NOT STARTED |
-| T16 | T15 | Unified live/replay engine | Not run; T15 pending | Not run for this task | NOT STARTED |
-| T17 | T16 | Backtest/event study/shadow/edge board | Not run; T16 pending | Not run for this task | NOT STARTED |
-| T18 | T02, T03, T05 | Ops/install/systemd/runbook | Not run; dependencies pending | Not run for this task | NOT STARTED |
-| T19 | T16 | Read-only live view | Not run; T16 pending | Not run for this task | NOT STARTED |
+| T02 | T01 | auth/core.py, ops/preflight.py | 21 auth tests; full staged task suite green | N/A: auth/preflight | DONE |
+| T03 | T01 | ingest/recorder.py | 15 recorder cases; staged suite green; six-hour lossless benchmark | 73,537 tick-equivalents/s; 50 stocks+3 indices, 21,600 raw frames, zero drops | DONE |
+| T04 | T01 | trades/core.py, bars/core.py, schema mid_price | 22 T04 cases + 3 session guards; full suite 217 passing + 92 subtests | 14,231 ticks/s; 50 stocks+3 indices, 6h; classification+1m bars | DONE |
+| T05 | T01 | ingest/history.py | 6 new tests; full suite 58 passing | N/A: daily REST/import I/O; no per-tick metric | DONE |
+| T06 | T04 | layers/orderflow/footprint.py | 6 known-answer/truncation cases; full staged task suite green | 17,491 ticks/s; cached six-hour simulation; footprint only | DONE |
+| T07 | T04 | layers/orderflow/depth.py | 15 known-answer/availability/truncation cases; staged suite green | 986 ticks/s; 50 stocks+3 indices, 6h; 19.46m feature rows | DONE |
+| T08 | T06 | layers/orderflow/flow.py | 21 known-answer/availability/truncation cases; staged suite green | 5,025 ticks/s; cached six-hour simulation; includes T06 footprint, excludes daily VPIN parameter derivation | DONE |
+| T09 | T04 | layers/profile/core.py | 6 known-answer/truncation cases; staged suite green | 32,249 ticks/s; cached six-hour simulation; final session profile only, excludes minute updates/composite/IB | DONE |
+| T10 | T04 | layers/vwap/core.py | 15 known-answer/availability/truncation cases; staged suite green | 14,728 ticks/s; cached six-hour simulation; VWAP features only, excludes event detection | DONE |
+| T11 | T04 | layers/smc/core.py | 13 known-answer/availability/truncation cases; staged suite green | 234,095 tick-equivalents/s; cached 1m bars, SMA/strict/eq fixture | STUCK |
+| T12 | T04 | layers/levels/core.py | 13 known-answer/availability/truncation cases; staged suite green | 274,065 tick-equivalents/s; 4,568 bars/s; cached six-hour day | DONE |
+| T13 | T03, T04 | layers/context/core.py | 10 known-answer/availability/truncation cases; staged suite green | 282,428 tick-equivalents/s; 4,707 bars/s; final cached context snapshot | DONE |
+| T14 | T09–T12 | zones/core.py | 13 known-answer/availability/truncation cases; staged suite green | 7,785 tick-equivalents/s; 360 minute evaluations; compact-provenance fixture | STUCK |
+| T15 | T08, T13, T14 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
+| T16 | T15 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
+| T17 | T16 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
+| T18 | T02, T03, T05 | ops/runtime.py, ops/cli.py, systemd, install.sh, RUNBOOK | 8 ops cases plus recorder status-writer coverage; systemd verification and clean-container install dry-run | N/A: ops; see T03 recorder benchmark | DONE |
+| T19 | T16 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
 
 Requested priority on resume: T01 → T02/T03/T05 → T18 → T04 → T06–T13 in
 dependency order → T14 → T15 → T16 → T17/T19.
 
-GitHub connector write access was verified on 2026-10-02 and the initialized
-remote main was reconciled into this branch. Full publication is being retried
-from the recovered workspace; the previous denial is retained as audit history.
+This branch contains task-scoped commits and the complete simulator-verified
+recorder milestone. One review PR targets main; remaining source-policy choices
+and resume criteria are documented rather than silently defaulted.

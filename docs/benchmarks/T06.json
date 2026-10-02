@@ -1,0 +1,11 @@
+{
+  "task": "T06",
+  "stock_symbols": 50,
+  "context_instruments": 3,
+  "simulated_hours": 6,
+  "ticks": 1144800,
+  "output_rows": 1079950,
+  "elapsed_seconds": 65.45024191999983,
+  "ticks_per_second": 17491.150015905136,
+  "mode": "feature only; cached official simulation"
+}

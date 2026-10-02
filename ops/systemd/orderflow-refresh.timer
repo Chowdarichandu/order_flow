@@ -1,0 +1,10 @@
+[Unit]
+Description=orderflow refresh schedule
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 03:45:00 Asia/Kolkata
+Unit=orderflow-refresh.service
+Persistent=false
+
+[Install]
+WantedBy=timers.target

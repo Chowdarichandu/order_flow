@@ -1,0 +1,11 @@
+{
+  "task": "T04",
+  "symbols": 50,
+  "context_instruments": 3,
+  "simulated_hours": 6,
+  "ticks": 1144800,
+  "bars": 19080,
+  "elapsed_seconds": 80.44350086700433,
+  "ticks_per_second": 14231.106151044762,
+  "mode": "classification + 1m bars; decoding excluded"
+}

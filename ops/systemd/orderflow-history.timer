@@ -1,0 +1,10 @@
+[Unit]
+Description=orderflow history schedule
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 20:30:00 Asia/Kolkata
+Unit=orderflow-history.service
+Persistent=false
+
+[Install]
+WantedBy=timers.target

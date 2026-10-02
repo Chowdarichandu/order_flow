@@ -1,0 +1,10 @@
+[Unit]
+Description=orderflow preflight (read-only)
+
+[Service]
+Type=simple
+WorkingDirectory=@ROOT@
+ExecStart="@ROOT@/.venv/bin/python" -m orderflow.ops.cli preflight --scheduled --config "%h/.config/orderflow/config.yaml"
+TimeoutStartSec=45min
+TimeoutStopSec=45s
+UMask=0077
