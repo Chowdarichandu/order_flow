@@ -1,0 +1,1 @@
+{"task": "T12", "input_bars": 19080, "input_tick_equivalents": 1144800, "output_levels": 318, "seconds": 4.177109696000116, "bars_per_second": 4567.751720351151, "tick_equivalents_per_second": 274065.10322106903, "scope": "levels from cached 50-stock plus 3-index six-hour simulated-day bars; upstream excluded"}

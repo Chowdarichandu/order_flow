@@ -131,7 +131,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T09 | T04 | layers/profile/core.py | 6 known-answer/truncation cases; staged suite green | 35,134 ticks/s; 50 stocks+3 indices, six-hour cached profile | DONE |
 | T10 | T04 | layers/vwap/core.py | 15 known-answer/availability/truncation cases; staged suite green | 17,138 ticks/s; 50 stocks+3 indices, six-hour cached VWAP features | DONE |
 | T11 | T04 | layers/smc/core.py | 13 known-answer/availability/truncation cases; staged suite green | 234,095 tick-equivalents/s; cached 1m bars, SMA/strict/eq fixture | STUCK |
-| T12 | T04 | Prior levels/opening ranges/gaps | Not run; T04 pending | Not run for this task | NOT STARTED |
+| T12 | T04 | layers/levels/core.py | 13 known-answer/availability/truncation cases; staged suite green | 274,065 tick-equivalents/s; 4,568 bars/s; cached six-hour day | DONE |
 | T13 | T03, T04 | Index/VIX/RS/breadth/context | Not run; T03/T04 pending | Not run for this task | NOT STARTED |
 | T14 | T09–T12 | Zone engine | Not run; T09–T12 pending | Not run for this task | NOT STARTED |
 | T15 | T08, T13, T14 | S1–S5/plans/cost gate/sizing | Not run; dependencies pending | Not run for this task | NOT STARTED |
