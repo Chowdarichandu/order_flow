@@ -1,0 +1,20 @@
+{
+  "task": "T08",
+  "stock_symbols": 50,
+  "context_instruments": 3,
+  "simulated_hours": 6,
+  "ticks": 1144800,
+  "output_rows": {
+    "vpin": 1050,
+    "kyle": 19080,
+    "events": 35800
+  },
+  "elapsed_seconds": 214.09481038399827,
+  "ticks_per_second": 5347.163707269216,
+  "mode": "cached simulation; T06 footprint dependency plus T08 VPIN/impact/events; sequential instruments",
+  "benchmark_parameters": {
+    "bucket_size": 10000,
+    "dominant_fraction": 0.6,
+    "return_definition": "simple"
+  }
+}

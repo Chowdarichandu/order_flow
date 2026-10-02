@@ -127,7 +127,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T05 | T01 | ingest/history.py | 6 new tests; full suite 58 passing | N/A: daily REST/import I/O; no per-tick metric | DONE |
 | T06 | T04 | layers/orderflow/footprint.py | 6 known-answer/truncation cases; full staged task suite green | 19,132 ticks/s; 50 stocks+3 indices, six-hour cached simulation | DONE |
 | T07 | T04 | layers/orderflow/depth.py | 15 known-answer/availability/truncation cases; staged suite green | 986 ticks/s; 50 stocks+3 indices, 6h; 19.46m feature rows | DONE |
-| T08 | T06 | Flow events/VPIN/Kyle | Not run; T06 pending | Not run for this task | NOT STARTED |
+| T08 | T06 | layers/orderflow/flow.py | 21 known-answer/availability/truncation cases; staged suite green | 5,347 ticks/s; cached six-hour day, includes T06 footprint | DONE |
 | T09 | T04 | layers/profile/core.py | 6 known-answer/truncation cases; staged suite green | 35,134 ticks/s; 50 stocks+3 indices, six-hour cached profile | DONE |
 | T10 | T04 | layers/vwap/core.py | 15 known-answer/availability/truncation cases; staged suite green | 17,138 ticks/s; 50 stocks+3 indices, six-hour cached VWAP features | DONE |
 | T11 | T04 | layers/smc/core.py | 13 known-answer/availability/truncation cases; staged suite green | 234,095 tick-equivalents/s; cached 1m bars, SMA/strict/eq fixture | STUCK |
