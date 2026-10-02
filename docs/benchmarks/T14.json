@@ -1,0 +1,19 @@
+{
+  "task": "T14",
+  "stock_symbols": 50,
+  "context_instruments": 3,
+  "simulated_hours": 6,
+  "ticks_equivalent": 1144800,
+  "input_bars": 19080,
+  "minute_evaluations": 360,
+  "output_rows": 19080,
+  "elapsed_seconds": 147.0528890880014,
+  "ticks_equivalent_per_second": 7784.954155609368,
+  "scope": "zone snapshot each minute; cached simulated bars and crafted active level/ATR fixtures; compact upstream bar provenance; excludes upstream layers and leaf expansion",
+  "policies": {
+    "linkage": "single_linkage",
+    "touch_policy": "entry_episode",
+    "invalidation_policy": "close_beyond_edge",
+    "freshness_policy": "cluster_formation"
+  }
+}
