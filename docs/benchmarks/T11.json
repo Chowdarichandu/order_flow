@@ -1,0 +1,17 @@
+{
+  "task": "T11",
+  "symbols": 50,
+  "context_instruments": 3,
+  "simulated_seconds": 21600,
+  "input_bars": 19080,
+  "levels": 19133,
+  "events": 0,
+  "seconds": 4.890322938997997,
+  "ticks_equivalent_per_second": 234094.97,
+  "scope": "SMC over cached 1m bars, excludes simulator/decode/trades/bar generation",
+  "policies": {
+    "atr_smoothing": "sma",
+    "swing_tie_policy": "strict",
+    "fvg_comparator": "eq"
+  }
+}

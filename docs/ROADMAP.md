@@ -130,7 +130,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T08 | T06 | Flow events/VPIN/Kyle | Not run; T06 pending | Not run for this task | NOT STARTED |
 | T09 | T04 | layers/profile/core.py | 6 known-answer/truncation cases; staged suite green | 35,134 ticks/s; 50 stocks+3 indices, six-hour cached profile | DONE |
 | T10 | T04 | layers/vwap/core.py | 15 known-answer/availability/truncation cases; staged suite green | 17,138 ticks/s; 50 stocks+3 indices, six-hour cached VWAP features | DONE |
-| T11 | T04 | SMC structures/pools/sweeps | Not run; T04 pending | Not run for this task | NOT STARTED |
+| T11 | T04 | layers/smc/core.py | 13 known-answer/availability/truncation cases; staged suite green | 234,095 tick-equivalents/s; cached 1m bars, SMA/strict/eq fixture | STUCK |
 | T12 | T04 | Prior levels/opening ranges/gaps | Not run; T04 pending | Not run for this task | NOT STARTED |
 | T13 | T03, T04 | Index/VIX/RS/breadth/context | Not run; T03/T04 pending | Not run for this task | NOT STARTED |
 | T14 | T09–T12 | Zone engine | Not run; T09–T12 pending | Not run for this task | NOT STARTED |
