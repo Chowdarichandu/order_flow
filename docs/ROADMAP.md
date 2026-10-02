@@ -137,7 +137,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T15 | T08, T13, T14 | S1–S5/plans/cost gate/sizing | Not run; dependencies pending | Not run for this task | NOT STARTED |
 | T16 | T15 | Unified live/replay engine | Not run; T15 pending | Not run for this task | NOT STARTED |
 | T17 | T16 | Backtest/event study/shadow/edge board | Not run; T16 pending | Not run for this task | NOT STARTED |
-| T18 | T02, T03, T05 | Ops/install/systemd/runbook | Not run; dependencies pending | Not run for this task | NOT STARTED |
+| T18 | T02, T03, T05 | ops/runtime.py, ops/cli.py, systemd, install.sh, RUNBOOK | 9 ops tests; full suite 67 passing; unit verification and offline clean-container install dry-run | N/A: ops; T03 recorder benchmark 73,660 tick-equivalents/s | DONE |
 | T19 | T16 | Read-only live view | Not run; T16 pending | Not run for this task | NOT STARTED |
 
 Requested priority on resume: T01 → T02/T03/T05 → T18 → T04 → T06–T13 in

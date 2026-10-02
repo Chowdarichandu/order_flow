@@ -1,0 +1,10 @@
+[Unit]
+Description=orderflow preflight schedule
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 08:30:00 Asia/Kolkata
+Unit=orderflow-preflight.service
+Persistent=false
+
+[Install]
+WantedBy=timers.target

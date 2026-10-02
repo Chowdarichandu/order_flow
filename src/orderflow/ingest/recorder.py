@@ -51,7 +51,7 @@ class Recorder:
     rule. A normal shutdown flushes every enqueued frame or reports failure.
     """
     def __init__(self, root: Path, *, capacity: int = 25000, batch_size: int = 1000,
-                 flush_seconds: float = 1, decoder: Any = None):
+                 flush_seconds: float = 1, decoder: Any = None, on_flush: Any = None):
         if min(capacity, batch_size) < 1 or flush_seconds <= 0:
             raise ValueError('invalid recorder batching policy')
         self.root, self.batch_size, self.flush_seconds = Path(root), batch_size, flush_seconds
@@ -59,6 +59,7 @@ class Recorder:
         self.metrics: Counter = Counter(received=0, written=0, dropped=0, disconnects=0,
                                         max_queue_lag_ms=0)
         self.decoder = decoder
+        self.on_flush = on_flush
         self.error: Exception | None = None
         self.thread: threading.Thread | None = None
         self.closed = False
@@ -116,6 +117,12 @@ class Recorder:
             finally:
                 if temp.exists():
                     temp.unlink()
+
+        if self.on_flush is not None:
+            try:
+                self.on_flush(self.quality())
+            except Exception:
+                LOG.warning('status update failed (soft alert)')
 
     def _writer(self) -> None:
         """Write batches off the receive thread; save errors for shutdown/reporting."""

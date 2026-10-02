@@ -1,0 +1,10 @@
+[Unit]
+Description=orderflow recorder schedule
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 09:00:00 Asia/Kolkata
+Unit=orderflow-recorder.service
+Persistent=false
+
+[Install]
+WantedBy=timers.target

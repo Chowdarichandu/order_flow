@@ -1,0 +1,19 @@
+# Installer replaces @HOME@. Only paths, never token values, belong here.
+data_root: '@HOME@/.local/share/orderflow'
+token_file: '@HOME@/.config/orderflow/token.json'
+credentials_file: '@HOME@/.config/orderflow/credentials.json'
+code_file: '@HOME@/.config/orderflow/code.json'
+state_file: '@HOME@/.config/orderflow/oauth-state.json'
+webhook_file: '@HOME@/.config/orderflow/webhook.json'
+calendar_file: '@HOME@/.config/orderflow/nse-holidays.json'
+instruments_file: '@HOME@/.config/orderflow/instruments.json'
+status_file: '@HOME@/.local/share/orderflow/status.json'
+feed_mode: full
+queue_capacity: 25000
+batch_size: 1000
+flush_seconds: 1
+heartbeat_seconds: 20
+reconnect_seconds: 3
+gap_seconds: 2
+preflight_retry_seconds: 30
+history_throttle_seconds: 0.2

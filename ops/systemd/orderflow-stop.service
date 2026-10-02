@@ -1,0 +1,7 @@
+[Unit]
+Description=orderflow stop (read-only)
+
+[Service]
+Type=simple
+WorkingDirectory=@ROOT@
+ExecStart=/usr/bin/systemctl --user stop orderflow-recorder.service

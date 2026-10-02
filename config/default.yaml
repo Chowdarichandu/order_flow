@@ -245,19 +245,21 @@ ops:
   timezone: Asia/Kolkata
   token_expiry_approx: '03:30'
   refresh: '03:45'
-  refresh_rescue: null
+  refresh_rescue: '08:00'
   preflight_start: '08:30'
   preflight_end: '09:10'
-  preflight_retry_seconds: null
+  preflight_retry_seconds: 30
   recorder_start: '09:00'
   recorder_stop: '15:35'
-  history_nightly: null
+  history_nightly: '20:30'
   discord_webhook_file: null
-  recorder_queue_capacity: null
-  writer_batch_size: null
-  writer_flush_seconds: null
+  recorder_queue_capacity: 25000
+  writer_batch_size: 1000
+  writer_flush_seconds: 1
 
 benchmark:
   symbols: 50
   simulated_session_hours: 6
   seed: 0
+
+# Owner runtime adapters and schedules are configured in config/owner.yaml.

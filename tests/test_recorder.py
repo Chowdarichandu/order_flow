@@ -149,3 +149,12 @@ def test_corrupt_frame_is_recorded_and_quality_failure_counted(tmp_path):
     table = pa.concat_tables(read_parts(tmp_path))
     assert table['payload'][0].as_py() == b'\xff'
     assert 'DECODE_ERROR' in table['flags'][0].as_py()
+
+
+def test_soft_status_failure_does_not_stop_recording(tmp_path):
+    def bad_status(metrics):
+        raise OSError('status disk problem')
+    with Recorder(tmp_path, batch_size=1, on_flush=bad_status) as recorder:
+        for frame in FeedSimulator(start=START).frames(3):
+            recorder.receive(frame)
+    assert recorder.metrics['written'] == 3 and recorder.error is None
