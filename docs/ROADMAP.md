@@ -134,7 +134,7 @@ await their dependencies. See [simulator evidence](SIMULATORS.md).
 | T12 | T04 | layers/levels/core.py | 13 known-answer/availability/truncation cases; staged suite green | 274,065 tick-equivalents/s; 4,568 bars/s; cached six-hour day | DONE |
 | T13 | T03, T04 | layers/context/core.py | 10 known-answer/availability/truncation cases; staged suite green | 282,428 tick-equivalents/s; 4,707 bars/s; final cached context snapshot | DONE |
 | T14 | T09–T12 | zones/core.py | 13 known-answer/availability/truncation cases; staged suite green | 7,785 tick-equivalents/s; 360 minute evaluations; compact-provenance fixture | STUCK |
-| T15 | T08, T13, T14 | S1–S5/plans/cost gate/sizing | Not run; dependencies pending | Not run for this task | NOT STARTED |
+| T15 | T08, T13, T14 | Dependency documentation; implementation not attempted | Not run: prerequisites not DONE | Not run: dependency blocked | STUCK |
 | T16 | T15 | Unified live/replay engine | Not run; T15 pending | Not run for this task | NOT STARTED |
 | T17 | T16 | Backtest/event study/shadow/edge board | Not run; T16 pending | Not run for this task | NOT STARTED |
 | T18 | T02, T03, T05 | ops/runtime.py, ops/cli.py, systemd, install.sh, RUNBOOK | 9 ops tests; full suite 67 passing; unit verification and offline clean-container install dry-run | N/A: ops; T03 recorder benchmark 73,660 tick-equivalents/s | DONE |
