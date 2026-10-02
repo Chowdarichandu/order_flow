@@ -1,0 +1,21 @@
+{
+  "task": "T03",
+  "stock_symbols": 50,
+  "context_instruments": 3,
+  "simulated_hours": 6,
+  "elapsed_seconds": 15.541745530998014,
+  "ticks_per_second": 73659.67984205481,
+  "metrics": {
+    "received": 21600,
+    "written": 21600,
+    "dropped": 0,
+    "disconnects": 0,
+    "max_queue_lag_ms": 9999.57365299997,
+    "gaps": 0,
+    "resets": 0,
+    "duplicates": 0,
+    "out_of_order": 0,
+    "unwritten": 0
+  },
+  "mode": "official V3 generation + raw Parquet writer"
+}
